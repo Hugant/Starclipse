@@ -1,0 +1,70 @@
+package Starclipse.Building.StarshipsFactory;
+
+import Starclipse.Building.Resources;
+
+public class Starship {
+	private byte damage = 0;
+	private byte speed = 0;
+	private Cost cost = null;
+	private short passenger = 0;	
+	private static final byte PASSENGER_VOLUME = 10;// quantity per unit
+	
+	private int residents = 0;
+	private int manpower = 5;// 2(pilots) , 3(mechanics)
+	
+	private String name = "";
+	
+	private static final String nameMas[] = {"Crimson", "Wenda", ""};
+	
+	//private int moneyCost = 0;
+	//private int buildingTime = 0;
+	private Resources expenses = null;
+	
+	//private int incomeTime = 0;
+	
+	public Starship(String name, Cost cost, String... cells) {
+		if(cells.length != 5) {
+			throw new IllegalArgumentException("The number of elements in the string array must be equal to 5");
+		} else {
+			for(String i : cells) {
+				switch(i) {
+					case "damage":
+						this.damage++;
+						this.manpower++;
+						break;
+						
+					case "speed":
+						this.speed++;
+						this.manpower++;
+						break;
+						
+					case "passenger":
+						this.passenger++;
+						this.manpower += 3;
+						break;
+					
+					case "cost":
+						if(cost == null) {
+							throw new IllegalArgumentException("If you specify an element of 'cost', "
+																+ "the object cannot be null");
+						} else {
+							this.cost = cost;
+							this.manpower += cost.getManpower();
+							//cost.ret();
+						}
+						break;
+						
+					default:
+						throw new UnsupportedOperationException("Such a resource does not exist");
+				}
+				
+				this.name = name;
+				this.residents = passenger * PASSENGER_VOLUME;
+			}
+		}
+	}
+	
+	public int getResidents() {
+		return this.residents;
+	}
+}
