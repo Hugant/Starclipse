@@ -10,9 +10,8 @@ public class LimitlessNumber {
 //																							GaV = 10e+57
 	private BigDecimal prefix = new BigDecimal("0");// number
 	private String postfix = "";// system
+
 	
-	
-	public LimitlessNumber() {}
 
 	public LimitlessNumber(String number) {
 		if(!number.equals("")) {
@@ -73,6 +72,9 @@ public class LimitlessNumber {
 		this.checkNumber();
 	}
 	
+	public void abs() {
+		this.prefix.abs();
+	}
 	
 	private BigDecimal transferTo(String system) {
 		for(int i = 0; i < POSTFIX_MAS.length; i++) {
@@ -87,14 +89,16 @@ public class LimitlessNumber {
 					this.prefix = this.prefix.divide(BigDecimal.valueOf(Math.pow(10, (sPostfix - fPostfix) * 3)));
 					this.postfix = system;
 					break;
+				} else {
+					break;
 				}
 			}
 			
 			if(i == POSTFIX_MAS.length - 1 ) {
-				throw new IllegalArgumentException("Such s system does not exist!"); 
+				throw new IllegalArgumentException("Such system does not exist!"); 
 			}
 		}
-
+		
 		return this.prefix;
 	}
 	
@@ -104,16 +108,15 @@ public class LimitlessNumber {
 	}
 	
 	public int compareTo(LimitlessNumber number) {
+		String numberPost = number.postfix;
 		number.transferTo(this.postfix);
 		if(this.prefix.compareTo(number.prefix) == -1){
-			number.transferTo(number.postfix);
+			number.transferTo(numberPost);
 			return -1;
 		} else if(this.prefix.compareTo(number.prefix) == 1) {
-			number.transferTo(number.postfix);
+			number.transferTo(numberPost);
 			return 1;
 		}
-		
-		number.transferTo(number.postfix);
 		return 0;
 	}
 	
@@ -128,9 +131,9 @@ public class LimitlessNumber {
 				}
 			}
 	
-			//number > 1000
+			//number >= 1000
 			while(this.prefix.compareTo(BigDecimal.valueOf(1000)) != -1) {
-				if(!this.postfix.equals(POSTFIX_MAS[POSTFIX_MAS.length])) {
+				if(!this.postfix.equals(POSTFIX_MAS[POSTFIX_MAS.length - 1])) {
 					this.prefix = this.prefix.divide(BigDecimal.valueOf(1000));
 					this.postfix = POSTFIX_MAS[Arrays.asList(POSTFIX_MAS).indexOf(this.postfix) + 1];
 				}

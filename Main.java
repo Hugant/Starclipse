@@ -1,7 +1,7 @@
 package Starclipse;
 
 import java.math.BigDecimal;
-import Hugant.Building.StarshipsFactory.*;
+import Starclipse.Building.StarshipsFactory.*;
 import Starclipse.LimitlessNumber;
 
 public class Main{
@@ -23,12 +23,12 @@ public class Main{
 
 		//System.out.println(a.subtract(b).toString());
 		
-		LimitlessNumber a = new LimitlessNumber("0");
-		a.add("1.123GaV");
-		Subject b = new Subject("a", "100");
-		Subject c = new Subject("a", "100");
+		//a.add("1.123GaV");
+		Subject b = new Subject("a", "121B", "100T");
+		Subject c = new Subject("a", "100B", "100T");
 		b.add(c);
-		//a.minus("2.246BaM");
-		System.out.println(a.getNumber());
+		
+		System.out.println(b.getNumber());
+		System.out.println(c.getNumber());
 	}
 }
