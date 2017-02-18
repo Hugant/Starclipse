@@ -24,18 +24,16 @@ public class Subject {
 		this.name = name.toLowerCase();
 	}
 
-	///////////////////////////////////////////////////////////////
+
 	public void add(Subject subject) {
 		if(this.name.equals(subject.name)) {
 			this.value.add(subject.value);
+			
+			if(this.maxValue.compareTo("0") == 1 && this.value.compareTo(this.maxValue) == 1) {
+				this.value = this.maxValue;
+			}
 		} else {
 			throw new ArithmeticException("Arithmetic operations can only be done with the same material");
-		}
-		
-		if(this.maxValue.compareTo("0") == 1 && this.value.compareTo(this.maxValue) == 1) {
-			this.value.minus(this.maxValue);
-			subject.value = this.value;
-			this.value = new LimitlessNumber(this.maxValue.getPrefix() + this.maxValue.getPostfix());
 		}
 	}
 	
@@ -43,14 +41,12 @@ public class Subject {
 	public void minus(Subject subject) {
 		if(this.name.equals(subject.name)) {
 			this.value.minus(subject.value);
+			
+			if(this.value.compareTo("0") == -1) {
+				this.value = new LimitlessNumber("0");
+			}
 		} else {
 			throw new ArithmeticException("Arithmetic operations can only be done with the same material");
-		}
-		
-		if(this.value.compareTo("0") == -1) {
-			this.value.abs();
-			subject.value = new LimitlessNumber(this.value.toString());
-			this.value = new LimitlessNumber("0");
 		}
 	}
 	
