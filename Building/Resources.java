@@ -26,17 +26,11 @@ public class Resources {
 			if(subjects.isEmpty()) {
 				subjects.add(new Subject(i, "0"));
 			} else {
-				subjects.
-				System.out.println(subjects.contains(new Subject(i, "0")));
 				if(!subjects.contains(new Subject(i, "0"))) {
 					subjects.add(new Subject(i, "0"));
 				}
 			}
-		}
-		
-		for(Subject i : subjects) {
-			System.out.println(i.getName());
-			}
+		}	
 	}
 	
 	public Resources(int i, String... res) {
@@ -50,104 +44,15 @@ public class Resources {
 		
 	}
 	
-	private void addStorage(String res, int volume) {
-		switch(res) {
-			case "tree":
-				this.tree.setMaxValue(Integer.parseInt(this.tree.getMaxValue().toString()) + volume); 
-				break;
-			case "iron":
-				this.iron.setMaxValue(Integer.parseInt(this.iron.getMaxValue().toString()) + volume); 
-				break;
-			case "gold":
-				this.gold.setMaxValue(Integer.parseInt(this.gold.getMaxValue().toString()) + volume); 
-				break;
-			case "energy":
-				this.energy.setMaxValue(Integer.parseInt(this.energy.getMaxValue().toString()) + volume); 
-				break;			
-			case "water":
-				this.water.setMaxValue(Integer.parseInt(this.water.getMaxValue().toString()) + volume); 
-				break;
-			case "oxygen":
-				this.oxygen.setMaxValue(Integer.parseInt(this.oxygen.getMaxValue().toString()) + volume); 
-				break;
-			case "coal":
-				this.coal.setMaxValue(Integer.parseInt(this.coal.getMaxValue().toString()) + volume); 
-				break;
-			case "stone":
-				this.stone.setMaxValue(Integer.parseInt(this.stone.getMaxValue().toString()) + volume); 
-				break;
-			case "food":
-				this.food.setMaxValue(Integer.parseInt(this.food.getMaxValue().toString()) + volume); 
-				break;
-			case "money":
-				this.money.setMaxValue(Integer.parseInt(this.money.getMaxValue().toString()) + volume); 
-				break;
-			default:
-				throw new UnsupportedOperationException("Such a resource does not exist");
-		}
-	}
-	
-	public String get(String res) {
-		switch(res) {
-			case "tree":   return this.tree.getNumber();
-			case "iron":   return this.iron.getNumber();
-			case "gold":   return this.gold.getNumber();
-			case "energy": return this.energy.getNumber();
-			case "water":  return this.water.getNumber();
-			case "oxygen": return this.oxygen.getNumber();
-			case "coal":   return this.coal.getNumber();	
-			case "stone":  return this.stone.getNumber();
-			case "food":   return this.food.getNumber();
-			case "money":  return this.money.getNumber();
-			default:
-				throw new UnsupportedOperationException("Such a resource does not exist");
-		}
-	}
-	
-	/*public int addResource(String res, int volume) {
-		switch(res) {
-			case "tree":   return tree;
-			case "iron":   return iron;
-			case "gold":   return gold;
-			case "energy": return energy;
-			case "water":  return water;
-			case "oxygen": return oxygen;
-			case "coal":   return coal;	
-			case "stone":  return stone;
-			case "food":   return food;
-			case "money":  return money;
-			default:
-				throw new UnsupportedOperationException("Such a resource does not exist");
-		}
-	}*/
-	
-	private void expenses(String res, String volume) {
-		switch(res) {
-			case "tree":   this.tree.add(volume);   break;
-			case "iron":   this.iron.add(volume);   break;
-			case "gold":   this.gold.add(volume);   break;
-			case "energy": this.energy.add(volume); break;
-			case "water":  this.water.add(volume);  break;
-			case "oxygen": this.oxygen.add(volume); break;
-			case "coal":   this.coal.add(volume);   break;	
-			case "stone":  this.stone.add(volume);  break;
-			case "food":   this.food.add(volume);   break;
-			case "money":  this.food.add(volume);   break;
-			default:
-				throw new UnsupportedOperationException("Such a resource does not exist");
-		}
-	}
-	
-	/*public void get() {
-		System.out.println("t = " + this.sTree);
-		System.out.println("i = " + this.sIron);
-		System.out.println("g = " + this.sGold);
-		System.out.println("e = " + this.sEnergy);
-		System.out.println("w = " + this.sWater);
-		System.out.println("o = " + this.sOxygen);
-		System.out.println("c = " + this.sCoal);
-		System.out.println("s = " + this.sStone);
-		System.out.println("f = " + this.sFood);
-		System.out.println("m = " + this.sMoney);
-	}*/
+//	private void addStorage(String res, int volume) {
+//		
+//	}
+//	
+//	public String get(String res) {
+//		
+//	}
+//	
+//	private void expenses(String res, String volume) {
+//		throw new UnsupportedOperationException("Such a resource does not exist");
+//	}
 }

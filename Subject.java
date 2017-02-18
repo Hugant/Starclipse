@@ -92,10 +92,13 @@ public class Subject {
 		return this.name;
 	}
 	
-	public boolean equals(Subject o) {
-		if(this.name.equals(o.name)) 
-			return true;
-		
+	@Override
+	public boolean equals(Object o) {
+		if(o != null && o instanceof Subject) {
+			if(this.name.equals(((Subject) o).name)) 
+				return true;
+		}
+
 		return false;
 	}
 }
