@@ -2,6 +2,8 @@ package Starclipse.Building;
 
 import Starclipse.Subject;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 
 public class Resources {
 	private Subject tree = new Subject("tree", "0");
@@ -19,30 +21,25 @@ public class Resources {
 	//building time 
 	//
 	
-	public Resources(String volume, String... res) {
-		for(String i : res) { 
-			for(Subject subject : subjects) {
-				if(subject.getName().equals(i)) {
-					subject.setMaxValue(subject.getMaxValue())
+	public Resources(String... res) {
+		for(String i : res) {
+			if(subjects.isEmpty()) {
+				subjects.add(new Subject(i, "0"));
+			} else {
+				subjects.
+				System.out.println(subjects.contains(new Subject(i, "0")));
+				if(!subjects.contains(new Subject(i, "0"))) {
+					subjects.add(new Subject(i, "0"));
 				}
 			}
 		}
 		
-		for(String i : res) {
-			if(!subjects.contains(i)) {
-				subjects.add(new Subject(i, "0", volume));
-			} else {
-				Subject a = subjects.get(subjects.indexOf(i));
-				a.add(volume);
-				subjects.set(subjects.indexOf(i), a);
+		for(Subject i : subjects) {
+			System.out.println(i.getName());
 			}
-		}
-		for(String i : res) {
-			this.addStorage(i.toLowerCase(), volume);
-		}
 	}
 	
-	public Resources(String... res) {
+	public Resources(int i, String... res) {
 		if(res.length % 2 != 0) {
 			throw new IllegalArgumentException("The number of array elements must be even");
 		} else {
