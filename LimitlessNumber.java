@@ -32,6 +32,8 @@ public class LimitlessNumber {
 		}
 	}
 	
+	
+	
 	public void add(String number) {
 		this.add(new LimitlessNumber(number));
 	}
@@ -53,6 +55,7 @@ public class LimitlessNumber {
 	}
 	
 	
+	
 	public void minus(String number) {
 		this.minus(new LimitlessNumber(number));
 	}
@@ -68,9 +71,11 @@ public class LimitlessNumber {
 		} else {
 			this.prefix = this.prefix.subtract(number.prefix);
 		}
-		
+
 		this.checkNumber();
 	}
+	
+	
 	
 	public void abs() {
 		this.prefix.abs();
@@ -103,6 +108,7 @@ public class LimitlessNumber {
 	}
 	
 	
+	
 	public int compareTo(String number) {
 		return this.compareTo(new LimitlessNumber(number));
 	}
@@ -121,10 +127,11 @@ public class LimitlessNumber {
 	}
 	
 	
+	
 	private void checkNumber() {
-		if(this.prefix.compareTo(BigDecimal.valueOf(0)) != 0) {
+		if(this.prefix.compareTo(BigDecimal.valueOf(0)) == 1) {
 			// number < 1, but number > 0
-			while(this.prefix.compareTo(BigDecimal.valueOf(1)) == -1) {
+			while(this.prefix.compareTo(BigDecimal.valueOf(1)) == -1) {	
 				if(!this.postfix.equals("")) {
 					this.prefix = this.prefix.multiply(BigDecimal.valueOf(1000));
 					this.postfix = POSTFIX_MAS[Arrays.asList(POSTFIX_MAS).indexOf(this.postfix) - 1];
