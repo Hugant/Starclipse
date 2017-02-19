@@ -1,9 +1,8 @@
 package Starclipse.Building;
 
 import Starclipse.Subject;
+import Starclipse.LimitlessNumber;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
 
 public class Resources {
 	private Subject tree = new Subject("tree", "0");
@@ -21,38 +20,28 @@ public class Resources {
 	//building time 
 	//
 	
-	public Resources(String... res) {
+	public Resources(LimitlessNumber volume, String... res) {
 		for(String i : res) {
-			if(subjects.isEmpty()) {
-				subjects.add(new Subject(i, "0"));
+			if(!subjects.contains(new Subject(i, "0"))) {
+				subjects.add(new Subject(i, "0", volume.getPrefix() + volume.getPostfix()));
 			} else {
-				if(!subjects.contains(new Subject(i, "0"))) {
-					subjects.add(new Subject(i, "0"));
-				}
+				subjects.get(subjects.indexOf(new Subject(i, "0"))).addToMaxValue(volume.getPrefix() + volume.getPostfix());
 			}
 		}	
 	}
 	
-	public Resources(int i, String... res) {
+	public Resources(String... res) {
 		if(res.length % 2 != 0) {
 			throw new IllegalArgumentException("The number of array elements must be even");
 		} else {
 			for(int i = 0; i < res.length; i += 2) {
-				this.expenses(res[i].toLowerCase(), res[i + 1]);
+				if(subjects.contains(new Subject(res[i], "0"))) {
+					subjects.clear();
+					throw new IllegalArgumentException("There are two of the same item");
+				} else {
+					subjects.add(new Subject(res[i], res[i + 1]));
+				}
 			}
 		}
-		
 	}
-	
-//	private void addStorage(String res, int volume) {
-//		
-//	}
-//	
-//	public String get(String res) {
-//		
-//	}
-//	
-//	private void expenses(String res, String volume) {
-//		throw new UnsupportedOperationException("Such a resource does not exist");
-//	}
 }

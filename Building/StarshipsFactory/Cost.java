@@ -7,7 +7,6 @@ public class Cost {
 	private int manpower = 0;
 	private int volume = 300;// the amount of resources per unit 
 	
-	private int moneyCost = 0;
 	//private int buildingTime = 0;
 	private Resources needResources = null;
 	
