@@ -1,11 +1,12 @@
 package Starclipse.Building.StarshipsFactory;
 
 import Starclipse.Building.Resources;
+import Starclipse.LimitlessNumber;
 
 public class Cost {
 	private Resources res;
 	private int manpower = 0;
-	private int volume = 300;// the amount of resources per unit 
+	private LimitlessNumber volume = new LimitlessNumber("300");// the amount of resources per unit 
 	
 	//private int buildingTime = 0;
 	private Resources needResources = null;
@@ -37,15 +38,7 @@ public class Cost {
 		return this.manpower;
 	}
 	
-	public int getMoneyCost() {
-		return this.moneyCost;
-	}
-	
 	public Resources getNeedResources() {
 		return this.needResources;
 	}
-	
-	//public void ret() {
-	//	res.get();
-	//}
 }
