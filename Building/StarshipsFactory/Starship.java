@@ -3,24 +3,21 @@ package Starclipse.Building.StarshipsFactory;
 import Starclipse.Building.Resources;
 
 public class Starship {
-	private byte damage = 0;
-	private byte speed = 0;
-	private Cost cost = null;
-	private short passenger = 0;	
 	private static final byte PASSENGER_VOLUME = 10;// quantity per unit
+	private static final String NAMES_MAS[] = {"Crimson", "Wenda", ""};
+	
+	
+	private int damage = 0;
+	private int speed = 0;
+	private int passenger = 0;
+	private Cost cost = null;
+		
 	
 	private int residents = 0;
 	private int manpower = 5;// 2(pilots) , 3(mechanics)
 	
 	private String name = "";
-	
-	private static final String nameMas[] = {"Crimson", "Wenda", ""};
-	
-	//private int moneyCost = 0;
-	//private int buildingTime = 0;
 	private Resources expenses = null;
-	
-	//private int incomeTime = 0;
 	
 	public Starship(String name, Cost cost, String... cells) {
 		if(cells.length != 5) {
@@ -50,7 +47,6 @@ public class Starship {
 						} else {
 							this.cost = cost;
 							this.manpower += cost.getManpower();
-							//cost.ret();
 						}
 						break;
 						

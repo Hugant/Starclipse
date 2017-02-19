@@ -7,11 +7,8 @@ public class Cost {
 	private Resources res;
 	private int manpower = 0;
 	private LimitlessNumber volume = new LimitlessNumber("300");// the amount of resources per unit 
-	
-	//private int buildingTime = 0;
 	private Resources needResources = null;
 	
-	//private int incomeTime = 0;
 	
 	public Cost(String... cells) {
 		if(cells.length != 5) {// only 5 cells

@@ -1,17 +1,13 @@
 package Starclipse.Building.Warehouse;
 
 import Starclipse.Building.Resources;
+import Starclipse.LimitlessNumber;
 
 public class Warehouse {
 	private Resources res;
 	private int manpower = 10;// 10(protection)
-	private int volume = 500;// the amount of resources per unit 
-	
-	private int moneyCost = 0;
-	//private int buildingTime = 0;
+	private LimitlessNumber volume = new LimitlessNumber("500");// the amount of resources per unit 
 	private Resources needResources = null;
-	
-	//private int incomeTime = 0;
 	
 	public Warehouse(String[] cells) {
 		if(cells.length != 6) {
