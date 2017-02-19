@@ -75,11 +75,7 @@ public class LimitlessNumber {
 		this.checkNumber();
 	}
 	
-	
-	
-	public void abs() {
-		this.prefix.abs();
-	}
+
 	
 	private BigDecimal transferTo(String system) {
 		for(int i = 0; i < POSTFIX_MAS.length; i++) {
