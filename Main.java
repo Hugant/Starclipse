@@ -14,5 +14,6 @@ public class Main{
 								    "iron",   "10",  
 								    "water",  "10", 
 								    "energy", "10"  );
+		System.out.println("hugant");
 	}
 }

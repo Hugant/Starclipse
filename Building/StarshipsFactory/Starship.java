@@ -12,7 +12,6 @@ public class Starship {
 	private int passenger = 0;
 	private Cost cost = null;
 		
-	
 	private int residents = 0;
 	private int manpower = 5;// 2(pilots) , 3(mechanics)
 	
