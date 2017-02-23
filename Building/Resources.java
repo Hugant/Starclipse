@@ -48,6 +48,14 @@ public class Resources {
 		}
 	}
 	
+	public Subject get(String name) {
+		if(subjects.contains(new Subject(name, "0"))) {
+			return subjects.get(subjects.indexOf(new Subject(name, "0")));
+		} else {
+			throw new ArithmeticException("No suck element exists");
+		}
+	}
+	
 	public void get() {
 		for(Subject i : subjects) {
 			if(i.getName().equals("tree"))
