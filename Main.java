@@ -15,6 +15,6 @@ public class Main{
 //								    "water",  "10", 
 //								    "energy", "10"  );
 		a.add(new Subject("iron", "100B"));
-		System.out.println(a.get("iron").toString());
+		System.out.println(a.get("iron"));
 	}
 }

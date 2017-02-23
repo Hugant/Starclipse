@@ -4,7 +4,7 @@ import Starclipse.Building.Resources;
 import Starclipse.LimitlessNumber;
 
 public class Cost {
-	private Resources res;
+	private Resources resources;
 	private int manpower = 0;
 	private LimitlessNumber volume = new LimitlessNumber("300");// the amount of resources per unit 
 	private Resources needResources = null;
@@ -14,7 +14,7 @@ public class Cost {
 		if(cells.length != 5) {// only 5 cells
 			throw new IllegalArgumentException("The number of elements in the string array must be equal to 5");
 		} else {
-			res = new Resources(volume, cells);
+			resources = new Resources(volume, cells);
 			for(String i : cells) {
 				switch(i) {
 					case "tree":   this.manpower += 1; break;
