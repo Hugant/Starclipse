@@ -15,9 +15,6 @@ public class Main{
 //								    "water",  "10", 
 //								    "energy", "10"  );
 		a.add(new Subject("iron", "100B"));
-		a.get();
-		a.minus(new Subject("gold", "1"));
-		a.minus(new Subject("iron", "40M"));
-		a.get();
+		System.out.println(a.get("iron").toString());
 	}
 }

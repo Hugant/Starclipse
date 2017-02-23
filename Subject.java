@@ -101,4 +101,9 @@ public class Subject {
 
 		return false;
 	}
+	
+	@Override
+	public String toString() {
+		return this.name + " " + this.getNumber();
+	}
 }
