@@ -12,7 +12,6 @@ public class LimitlessNumber {
 	private String postfix = "";// system
 
 	
-
 	public LimitlessNumber(String number) {
 		if(!number.equals("")) {
 			for(int i = POSTFIX_MAS.length - 1; i > 0; i--) {
