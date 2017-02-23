@@ -31,28 +31,4 @@ public class Resources {
 			}
 		}
 	}
-	
-	public void add(Subject sub) {
-		if(subjects.contains(sub)) {
-			
-		} else {
-			
-		}
-	}
-	
-	public void minus(Subject sub) {
-		if(subjects.contains(sub)) {
-			
-		} else {
-			
-		}
-	}
-	
-	public void get() {
-		for(Subject i : subjects) {
-			if(i.getName().equals("tree"))
-				i.minus(new Subject("tree", "100B"));
-			System.out.println(i.getName() + ": " + i.getNumber());
-		}
-	}
 }

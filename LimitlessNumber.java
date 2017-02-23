@@ -67,9 +67,7 @@ public class LimitlessNumber {
 		if(fPostfix > sPostfix) {
 			this.prefix = this.prefix.subtract(number.transferTo(this.postfix));
 		} else if(fPostfix < sPostfix) {
-			this.prefix = BigDecimal.valueOf(0);
-			this.postfix = "";
-			//throw new ArithmeticException("You cannot subtract more from lot!"); 
+			throw new ArithmeticException("You cannot subtract more frome lot!"); 
 		} else {
 			this.prefix = this.prefix.subtract(number.prefix);
 		}
