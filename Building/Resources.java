@@ -34,17 +34,17 @@ public class Resources {
 	
 	public void add(Subject sub) {
 		if(subjects.contains(sub)) {
-			
+			subjects.get(subjects.indexOf(sub)).add(sub);;
 		} else {
-			
+			throw new ArithmeticException("No such element exists");
 		}
 	}
 	
 	public void minus(Subject sub) {
 		if(subjects.contains(sub)) {
-			
+			subjects.get(subjects.indexOf(sub)).minus(sub);
 		} else {
-			
+			throw new ArithmeticException("No suck element exists");
 		}
 	}
 	
