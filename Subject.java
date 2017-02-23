@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class Subject {
 	private LimitlessNumber value;
-	private LimitlessNumber maxValue;
+	private LimitlessNumber maxValue = new LimitlessNumber("0");
 	private String name = "";
 	
 	
