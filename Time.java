@@ -7,4 +7,8 @@ public class Time {
 	final static long SECOND = 1000L;
 	long duration = 0;
 	long start = 0;
+	
+	public Time(long duration) {
+		this.duration = duration;	
+	}
 }
