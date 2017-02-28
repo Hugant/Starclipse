@@ -7,7 +7,9 @@ public class Timer {
 	final static long HOUR = 3600000L;
 	final static long MINUTE = 60000L;
 	final static long SECOND = 1000L;
+	
 	long duration = 0;
+	long timer = 0;
 	long start = 0;
 	
 	public Timer(long duration) {
