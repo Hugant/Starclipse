@@ -22,16 +22,16 @@ public class Timer {
 	
 	@Override
 	public String toString() {
-		if(getDays() > 0) {
-			return  getDays() + "d " +
-					(getHours()   < 10 ? "0" + getHours()   : getHours())   + ":" + 
-					(getMinutes() < 10 ? "0" + getMinutes() : getMinutes()) + ":" + 
-					(getSeconds() < 10 ? "0" + getSeconds() : getSeconds());
+		if(getDays(timer) > 0) {
+			return  getDays(timer) + "d " +
+					(getHours(timer)   < 10 ? "0" + getHours(timer)   : getHours(timer))   + ":" + 
+					(getMinutes(timer) < 10 ? "0" + getMinutes(timer) : getMinutes(timer)) + ":" + 
+					(getSeconds(timer) < 10 ? "0" + getSeconds(timer) : getSeconds(timer));
 		}
 		
-		return  (getHours()   < 10 ? "0" + getHours()   : getHours())   + ":" + 
-				(getMinutes() < 10 ? "0" + getMinutes() : getMinutes()) + ":" + 
-				(getSeconds() < 10 ? "0" + getSeconds() : getSeconds());
+		return  (getHours(timer)   < 10 ? "0" + getHours(timer)   : getHours(timer))   + ":" + 
+				(getMinutes(timer) < 10 ? "0" + getMinutes(timer) : getMinutes(timer)) + ":" + 
+				(getSeconds(timer) < 10 ? "0" + getSeconds(timer) : getSeconds(timer));
 	}
 	
 	private long getDays() {
