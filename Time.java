@@ -11,4 +11,18 @@ public class Time {
 	public Time(long duration) {
 		this.duration = duration;	
 	}
+	
+	@Override
+	public String toString() {
+		if(getDays() > 0) {
+			return  getDays() + "d " +
+					(getHours()   < 10 ? "0" + getHours()   : getHours())   + ":" + 
+					(getMinutes() < 10 ? "0" + getMinutes() : getMinutes()) + ":" + 
+					(getSeconds() < 10 ? "0" + getSeconds() : getSeconds());
+		}
+		
+		return  (getHours()   < 10 ? "0" + getHours()   : getHours())   + ":" + 
+				(getMinutes() < 10 ? "0" + getMinutes() : getMinutes()) + ":" + 
+				(getSeconds() < 10 ? "0" + getSeconds() : getSeconds());
+	}
 }
