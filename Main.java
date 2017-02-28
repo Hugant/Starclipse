@@ -7,6 +7,7 @@ import Starclipse.Building.Resources;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Date;
+import Starclipse.Time;
 
 public class Main{
 	public static void main(String args[]) {
@@ -35,15 +36,15 @@ public class Main{
 //		
 //		System.out.println(end.getTime());
 		
-		Date a = new Date();
-		Date b = new Date(10000);
+//		Date b = new Date(10000);
+//		Calendar c = new GregorianCalendar();
+//		
+//		System.out.println(c.getTime());
+//		c.add(Calendar.MILLISECOND, 86400000);
+//		System.out.println(c.getTime());
 		
-		long end = a.getTime() + b.getTime();
-		Date c = new Date(end);
-		System.out.println(b.toString());
-		System.out.println(a.toString());
-		System.out.println(c.toString());
-		
+		Time a = new Time(Time.HOUR * 5 + Time.SECOND * 2 + Time.DAY * 123);
+		System.out.println(a);
 		
 	}
 }
