@@ -25,4 +25,20 @@ public class Time {
 				(getMinutes() < 10 ? "0" + getMinutes() : getMinutes()) + ":" + 
 				(getSeconds() < 10 ? "0" + getSeconds() : getSeconds());
 	}
+	
+	private long getDays() {
+		return this.duration / DAY;
+	}
+	
+	private long getHours() {
+		return (this.duration % DAY) / HOUR;
+	}
+	
+	private long getMinutes() {
+		return ((this.duration % DAY) % HOUR) / MINUTE;
+	}
+	
+	private long getSeconds() {
+		return (((this.duration % DAY) % HOUR) % MINUTE) / SECOND;
+	}
 }
