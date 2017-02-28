@@ -16,6 +16,10 @@ public class Timer {
 		this.duration = duration;	
 	}
 	
+	public void start() {
+		this.start = new Date().getTime();
+	}
+	
 	@Override
 	public String toString() {
 		if(getDays() > 0) {
