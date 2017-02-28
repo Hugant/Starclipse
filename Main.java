@@ -44,6 +44,7 @@ public class Main{
 //		System.out.println(c.getTime());
 		
 		Timer a = new Timer(Timer.HOUR * 5 + Timer.SECOND * 2 + Timer.DAY * 123);
+		a.start();
 		System.out.println(a);
 		
 	}

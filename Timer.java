@@ -1,5 +1,7 @@
 package Starclipse;
 
+import java.util.Date;
+
 public class Timer {
 	final static long DAY = 86400000L;
 	final static long HOUR = 3600000L;
