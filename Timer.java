@@ -34,19 +34,19 @@ public class Timer {
 				(getSeconds(timer) < 10 ? "0" + getSeconds(timer) : getSeconds(timer));
 	}
 	
-	private long getDays() {
-		return this.duration / DAY;
+	private long getDays(long time) {
+		return time / DAY;
 	}
 	
-	private long getHours() {
-		return (this.duration % DAY) / HOUR;
+	private long getHours(long time) {
+		return (time % DAY) / HOUR;
 	}
 	
-	private long getMinutes() {
-		return ((this.duration % DAY) % HOUR) / MINUTE;
+	private long getMinutes(long time) {
+		return ((time % DAY) % HOUR) / MINUTE;
 	}
 	
-	private long getSeconds() {
-		return (((this.duration % DAY) % HOUR) % MINUTE) / SECOND;
+	private long getSeconds(long time) {
+		return (((time % DAY) % HOUR) % MINUTE) / SECOND;
 	}
 }
