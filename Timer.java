@@ -1,6 +1,6 @@
 package Starclipse;
 
-public class Time {
+public class Timer {
 	final static long DAY = 86400000L;
 	final static long HOUR = 3600000L;
 	final static long MINUTE = 60000L;
@@ -8,7 +8,7 @@ public class Time {
 	long duration = 0;
 	long start = 0;
 	
-	public Time(long duration) {
+	public Timer(long duration) {
 		this.duration = duration;	
 	}
 	

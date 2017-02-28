@@ -7,7 +7,7 @@ import Starclipse.Building.Resources;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Date;
-import Starclipse.Time;
+import Starclipse.Timer;
 
 public class Main{
 	public static void main(String args[]) {
@@ -43,7 +43,7 @@ public class Main{
 //		c.add(Calendar.MILLISECOND, 86400000);
 //		System.out.println(c.getTime());
 		
-		Time a = new Time(Time.HOUR * 5 + Time.SECOND * 2 + Time.DAY * 123);
+		Timer a = new Timer(Timer.HOUR * 5 + Timer.SECOND * 2 + Timer.DAY * 123);
 		System.out.println(a);
 		
 	}
