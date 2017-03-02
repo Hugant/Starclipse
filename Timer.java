@@ -2,7 +2,7 @@ package Starclipse;
 
 import java.util.Date;
 
-/** My class */
+/** The Timer class allows you to create a time counter(timer).*/
 public class Timer {
 
 	/**The number of milliseconds in the day {@value #DAY}ms*/
@@ -25,7 +25,7 @@ public class Timer {
      * <pre>  <b>duration</b> the number of the milliseconds.</pre>
      * 
      * <p>
-     * <strong>Example: </strong>
+     * <strong>Examples: </strong>
      * <pre>
      * <code> Timer timer = new Timer(1000);// 1s
      *  Timer timer = new Timer(Timer.HOUR * 4);// 4h
@@ -45,6 +45,17 @@ public class Timer {
 		this.finish = new Date().getTime() + this.duration;
 	}
 	
+	
+	/**
+	 * Return the remaining of the timer in the format <b><code>1d 9h 31m 5s</code></b>.
+	 * <br>
+	 * If the timer has no starting counting will return <b><code>Start</code></b>.
+	 * <br>
+	 * If the timer has finished the counting will return <b><code>Claim</code></b>.
+	 * 
+	 * @return String in the format:<b> <code>(dd)d (hh)h (mm)m (ss)s</code></b> 
+	 *  	   or <b><code>Start</code></b> or <b><code>Claim</code></b>.
+	 */
 	@Override
 	public String toString() {
 		long timer = this.finish - new Date().getTime();
@@ -61,6 +72,24 @@ public class Timer {
 		return "Claim";
 	}
 	
+	
+	/**
+	 * Return the remaining of the timer in the your format.
+	 * <p>
+	 * dd - days<br>
+	 * hh - hours<br>
+	 * mm - minutes<br>
+	 * ss - seconds<br>
+	 * 
+	 * <p>
+	 * <strong>Example:</strong>
+	 * <pre>
+	 * <code> new Timer(1000).toString(seconds: ss);// seconds: 1
+	 *  new Timer(Timer.Day + Timer.MINUTE * 30).toString(ddd hhh mmm sss);// 1d 0h 30m 0s
+	 * 
+	 * @param format is your format of the output
+	 * @return String in your <b><code>format</code></b> or <b><code>Start</code></b> or <b><code>Claim</code></b>.
+	 */
 	public String toString(String format) {
 		long timer = this.finish - new Date().getTime();
 		
