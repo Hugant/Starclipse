@@ -17,7 +17,7 @@ public class Timer {
 	}
 	
 	public void start() {
-		this.start = new Date().getTime();
+		this.finish = new Date().getTime() + this.duration;
 	}
 	
 	@Override
