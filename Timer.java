@@ -2,22 +2,45 @@ package Starclipse;
 
 import java.util.Date;
 
+/** My class */
 public class Timer {
-	final static long DAY = 86400000L;
-	final static long HOUR = 3600000L;
-	final static long MINUTE = 60000L;
-	final static long SECOND = 1000L;
+
+	/**The number of milliseconds in the day {@value #DAY}ms*/
+	public static final long DAY = 86400000L;
+	/**The number of milliseconds in the hour {@value #HOUR}ms*/
+	public static final long HOUR = 3600000L;
+	/**The number of milliseconds in the minute {@value #MINUTE}ms*/
+	public static final long MINUTE = 60000L;
+	/**The number of milliseconds in the second {@value #SECOND}ms*/
+	public static final long SECOND = 1000L;
 	
-	long duration = 0;
-	long timer = 0;
-	long start = 0;
 	private long duration = 0;
 	private long finish = 0;
 	
+	/**
+     * Creates a timer a certain amount of time specified in the parameters. 
+     * 
+     * <p>
+     * <strong>Parameters: </strong>
+     * <pre>  <b>duration</b> the number of the milliseconds.</pre>
+     * 
+     * <p>
+     * <strong>Example: </strong>
+     * <pre>
+     * <code> Timer timer = new Timer(1000);// 1s
+     *  Timer timer = new Timer(Timer.HOUR * 4);// 4h
+     *  Timer timer = new Timer(Timer.DAY * 2 + Timer.MINUTE * 50);// 2d 50m
+     *  Timer timer = new Timer(Timer.HOUR * 48);// 2d 
+     * </code></pre>
+     */
 	public Timer(long duration) {
 		this.duration = duration;	
 	}
 	
+	
+	/**
+	 * Starts counting timer.
+	 */
 	public void start() {
 		this.finish = new Date().getTime() + this.duration;
 	}
