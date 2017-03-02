@@ -4,10 +4,10 @@ import java.util.Arrays;
 import java.math.BigDecimal;
 
 public class LimitlessNumber {
-	private static final String[] POSTFIX_MAS = new String[]{ "", "K", "M", "B", "T", "Z", "J", "V",
-													         "BaM", "BaB", "BaT", "BaZ", "BaJ", "BaV",
-													         "GaM", "GaB", "GaT", "GaZ", "GaJ", "GaV" };
-//																							GaV = 10e+57
+	private static final String[] POSTFIX_MAS = new String[]{ "", "K", "M", "B", "T", "V", "Z", "J",
+													         "BaM", "BaB", "BaT", "BaV", "BaZ", "BaJ",
+													         "GaM", "GaB", "GaT", "GaV", "GaZ", "GaJ" };
+//																							GaJ = 10e+57
 	private BigDecimal prefix = new BigDecimal("0");// number
 	private String postfix = "";// system
 
