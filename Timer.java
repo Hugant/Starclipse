@@ -11,6 +11,8 @@ public class Timer {
 	long duration = 0;
 	long timer = 0;
 	long start = 0;
+	private long duration = 0;
+	private long finish = 0;
 	
 	public Timer(long duration) {
 		this.duration = duration;	
