@@ -22,16 +22,18 @@ public class Timer {
 	
 	@Override
 	public String toString() {
-		if(getDays(timer) > 0) {
-			return  getDays(timer) + "d " +
-					(getHours(timer)   < 10 ? "0" + getHours(timer)   : getHours(timer))   + ":" + 
-					(getMinutes(timer) < 10 ? "0" + getMinutes(timer) : getMinutes(timer)) + ":" + 
-					(getSeconds(timer) < 10 ? "0" + getSeconds(timer) : getSeconds(timer));
+		long timer = this.finish - new Date().getTime();
+		
+		if(timer > 0) {
+			return  (getDays(timer)    == 0 ? "" : getDays(timer)    + "d ") + 
+					(getHours(timer)   == 0 ? "" : getHours(timer)   + "h ") + 
+					(getMinutes(timer) == 0 ? "" : getMinutes(timer) + "m ") + 
+					(getSeconds(timer) + "s");
+		} else if(finish == 0) {
+			return "Start";
 		}
 		
-		return  (getHours(timer)   < 10 ? "0" + getHours(timer)   : getHours(timer))   + ":" + 
-				(getMinutes(timer) < 10 ? "0" + getMinutes(timer) : getMinutes(timer)) + ":" + 
-				(getSeconds(timer) < 10 ? "0" + getSeconds(timer) : getSeconds(timer));
+		return "Claim";
 	}
 	
 	private long getDays(long time) {
