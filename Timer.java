@@ -61,6 +61,22 @@ public class Timer {
 		return "Claim";
 	}
 	
+	public String toString(String format) {
+		long timer = this.finish - new Date().getTime();
+		
+		if(timer > 0) {
+			format = format.replace("dd", getDays(timer) + "");
+			format = format.replace("hh", getHours(timer) + "");
+			format = format.replace("mm", getMinutes(timer) + "");
+			format = format.replace("ss", getSeconds(timer) + "");
+			return format;
+		} else if(finish == 0) {
+			return "Start";
+		}
+		
+		return "Claim";
+	}
+	
 	private long getDays(long time) {
 		return time / DAY;
 	}
