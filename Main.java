@@ -1,6 +1,7 @@
 package Starclipse;
 
 import java.math.BigDecimal;
+
 import Starclipse.Building.StarshipsFactory.*;
 import Starclipse.LimitlessNumber;
 import Starclipse.Building.Resources;
@@ -43,9 +44,12 @@ public class Main{
 //		c.add(Calendar.MILLISECOND, 86400000);
 //		System.out.println(c.getTime());
 		
-		Timer a = new Timer(Timer.HOUR * 5 + Timer.SECOND * 2 + Timer.DAY * 123);
+		Timer a = new Timer(Timer.HOUR * 48);
 		a.start();
-		System.out.println(a);
+		while(true){
+			System.out.println(a.toString("ddd hhh mmm sss"));
+		}
+			
 		
 	}
 }
