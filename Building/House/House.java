@@ -56,4 +56,8 @@ public class House {
 	public void build() {
 		buildTime.start();
 	}
+	
+	public int claim() {
+		return 1;
+	}
 }
