@@ -12,7 +12,7 @@ import Starclipse.Timer;
 
 public class Main{
 	public static void main(String args[]) {
-		//Resources a = new Resources(new LimitlessNumber("100M"), "iron", "gold", "coal", "gold");
+//		Resources a = new Resources(new LimitlessNumber("100M"), "iron", "gold", "coal", "gold");
 //		Resources a = new Resources("stone",  "100", 
 //								    "tree",   "50", 
 //								    "money",  "1000", 
