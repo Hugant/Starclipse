@@ -52,4 +52,8 @@ public class House {
 				return;
 		}
 	}
+	
+	public void build() {
+		buildTime.start();
+	}
 }
