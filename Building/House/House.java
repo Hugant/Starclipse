@@ -13,7 +13,6 @@ public class House {
 	private Timer incomeTime;
 	
 	public House(String type) {
-		switch(type) {
 		switch(type.toLowerCase()) {
 			case "big":
 				this.maxResidents = 100;
