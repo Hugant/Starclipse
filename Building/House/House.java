@@ -1,6 +1,7 @@
 package Starclipse.Building.House;
 
 import Starclipse.Building.Resources;
+import Starclipse.Timer;
 
 public class House {
 	private int maxResidents = 0;
