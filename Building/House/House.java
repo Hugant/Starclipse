@@ -8,9 +8,9 @@ public class House {
 	private int residents = 0;
 	private String status = "";
 	private String name = "";
-	private Resources expenses = null;
 	private Timer buildTime;
 	private Timer incomeTime;
+	private Resources expenses = null;
 	
 	public House(String type) {
 		switch(type.toLowerCase()) {
