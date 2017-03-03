@@ -3,6 +3,27 @@ package Starclipse;
 import java.util.Arrays;
 import java.math.BigDecimal;
 
+/**
+ * The class LimitlessNumber allows you to translate number in a more convenient
+ * form for the user.
+ *
+ * <p>
+ * <strong>What number is converted: </strong>
+ * <br>
+ * <pre> 1000 = 1K;
+ *  1000K = 1M;
+ *  1000M = 1B;
+ *  1000B = 1T;
+ *  1000T = 1V;
+ *  1000V = 1Z;
+ *  1000Z = 1J;
+ *  1000J = 1BaM;
+ *  1000BaM = 1BaB;
+ *  ...
+ *  1000GaZ = 1GaJ;
+ * 
+ * @autor
+ */
 public class LimitlessNumber {
 	private static final String[] POSTFIX_MAS = new String[]{ "", "K", "M", "B", "T", "V", "Z", "J",
 													         "BaM", "BaB", "BaT", "BaV", "BaZ", "BaJ",
@@ -11,7 +32,20 @@ public class LimitlessNumber {
 	private BigDecimal prefix = new BigDecimal("0");// number
 	private String postfix = "";// system
 
-	
+   /**
+	* Create number type of LimitlessNumber and convert it to the form
+	* (number)(postfix).
+	*
+	* <p>
+	* <strong>Example:</strong>
+	* <pre><code> LimitlessNumber num = new LimitlessNumber("1000");// 1K
+	*  LimitlessNumber num = new LimitlessNumber("45M");// 45M
+	*  LimitlessNumber num = new LimitlessNumber("1502M");// 1.502B
+	*  LimitlessNumber num = new LimitlessNumber("0.53B");// 530M
+	* 
+	* @params
+	* @returns
+	*/
 	public LimitlessNumber(String number) {
 		if(!number.equals("")) {
 			for(int i = POSTFIX_MAS.length - 1; i > 0; i--) {
@@ -32,11 +66,17 @@ public class LimitlessNumber {
 	}
 	
 	
-	
+   /**
+	* 
+	*/
 	public void add(String number) {
 		this.add(new LimitlessNumber(number));
 	}
 	
+	
+   /**
+	*
+	*/
 	public void add(LimitlessNumber number) {
 		final int fPostfix = Arrays.asList(POSTFIX_MAS).indexOf(this.postfix);
 		final int sPostfix = Arrays.asList(POSTFIX_MAS).indexOf(number.postfix);
@@ -54,11 +94,17 @@ public class LimitlessNumber {
 	}
 	
 	
-	
+   /**
+	*
+	*/
 	public void minus(String number) {
 		this.minus(new LimitlessNumber(number));
 	}
 	
+	
+   /**
+	*
+	*/
 	public void minus(LimitlessNumber number) {
 		final int fPostfix = Arrays.asList(POSTFIX_MAS).indexOf(this.postfix);
 		final int sPostfix = Arrays.asList(POSTFIX_MAS).indexOf(number.postfix);
@@ -105,11 +151,17 @@ public class LimitlessNumber {
 	}
 	
 	
-	
+   /**
+	*
+	*/
 	public int compareTo(String number) {
 		return this.compareTo(new LimitlessNumber(number));
 	}
 	
+	
+   /**
+	*
+	*/
 	public int compareTo(LimitlessNumber number) {
 		String numberPost = number.postfix;
 		number.transferTo(this.postfix);
@@ -123,8 +175,7 @@ public class LimitlessNumber {
 		return 0;
 	}
 	
-	
-	
+
 	private void checkNumber() {
 		if(this.prefix.compareTo(BigDecimal.valueOf(0)) == 1) {
 			// number < 1, but number > 0
@@ -155,19 +206,30 @@ public class LimitlessNumber {
 		}
 	}
 	
+   /**
+	*
+	*/
 	public BigDecimal getPrefix() {
 		return this.prefix;	
 	}
 	
+   /**
+	*
+	*/
 	public String getPostfix() {
 		return this.postfix;
 	}
 	
+   /**
+	*
+	*/
 	public void setPrefix(BigDecimal prefix) {
 		this.prefix = prefix;
 	}
 	
-	public void setPostfix(String postfix) {
+   /**
+	*
+	*/	public void setPostfix(String postfix) {
 		this.postfix = postfix;
 	}
 }
