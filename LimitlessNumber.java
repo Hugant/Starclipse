@@ -10,7 +10,7 @@ import java.math.BigDecimal;
  * <p>
  * <strong>What number is converted: </strong>
  * <br>
- * <pre> 1000 = 1K;
+ * <pre>  1000 = 1K;
  *  1000K = 1M;
  *  1000M = 1B;
  *  1000B = 1T;
@@ -21,8 +21,8 @@ import java.math.BigDecimal;
  *  1000BaM = 1BaB;
  *  ...
  *  1000GaZ = 1GaJ;
- * 
- * @autor
+ * <br>
+ * @author Hugant MD
  */
 public class LimitlessNumber {
 	private static final String[] POSTFIX_MAS = new String[]{ "", "K", "M", "B", "T", "V", "Z", "J",
@@ -38,13 +38,13 @@ public class LimitlessNumber {
 	*
 	* <p>
 	* <strong>Example:</strong>
-	* <pre><code> LimitlessNumber num = new LimitlessNumber("1000");// 1K
+	* <pre><code>  LimitlessNumber num = new LimitlessNumber("1000");// 1K
 	*  LimitlessNumber num = new LimitlessNumber("45M");// 45M
 	*  LimitlessNumber num = new LimitlessNumber("1502M");// 1.502B
 	*  LimitlessNumber num = new LimitlessNumber("0.53B");// 530M
+	* <br>
 	* 
-	* @params
-	* @returns
+	* @param number the string which will be translated
 	*/
 	public LimitlessNumber(String number) {
 		if(!number.equals("")) {
@@ -67,7 +67,9 @@ public class LimitlessNumber {
 	
 	
    /**
+	* Add number to this LimitlessNumber.
 	* 
+	* @param number the string, which you want to add.
 	*/
 	public void add(String number) {
 		this.add(new LimitlessNumber(number));
@@ -75,7 +77,9 @@ public class LimitlessNumber {
 	
 	
    /**
-	*
+	* Add number to this LimitlessNumber.
+	* 
+	* @param number the LimitlessNumber, which you want to add.
 	*/
 	public void add(LimitlessNumber number) {
 		final int fPostfix = Arrays.asList(POSTFIX_MAS).indexOf(this.postfix);
@@ -95,7 +99,9 @@ public class LimitlessNumber {
 	
 	
    /**
-	*
+	* Takes the number from this LimitlessNumber.
+	* 
+	* @param number the string, which you want take.
 	*/
 	public void minus(String number) {
 		this.minus(new LimitlessNumber(number));
@@ -103,7 +109,9 @@ public class LimitlessNumber {
 	
 	
    /**
-	*
+	* Takes the number from this LimitlessNumber.
+	* 
+	* @param number the LimitlessNumber, which you want take.
 	*/
 	public void minus(LimitlessNumber number) {
 		final int fPostfix = Arrays.asList(POSTFIX_MAS).indexOf(this.postfix);
@@ -152,7 +160,9 @@ public class LimitlessNumber {
 	
 	
    /**
-	*
+	* Compare this LimitlessNumber to the string.
+	* 
+	* @param number the string to compare with.
 	*/
 	public int compareTo(String number) {
 		return this.compareTo(new LimitlessNumber(number));
@@ -160,7 +170,9 @@ public class LimitlessNumber {
 	
 	
    /**
-	*
+	* Compare this LimitlessNumber to the LimitlessNumber.
+	* 
+	* @param number the LimitlessNumber to compare with.
 	*/
 	public int compareTo(LimitlessNumber number) {
 		String numberPost = number.postfix;
@@ -207,28 +219,51 @@ public class LimitlessNumber {
 	}
 	
    /**
-	*
+	* Return the BigDecimal number, this prefix.
+	* <br>
+	* <br>
+	* <strong>Example: </strong>
+	* <pre><code> new LimitlessNumber("55B").getPrefix();// 55
+	* </pre></code>
 	*/
 	public BigDecimal getPrefix() {
 		return this.prefix;	
 	}
 	
    /**
-	*
+	* Return the system of the number, this postfix.
+	* <br>
+	* <br>
+	* <strong>Example: </strong>
+	* <pre><code> new LimitlessNumber("324M").getPostfix();// M
 	*/
 	public String getPostfix() {
 		return this.postfix;
 	}
 	
    /**
-	*
+	* Set prefix to this LimitlessNumber.
+	* <br>
+	* <br>
+	* <strong>Example: </strong>
+	* <pre><code> new LimitlessNumber("23B").setPrefix(BigDecimal.valueOf(132));// 132B
+	* <br>
+	* 
+	* @param prefix the number, which replaced this prefix.
 	*/
 	public void setPrefix(BigDecimal prefix) {
 		this.prefix = prefix;
 	}
 	
    /**
-	*
+	* Set postfix to this LimitlessNumber.
+	* <br>
+	* <br>
+	* <strong>Example: </strong>
+	* <pre><code> new LimitlessNumber("43B").setPostfix("J");// 43J
+	* <br>
+	* 
+	* @param postfix the string, which replaced this postfix.
 	*/	public void setPostfix(String postfix) {
 		this.postfix = postfix;
 	}

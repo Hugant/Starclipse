@@ -2,7 +2,11 @@ package Starclipse;
 
 import java.util.Date;
 
-/** The Timer class allows you to create a time counter(timer).*/
+/** 
+ * The Timer class allows you to create a time counter(timer).
+ * <br>
+ * @author Hugant MD
+ */
 public class Timer {
 
 	/**The number of milliseconds in the day {@value #DAY}ms*/
