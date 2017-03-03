@@ -6,8 +6,11 @@ import Starclipse.Timer;
 public class House {
 	private int maxResidents = 0;
 	private int residents = 0;
+	private String status = "";
 	private String name = "";
 	private Resources needResources = null;
+	private Timer buildTime;
+	private Timer incomeTime;
 	
 	public House(String type) {
 		switch(type) {
