@@ -12,6 +12,21 @@ public class House {
 	private Timer incomeTime;
 	private Resources expenses = null;
 	
+	public class Updater extends Thread {
+		public void run() {
+			while(!getStatus().equals("End Work")) {
+				try {
+					updateStatus();
+					System.out.println(getStatus());
+					Thread.sleep(1000);
+				} catch(InterruptedException e) {
+					System.out.println(e.toString());
+				}
+			}
+			
+		}
+	}
+	
 	public House(String type) {
 		switch(type.toLowerCase()) {
 			case "big":
@@ -54,6 +69,20 @@ public class House {
 	
 	public void build() {
 		buildTime.start();
+		Updater updater = new Updater();
+		updater.start();
+	}
+	
+	public void startWork() {
+		
+	}
+	
+	private void updateStatus() {
+		this.status = buildTime.toString();
+	}
+	
+	public String getStatus() {
+		return this.status;
 	}
 	
 	public int claim() {
