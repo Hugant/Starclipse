@@ -9,6 +9,7 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Date;
 import Starclipse.Timer;
+import Starclipse.Building.House.House;
 
 public class Main{
 	public static void main(String args[]) {
@@ -44,11 +45,9 @@ public class Main{
 //		c.add(Calendar.MILLISECOND, 86400000);
 //		System.out.println(c.getTime());
 		
-		Timer a = new Timer(Timer.HOUR * 48);
-		a.start();
-		while(true){
-			System.out.println(a.toString("ddd hhh mmm sss"));
-		}
+		House a = new House("small");
+		a.build();
+		
 			
 		
 	}
