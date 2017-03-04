@@ -70,10 +70,10 @@ public class Timer {
 					(getMinutes(timer) == 0 ? "" : getMinutes(timer) + "m ") + 
 					(getSeconds(timer) + "s");
 		} else if(finish == 0) {
-			return "Start";
+			throw new UnsupportedOperationException("You did not start the timer");
 		}
 		
-		return "Claim";
+		return "End Work";
 	}
 	
 	
