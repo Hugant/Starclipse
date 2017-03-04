@@ -57,8 +57,11 @@ public class Timer {
 	 * <br>
 	 * If the timer has finished the counting will return <b><code>Claim</code></b>.
 	 * 
-	 * @return String in the format:<b> <code>(dd)d (hh)h (mm)m (ss)s</code></b> 
-	 *  	   or <b><code>Start</code></b> or <b><code>Claim</code></b>.
+	 * @exception UnsupportedOperationException
+	 * 
+	 * @return String in the format:<b> <code>(dd)d (hh)h (mm)m (ss)s</code></b>,
+	 * 		   if the timer has finished to count then it will return "End Work",
+	 * 		   if you did not start the timer, pop up UnsupportedOperationException.
 	 */
 	@Override
 	public String toString() {
