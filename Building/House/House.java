@@ -12,18 +12,30 @@ public class House {
 	private Timer incomeTime;
 	private Resources expenses = null;
 	
-	public class Updater extends Thread {
+	private class Updater extends Thread {
 		public void run() {
-			while(!getStatus().equals("End Work")) {
+			while(!buildUpdateStatus().equals("End Work")) {
 				try {
-					updateStatus();
-					System.out.println(getStatus());
 					Thread.sleep(1000);
 				} catch(InterruptedException e) {
 					System.out.println(e.toString());
 				}
 			}
-			
+			startWork();
+		}
+	}
+	
+	private class Worker extends Thread {
+		public void run() {
+			while(!workUpdateStatus().equals("End Work")) {
+				try {
+					Thread.sleep(1000);
+				} catch(InterruptedException e) {
+					System.out.println(e.toString());
+				}
+			}
+			System.out.println("End THREAD!");
+			setStatus("Claim");
 		}
 	}
 	
@@ -33,6 +45,7 @@ public class House {
 				this.maxResidents = 100;
 				this.name = "Big House";
 				this.buildTime = new Timer(Timer.MINUTE + Timer.SECOND * 30);
+				this.incomeTime = new Timer(Timer.SECOND * 20);
 				this.expenses = new Resources("stone",  "100", 
 											  "tree",   "50", 
 											  "money",  "1000", 
@@ -45,6 +58,7 @@ public class House {
 				this.maxResidents = 50;
 				this.name = "Avarage House";
 				this.buildTime = new Timer(Timer.MINUTE * 5);
+				this.incomeTime = new Timer(Timer.SECOND * 20);
 				this.expenses = new Resources("stone",  "50", 
 											  "tree",   "25", 
 											  "money",  "500",
@@ -56,7 +70,8 @@ public class House {
 			case "small":
 				this.maxResidents = 10;
 				this.name = "Small House";
-				this.buildTime = new Timer(Timer.MINUTE * 30);
+				this.buildTime = new Timer(Timer.SECOND * 10);
+				this.incomeTime = new Timer(Timer.SECOND * 10);
 				this.expenses = new Resources("stone",  "12", 
 											  "tree",   "6", 
 											  "money",  "125",
@@ -74,18 +89,33 @@ public class House {
 	}
 	
 	public void startWork() {
-		
+		incomeTime.start();
+		Worker worker = new Worker();
+		worker.start();
 	}
 	
-	private void updateStatus() {
+	private String buildUpdateStatus() {
 		this.status = buildTime.toString();
+		return this.status;
+	}
+	
+	private String workUpdateStatus() {
+		this.status = incomeTime.toString();
+		return this.status;
 	}
 	
 	public String getStatus() {
 		return this.status;
 	}
 	
+	private void setStatus(String status) {
+		this.status = status;
+	}
+	
 	public int claim() {
+		incomeTime.start();
+		Worker worker = new Worker();
+		worker.start();
 		return 1;
 	}
 }

@@ -11,6 +11,7 @@ import java.util.Date;
 import Starclipse.Timer;
 import Starclipse.Building.House.House;
 
+
 public class Main{
 	public static void main(String args[]) {
 //		Resources a = new Resources(new LimitlessNumber("100M"), "iron", "gold", "coal", "gold");
@@ -48,6 +49,24 @@ public class Main{
 		House a = new House("small");
 		a.build();
 		
+		class myThread extends Thread {
+			public void run() {
+				while(true) {
+					try {
+						System.out.println(a.getStatus());
+						if(a.getStatus().equals("Claim")) {
+							a.claim();
+						}
+						Thread.sleep(1000);
+					} catch(InterruptedException e) {
+						System.out.println(e.toString());
+					}
+				}
+			}
+		}
+		
+		myThread b = new myThread();
+		b.start();
 			
 		
 	}
