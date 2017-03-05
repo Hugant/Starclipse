@@ -107,10 +107,10 @@ public class Timer {
 			format = format.replace("ss", getSeconds(timer) + "");
 			return format;
 		} else if(finish == 0) {
-			return "Start";
+			throw new UnsupportedOperationException("You did not start the timer");
 		}
 		
-		return "Claim";
+		return "End Work";
 	}
 	
 	private long getDays(long time) {
