@@ -93,9 +93,13 @@ public class Timer {
 	 * <pre>
 	 * <code> new Timer(1000).toString(seconds: ss);// seconds: 1
 	 *  new Timer(Timer.Day + Timer.MINUTE * 30).toString(ddd hhh mmm sss);// 1d 0h 30m 0s
-	 * 
+	 *  </code></pre>
+	 * <br>
 	 * @param format is your format of the output
-	 * @return String in your <b><code>format</code></b> or <b><code>Start</code></b> or <b><code>Claim</code></b>.
+	 * <br>
+	 * @return String in your <b><code>format</code></b>,
+	 * 		   if the timer has finished to count then it will return "End Work",
+	 * 		   if you did not start the timer, pop up UnsupportedOperationException.
 	 */
 	public String toString(String format) {
 		long timer = this.finish - new Date().getTime();
