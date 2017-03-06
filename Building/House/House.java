@@ -1,4 +1,4 @@
-package Starclipse.Building.House;
+package starclipse.building.house;
 
 import starclipse.building.Resources;
 import starclipse.common.Timer;
