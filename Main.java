@@ -1,15 +1,16 @@
-package Starclipse;
+package starclipse;
 
 import java.math.BigDecimal;
 
-import Starclipse.Building.StarshipsFactory.*;
-import Starclipse.LimitlessNumber;
-import Starclipse.Building.Resources;
+import Starclipse.common.LimitlessNumber;
+import Starclipse.common.Timer;
+import Starclipse.Building.house.House;
+import Starclipse.Building.starships.*;
+import Starclipse.building.Resources;
+
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Date;
-import Starclipse.Timer;
-import Starclipse.Building.House.House;
 
 
 public class Main{
