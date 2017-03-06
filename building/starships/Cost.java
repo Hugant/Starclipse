@@ -1,7 +1,7 @@
-package Starclipse.Building.StarshipsFactory;
+package starclipse.building.starships;
 
-import Starclipse.Building.Resources;
-import Starclipse.LimitlessNumber;
+import starclipse.building.Resources;
+import starclipse.common.LimitlessNumber;
 
 public class Cost {
 	private Resources resources;

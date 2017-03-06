@@ -1,4 +1,4 @@
-package Starclipse;
+package starclipse.common;
 
 import java.util.Date;
 

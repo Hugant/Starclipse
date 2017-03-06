@@ -1,6 +1,6 @@
-package Starclipse.Building.StarshipsFactory;
+package starclipse.building.starships;
 
-import Starclipse.Building.Resources;
+import starclipse.building.Resources;
 
 public class Starship {
 	private static final byte PASSENGER_VOLUME = 10;// quantity per unit

@@ -1,12 +1,14 @@
-package Starclipse.Building.StarshipsFactory;
+package starclipse.building.industry;
 
-import Starclipse.Building.Resources;
+import starclipse.building.starships.Cost;
+import starclipse.building.starships.Starship;
+import starclipse.building.Resources;
 
 public class StarshipsFactory {
 	private String name = "Starships Factory";
 	private Starship starship = null;
 	private int manpower = 0;
-	private Resources needResources = new Resources("iron",   "10K",   
+	private Resources expenses = new Resources("iron",   "10K",   
 													"gold",   "5K",   
 													"tree",   "1K",
 													"stone",  "1K",    
