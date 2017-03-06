@@ -56,12 +56,4 @@ public class Resources {
 			throw new ArithmeticException("No suck element exists");
 		}
 	}
-	
-	public void get() {
-		for(Subject i : subjects) {
-			if(i.getName().equals("tree"))
-				i.minus(new Subject("tree", "100B"));
-			System.out.println(i.getName() + ": " + i.getNumber());
-		}
-	}
 }
