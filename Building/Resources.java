@@ -1,8 +1,9 @@
-package Starclipse.Building;
+package starclipse.building;
 
-import Starclipse.Subject;
-import Starclipse.LimitlessNumber;
 import java.util.ArrayList;
+
+import starclipse.common.LimitlessNumber;
+import starclipse.common.Subject;
 
 public class Resources {
 	private ArrayList<Subject> subjects = new ArrayList<Subject>();
