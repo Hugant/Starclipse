@@ -1,15 +1,15 @@
 package Starclipse.Building.House;
 
-import Starclipse.Building.Resources;
-import Starclipse.Timer;
+import starclipse.building.Resources;
+import starclipse.common.Timer;
+import starclipse.common.Subject;
 
-public class House {
-	private int maxResidents = 0;
-	private int residents = 0;
+public class House implements starclipse.building.Building{
 	private String status = "";
 	private String name = "";
 	private Timer buildTime;
 	private Timer incomeTime;
+	private Subject residents;
 	private Resources expenses = null;
 	
 	private class Updater extends Thread {
@@ -42,7 +42,7 @@ public class House {
 	public House(String type) {
 		switch(type.toLowerCase()) {
 			case "big":
-				this.maxResidents = 100;
+				this.residents = new Subject("residents", "0", "100");
 				this.name = "Big House";
 				this.buildTime = new Timer(Timer.MINUTE + Timer.SECOND * 30);
 				this.incomeTime = new Timer(Timer.SECOND * 20);
@@ -55,7 +55,7 @@ public class House {
 				return;
 				
 			case "avarage":
-				this.maxResidents = 50;
+				this.residents = new Subject("residents", "0", "50");
 				this.name = "Avarage House";
 				this.buildTime = new Timer(Timer.MINUTE * 5);
 				this.incomeTime = new Timer(Timer.SECOND * 20);
@@ -68,7 +68,7 @@ public class House {
 				return;
 				
 			case "small":
-				this.maxResidents = 10;
+				this.residents = new Subject("residents", "0", "10");
 				this.name = "Small House";
 				this.buildTime = new Timer(Timer.SECOND * 10);
 				this.incomeTime = new Timer(Timer.SECOND * 10);
@@ -112,10 +112,10 @@ public class House {
 		this.status = status;
 	}
 	
-	public int claim() {
+	public Subject claim() {
 		incomeTime.start();
 		Worker worker = new Worker();
 		worker.start();
-		return 1;
+		return this.residents;
 	}
 }
