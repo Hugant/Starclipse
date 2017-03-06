@@ -1,7 +1,7 @@
-package Starclipse.Building.Warehouse;
+package starclipse.building.warehouse;
 
-import Starclipse.Building.Resources;
-import Starclipse.LimitlessNumber;
+import starclipse.building.Resources;
+import starclipse.common.LimitlessNumber;
 
 public class Warehouse {
 	private Resources res;
