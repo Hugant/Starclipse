@@ -11,30 +11,51 @@ import java.math.BigDecimal;
  * <strong>What number is converted: </strong>
  * <br>
  * <pre>  1000 = 1K;
- *  1000K = 1M;
- *  1000M = 1B;
- *  1000B = 1T;
- *  1000T = 1V;
- *  1000V = 1Z;
- *  1000Z = 1J;
- *  1000J = 1BaM;
- *  1000BaM = 1BaB;
+ *  1000K = 1M;// Million
+ *  1000M = 1B;// Billion
+ *  1000B = 1T;// Trillion
+ *  1000T = 1V;// Villion
+ *  1000V = 1Z;// Zillion
+ *  1000Z = 1J;// Jillion
+ *  1000J = 1BaM;// BaMillion
+ *  1000BaM = 1BaB;// BaBillion
  *  ...
- *  1000GaZ = 1GaJ;
+ *  1000GaZ = 1GaJ;// GaJillion
  * <br>
  * @author Hugant MD
  */
 public class LimitlessNumber {
+	/**
+	* <b>Contains the names of large numbers: <br></b>
+	* K = 1000, <br>
+	* M - Million = 100K, <br>
+	* B - Billion = 100M, <br>
+	* T - Trillion = 100B, <br>
+	* V - Villion = 100T, <br>
+	* Z - Zillion = 100V, <br>
+	* J - Jillion = 100Z, <br>
+	* BaM - BaMillion = 100J, <br>
+	* BaB - BaBillion = 100BaM, <br>
+	* BaT - BaTrillion = 100BaB, <br>
+	* BaV - BaVillion = 100BaT, <br>
+	* BaZ - BaZillion = 100BaV, <br>
+	* BaJ - BaJillion = 100BaZ, <br>
+	* GaM - GaMillion = 100BaJ, <br>
+	* GaB - GaBillion = 100GaM, <br>
+	* GaT - GaTrillion = 100GaB, <br>
+	* GaV - GaVillion = 100GaT, <br>
+	* GaZ - GaZillion = 100GaV, <br>
+	* GaJ - GaJillion = 100GaZ;
+	*/
 	private static final String[] POSTFIX_MAS = new String[]{ "", "K", "M", "B", "T", "V", "Z", "J",
 													         "BaM", "BaB", "BaT", "BaV", "BaZ", "BaJ",
 													         "GaM", "GaB", "GaT", "GaV", "GaZ", "GaJ" };
-//																							GaJ = 10e+57
-	private BigDecimal prefix = new BigDecimal("0");// number
-	private String postfix = "";// system
+	private BigDecimal prefix = new BigDecimal("0");
+	private String postfix = "";
 
-   /**
+	/**
 	* Create number type of LimitlessNumber and convert it to the form
-	* (number)(postfix).
+	* prefix + postfix.
 	*
 	* <p>
 	* <strong>Example:</strong>
@@ -66,7 +87,7 @@ public class LimitlessNumber {
 	}
 	
 	
-   /**
+	/**
 	* Add number to this LimitlessNumber.
 	* 
 	* @param number the string, which you want to add.
@@ -76,7 +97,7 @@ public class LimitlessNumber {
 	}
 	
 	
-   /**
+	/**
 	* Add number to this LimitlessNumber.
 	* 
 	* @param number the LimitlessNumber, which you want to add.
@@ -98,7 +119,7 @@ public class LimitlessNumber {
 	}
 	
 	
-   /**
+	/**
 	* Takes the number from this LimitlessNumber.
 	* 
 	* @param number the string, which you want take.
@@ -108,7 +129,7 @@ public class LimitlessNumber {
 	}
 	
 	
-   /**
+	/**
 	* Takes the number from this LimitlessNumber.
 	* 
 	* @param number the LimitlessNumber, which you want take.
@@ -159,7 +180,7 @@ public class LimitlessNumber {
 	}
 	
 	
-   /**
+	/**
 	* Compare this LimitlessNumber to the string.
 	* 
 	* @param number the string to compare with.
@@ -169,7 +190,7 @@ public class LimitlessNumber {
 	}
 	
 	
-   /**
+	/**
 	* Compare this LimitlessNumber to the LimitlessNumber.
 	* 
 	* @param number the LimitlessNumber to compare with.
@@ -218,7 +239,7 @@ public class LimitlessNumber {
 		}
 	}
 	
-   /**
+	/**
 	* Return the BigDecimal number, this prefix.
 	* <br>
 	* <br>
@@ -230,7 +251,7 @@ public class LimitlessNumber {
 		return this.prefix;	
 	}
 	
-   /**
+	/**
 	* Return the system of the number, this postfix.
 	* <br>
 	* <br>
@@ -241,7 +262,7 @@ public class LimitlessNumber {
 		return this.postfix;
 	}
 	
-   /**
+	/**
 	* Set prefix to this LimitlessNumber.
 	* <br>
 	* <br>
@@ -255,7 +276,7 @@ public class LimitlessNumber {
 		this.prefix = prefix;
 	}
 	
-   /**
+	/**
 	* Set postfix to this LimitlessNumber.
 	* <br>
 	* <br>
@@ -264,7 +285,8 @@ public class LimitlessNumber {
 	* <br>
 	* 
 	* @param postfix the string, which replaced this postfix.
-	*/	public void setPostfix(String postfix) {
+	*/	
+	public void setPostfix(String postfix) {
 		this.postfix = postfix;
 	}
 }
