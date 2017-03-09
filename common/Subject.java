@@ -25,7 +25,7 @@ import java.math.BigDecimal;
 public class Subject {
 	private LimitlessNumber value;
 	private LimitlessNumber maxValue = new LimitlessNumber("0");
-	private String name = "";
+	private String type = "";
 	
 	
 	/**
@@ -43,7 +43,7 @@ public class Subject {
 	*/
 	public Subject(String type, String value) {
 		this.value = new LimitlessNumber(value);
-		this.name = name.toLowerCase();
+		this.type = type.toLowerCase();
 	}
 	
 	/**
@@ -55,7 +55,7 @@ public class Subject {
 	public Subject(String type, String value, String maxValue) {
 		this.value = new LimitlessNumber(value);
 		this.maxValue = new LimitlessNumber(maxValue);
-		this.name = name.toLowerCase();
+		this.type = type.toLowerCase();
 	}
 
 	/**
@@ -66,7 +66,7 @@ public class Subject {
 	 * @param subject is a Subject which you want to add
 	 */
 	public void add(Subject subject) {
-		if(this.name.equals(subject.name)) {
+		if(this.type.equals(subject.type)) {
 			this.value.add(subject.value);
 			
 			if(this.maxValue.compareTo("0") == 1 && this.value.compareTo(this.maxValue) == 1) {
@@ -85,7 +85,7 @@ public class Subject {
 	 * @param subject is a Subject which you want to take
 	 */
 	public void minus(Subject subject) {
-		if(this.name.equals(subject.name)) {
+		if(this.type.equals(subject.type)) {
 			this.value.minus(subject.value);
 			
 			if(this.value.compareTo("0") == -1) {
@@ -160,13 +160,13 @@ public class Subject {
 		return maxValue.getPrefix() + maxValue.getPostfix();
 	}
 	
-	public String getName() {
-		return this.name;
 	
 	/**
 	 * Return the string the type of this object.
 	 * @return string the type of this object
 	 */
+	public String getType() {
+		return this.type;
 	}
 	
 	/**
@@ -175,7 +175,7 @@ public class Subject {
 	@Override
 	public boolean equals(Object o) {
 		if(o != null && o instanceof Subject) {
-			if(this.name.equals(((Subject) o).name)) 
+			if(this.type.equals(((Subject) o).type)) 
 				return true;
 		}
 
@@ -189,6 +189,6 @@ public class Subject {
 	 */
 	@Override
 	public String toString() {
-		return this.name + " " + this.getNumber();
+		return this.type + " " + this.getNumber();
 	}
 }
