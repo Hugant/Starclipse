@@ -68,6 +68,12 @@ public class LimitlessNumber {
 	* @param number the string which will be translated
 	*/
 	public LimitlessNumber(String number) {
+		if(number == null) {
+			
+		}
+		
+		
+		
 		if(!number.equals("")) {
 			for(int i = POSTFIX_MAS.length - 1; i > 0; i--) {
 				if(number.contains(POSTFIX_MAS[i])) {
