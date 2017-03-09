@@ -6,9 +6,9 @@ import starclipse.building.Building;
 import starclipse.building.Resources;
 
 public class Planet {
-	Resources resources;
-	ArrayList<Building> infrastructure = new ArrayList<Building>();
-	ArrayList<Planet> travel = new ArrayList<Planet>();
+	private Resources resources;
+	private ArrayList<Building> infrastructure = new ArrayList<Building>();
+	private ArrayList<Planet> travel = new ArrayList<Planet>();
 	
 	public Planet() {
 		
