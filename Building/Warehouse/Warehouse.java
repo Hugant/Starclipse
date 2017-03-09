@@ -28,7 +28,7 @@ public class Warehouse implements starclipse.building.Building{
 //					case "stone":  this.manpower +=  1; break;
 //					case "food":   this.manpower +=  2; break;
 //				}
-			}
+//			}
 		}
 	}
 }
