@@ -289,4 +289,8 @@ public class LimitlessNumber {
 	public void setPostfix(String postfix) {
 		this.postfix = postfix;
 	}
+	@Override
+	public String toString() {
+		return this.prefix + this.postfix;
+	}
 }
