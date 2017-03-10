@@ -68,13 +68,7 @@ public class LimitlessNumber {
 	* @param number the string which will be translated
 	*/
 	public LimitlessNumber(String number) {
-		if(number == null) {
-			
-		}
-		
-		
-		
-		if(!number.equals("")) {
+		if(number != null && number.matches("^(\\d+|\\d+[.]\\d+)([KMBTVZJ]|Ba[KMBTVZJ]|Ga[KMBTVZJ])?$")) {
 			for(int i = POSTFIX_MAS.length - 1; i > 0; i--) {
 				if(number.contains(POSTFIX_MAS[i])) {
 					this.prefix = 
@@ -84,11 +78,11 @@ public class LimitlessNumber {
 				}
 			}
 			
-			if(this.postfix.equals("")) {
-				this.prefix = BigDecimal.valueOf(Double.parseDouble(number));
-			}
-			
+			this.prefix = BigDecimal.valueOf(Double.parseDouble(number));
 			this.checkNumber();
+			
+		} else {
+			throw new IllegalArgumentException("Incorrect number");
 		}
 	}
 	
