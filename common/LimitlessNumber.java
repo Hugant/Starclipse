@@ -55,7 +55,8 @@ public class LimitlessNumber {
 
 	/**
 	* Create number type of LimitlessNumber and convert it to the form
-	* prefix + postfix.
+	* prefix + postfix. If number has an irregular form, will generate
+	* an IllegalArgumentException.
 	*
 	* <p>
 	* <strong>Example:</strong>
@@ -289,6 +290,10 @@ public class LimitlessNumber {
 	public void setPostfix(String postfix) {
 		this.postfix = postfix;
 	}
+	
+	/**
+	 * Return string in the form prefix + postfix.
+	 */
 	@Override
 	public String toString() {
 		return this.prefix + this.postfix;
