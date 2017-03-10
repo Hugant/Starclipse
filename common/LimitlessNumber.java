@@ -76,7 +76,8 @@ public class LimitlessNumber {
 					this.prefix = 
 							BigDecimal.valueOf(Double.parseDouble(number.substring(0, number.indexOf(POSTFIX_MAS[i]))));
 					this.postfix = number.substring(number.indexOf(POSTFIX_MAS[i]), number.length());
-					break;
+					this.checkNumber();
+					return;
 				}
 			}
 			
