@@ -66,6 +66,7 @@ public class LimitlessNumber {
 	*  LimitlessNumber num = new LimitlessNumber("0.53B");// 530M
 	* <br>
 	* 
+	* @throws IllegalArgumentException
 	* @param number the string which will be translated
 	*/
 	public LimitlessNumber(String number) {
