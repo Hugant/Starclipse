@@ -226,14 +226,6 @@ public class LimitlessNumber {
 					this.prefix = this.prefix.divide(BigDecimal.valueOf(1000));
 					this.postfix = POSTFIX_MAS[Arrays.asList(POSTFIX_MAS).indexOf(this.postfix) + 1];
 			}
-			
-			if(this.prefix.compareTo(BigDecimal.valueOf(0)) == 1) {
-				//remove extra zeros
-				
-				if(this.prefix.divide(this.prefix.setScale(0, BigDecimal.ROUND_DOWN)).compareTo(BigDecimal.valueOf(1)) == 0) {
-					this.prefix = this.prefix.setScale(0, BigDecimal.ROUND_DOWN);
-				}
-			}
 		} else {
 			this.postfix = "";
 		}
