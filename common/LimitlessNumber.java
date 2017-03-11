@@ -76,13 +76,13 @@ public class LimitlessNumber {
 					this.prefix = 
 							BigDecimal.valueOf(Double.parseDouble(number.substring(0, number.indexOf(POSTFIX_MAS[i]))));
 					this.postfix = number.substring(number.indexOf(POSTFIX_MAS[i]), number.length());
-					this.checkNumber();
+					this.checkingValidity();
 					return;
 				}
 			}
 			
 			this.prefix = BigDecimal.valueOf(Double.parseDouble(number));
-			this.checkNumber();
+			this.checkingValidity();
 			
 		} else {
 			throw new IllegalArgumentException("Incorrect number");
@@ -151,7 +151,7 @@ public class LimitlessNumber {
 			this.prefix = this.prefix.subtract(number.prefix);
 		}
 
-		this.checkNumber();
+		this.checkingValidity();
 	}
 	
 
@@ -212,7 +212,7 @@ public class LimitlessNumber {
 	}
 	
 
-	private void checkNumber() {
+	private void checkingValidity() {
 		if(this.prefix.compareTo(BigDecimal.valueOf(0)) == 1) {
 			// number < 1, but number > 0
 			while(this.prefix.compareTo(BigDecimal.valueOf(1)) == -1 && !this.postfix.equals("")) {	
