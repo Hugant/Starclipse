@@ -47,7 +47,7 @@ public class Subject {
 	}
 	
 	/**
-	* Create a Subject which have type, value and maximum value.
+	* Create a <b>Subject</b> which have type, value and maximum value.
 	* @param type is the type of a subject
 	* @param value is the amount of a subject
 	* @param maxValue is the maximum amount of a subject
