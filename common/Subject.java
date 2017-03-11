@@ -43,7 +43,7 @@ public class Subject {
 	*/
 	public Subject(String type, String value) {
 		this.value = new LimitlessNumber(value);
-		this.type = type.toLowerCase();
+		this.type = type == null ? type : type.toLowerCase();
 	}
 	
 	/**
@@ -55,7 +55,7 @@ public class Subject {
 	public Subject(String type, String value, String maxValue) {
 		this.value = new LimitlessNumber(value);
 		this.maxValue = new LimitlessNumber(maxValue);
-		this.type = type.toLowerCase();
+		this.type = type == null ? type : type.toLowerCase();
 	}
 
 	/**
