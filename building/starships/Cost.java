@@ -4,10 +4,10 @@ import starclipse.building.Resources;
 import starclipse.common.LimitlessNumber;
 
 public class Cost {
-	private Resources resources;
+	private Resources resources = null;
 	private int manpower = 0;
 	private LimitlessNumber volume = new LimitlessNumber("300");// the amount of resources per unit 
-	private Resources needResources = null;
+	private Resources expenses = null;
 	
 	
 	public Cost(String... cells) {
@@ -36,6 +36,6 @@ public class Cost {
 	}
 	
 	public Resources getNeedResources() {
-		return this.needResources;
+		return this.expenses;
 	}
 }
