@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.math.BigDecimal;
 
 /**
- * The class LimitlessNumber allows you to translate number in a more convenient
+ * The class <b>LimitlessNumber</b> allows you to translate number in a more convenient
  * form for the user.
  *
  * <p>
@@ -54,7 +54,7 @@ public class LimitlessNumber {
 	private String postfix = "";
 
 	/**
-	* Create number type of LimitlessNumber and convert it to the form
+	* Create number type of <b>LimitlessNumber</b> and convert it to the form
 	* prefix + postfix. If number has an irregular form, will generate
 	* an IllegalArgumentException.
 	*
@@ -91,7 +91,7 @@ public class LimitlessNumber {
 	
 	
 	/**
-	* Add number to this LimitlessNumber.
+	* Add number to this <b>LimitlessNumber</b>.
 	* 
 	* @param number the string, which you want to add.
 	*/
@@ -101,9 +101,9 @@ public class LimitlessNumber {
 	
 	
 	/**
-	* Add number to this LimitlessNumber.
+	* Add number to this <b>LimitlessNumber</b>.
 	* 
-	* @param number the LimitlessNumber, which you want to add.
+	* @param number the <b>LimitlessNumber</b>, which you want to add.
 	*/
 	public void add(LimitlessNumber number) {
 		final int fPostfix = Arrays.asList(POSTFIX_MAS).indexOf(this.postfix);
@@ -123,7 +123,7 @@ public class LimitlessNumber {
 	
 	
 	/**
-	* Takes the number from this LimitlessNumber.
+	* Takes the number from this <b>LimitlessNumber</b>.
 	* 
 	* @param number the string, which you want take.
 	*/
@@ -133,9 +133,9 @@ public class LimitlessNumber {
 	
 	
 	/**
-	* Takes the number from this LimitlessNumber.
+	* Takes the number from this <b>LimitlessNumber</b>.
 	* 
-	* @param number the LimitlessNumber, which you want take.
+	* @param number the <b>LimitlessNumber</b>, which you want take.
 	*/
 	public void minus(LimitlessNumber number) {
 		final int fPostfix = Arrays.asList(POSTFIX_MAS).indexOf(this.postfix);
@@ -184,7 +184,7 @@ public class LimitlessNumber {
 	
 	
 	/**
-	* Compare this LimitlessNumber to the string.
+	* Compare this <b>LimitlessNumber</b> to the string.
 	* 
 	* @param number the string to compare with.
 	*/
@@ -194,9 +194,9 @@ public class LimitlessNumber {
 	
 	
 	/**
-	* Compare this LimitlessNumber to the LimitlessNumber.
+	* Compare this <b>LimitlessNumber</b> to the <b>LimitlessNumber</b>.
 	* 
-	* @param number the LimitlessNumber to compare with.
+	* @param number the <b>LimitlessNumber</b> to compare with.
 	*/
 	public int compareTo(LimitlessNumber number) {
 		String numberPost = number.postfix;
@@ -255,7 +255,7 @@ public class LimitlessNumber {
 	}
 	
 	/**
-	* Set prefix to this LimitlessNumber.
+	* Set prefix to this <b>LimitlessNumber</b>.
 	* <br>
 	* <br>
 	* <strong>Example: </strong>
@@ -269,7 +269,7 @@ public class LimitlessNumber {
 	}
 	
 	/**
-	* Set postfix to this LimitlessNumber.
+	* Set postfix to this <b>LimitlessNumber</b>.
 	* <br>
 	* <br>
 	* <strong>Example: </strong>
