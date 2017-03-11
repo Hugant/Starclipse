@@ -23,9 +23,9 @@ import java.math.BigDecimal;
  * @author Hugant MD
  */
 public class Subject {
-	private LimitlessNumber value;
-	private LimitlessNumber maxValue = new LimitlessNumber("0");
-	private String type = "";
+	private LimitlessNumber value = null;
+	private LimitlessNumber maxValue = null;
+	private String type = null;
 	
 	
 	/**
