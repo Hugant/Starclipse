@@ -89,15 +89,18 @@ public class Subject {
 	 * @param subject is a Subject which you want to take
 	 */
 	public void minus(Subject subject) {
-		if(this.type.equals(subject.type)) {
+		if(subject.type == null || this.type == null) {
 			this.value.minus(subject.value);
-			
-			if(this.value.compareTo("0") == -1) {
-				this.value = new LimitlessNumber("0");
-			}
+		} else if(this.type.equals(subject.type)) {
+			this.value.minus(subject.value);
 		} else {
 			throw new ArithmeticException("Arithmetic operations can only be done with the same material");
 		}
+		
+		if(this.value.compareTo("0") == -1) {
+			this.value = new LimitlessNumber("0");
+		}
+
 	}
 	
 	/**
