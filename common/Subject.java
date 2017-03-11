@@ -197,6 +197,6 @@ public class Subject {
 	 */
 	@Override
 	public String toString() {
-		return this.type + " " + this.getNumber();
+		return (this.type == null ? "no type" : this.type) + " " + this.getNumber();
 	}
 }
