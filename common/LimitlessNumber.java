@@ -118,7 +118,7 @@ public class LimitlessNumber {
 			this.prefix = this.prefix.add(number.prefix);
 		}
 		
-		this.checkNumber();
+		this.checkingValidity();
 	}
 	
 	
