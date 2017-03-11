@@ -18,10 +18,8 @@ import starclipse.common.Subject;
 public class Main{
 	public static void main(String args[]) {
 			
-		//LimitlessNumber a = new LimitlessNumber("0.00001K");
-		Subject b = new Subject("1.10K");
-		System.out.println(b.getNumber());
-		//System.out.println(BigDecimal.valueOf(0.123213).compareTo(BigDecimal.valueOf(0)) == 1); 
-		
+		Resources a = new Resources("gold", "100B",
+									"iron", "1T");
+		System.out.println(a.get("iron"));
 	}
 }
