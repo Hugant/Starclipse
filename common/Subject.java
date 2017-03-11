@@ -3,7 +3,7 @@ package starclipse.common;
 import java.math.BigDecimal;
 
 /**
- * The class Subject creates the subject with its type, quantity and maximum value.
+ * The class <b>Subject</b> creates the subject with its type, quantity and maximum value.
  * <p>
  * You can create a subject which will have only the value, value and type, 
  * value and type and maximum value.
@@ -29,7 +29,7 @@ public class Subject {
 	
 	
 	/**
-	* Create a Subject which have only value.
+	* Create a <b>Subject</b> which have only value.
 	* @param value is the amount of a subject
 	*/
 	public Subject(String value) {
@@ -37,7 +37,7 @@ public class Subject {
 	}
 	
 	/**
-	* Create a Subject which have type and value
+	* Create a <b>Subject</b> which have type and value
 	* @param type is the type of a subject
 	* @param value is the amount of a subject
 	*/
@@ -59,8 +59,9 @@ public class Subject {
 	}
 
 	/**
-	 * Adds a Subject to the Subject.
-	 * If the have a different type then pop up a ArithmeticException.
+	 * Adds a <b>Subject</b> to the <b>Subject</b>.
+	 * If the have a different type will generate
+	 * an ArithmeticException.
 	 * 
 	 * @throws ArithmeticException
 	 * @param subject is a Subject which you want to add
@@ -78,8 +79,9 @@ public class Subject {
 	}
 	
 	/**
-	 * Take a Subject to the Subject.
-	 * If the have a different type then pop up a ArithmeticException.
+	 * Take a <b>Subject</b> to the <b>Subject</b>.
+	 * If the have a different type will generate
+	 * an ArithmeticException.
 	 * 
 	 * @throws ArithmeticException
 	 * @param subject is a Subject which you want to take
@@ -97,14 +99,14 @@ public class Subject {
 	}
 	
 	/**
-	 * Return the string in the form LimitlessNumber rounded down to the nearest tenth.
+	 * Return the string in the form <b>LimitlessNumber</b> rounded down to the nearest tenth.
 	 * <br>
 	 * <pre><code> new Subject("145T").getNumber();// "145T"
 	 *  new Subject("1.001V").getNumber();// "1V"
 	 *  new Subject("1.01Z").getNumber();// "1Z"
 	 *  new Subject("1.1234J").getNumber();// "1.12J"
 	 * </pre><code>
-	 * @return string in the form LimitlessNumber
+	 * @return string in the form <b>LimitlessNumber</b>
 	 */
 	public String getNumber() {
 		if(value.getPrefix().toString().contains(".00") || value.getPrefix().toString().contains(".0")) {
@@ -116,16 +118,16 @@ public class Subject {
 	
 	
 	/**
-	 * Adds the value to the maximum value of this Subject
-	 * @param subject is a string in the form LimitlessNumber
+	 * Adds the value to the maximum value of this <b>Subject</b>.
+	 * @param subject is a string in the form <b>LimitlessNumber</b>
 	 */
 	public void addToMaxValue(String subject) {
 		this.addToMaxValue(new Subject(subject));
 	}
 	
 	/**
-	 * Adds the Subject to the maximum value of this Subject
-	 * @param subject is a Subject
+	 * Adds the Subject to the maximum value of this <b>Subject</b>.
+	 * @param subject is a <b>Subject</b>
 	 */
 	public void addToMaxValue(Subject subject) {
 		this.maxValue.add(subject.value);
@@ -134,7 +136,7 @@ public class Subject {
 	
 	/**
 	 * Set the maximum value.
-	 * @param subject is a string in the form LimitlessNumber
+	 * @param subject is a string in the form <b>LimitlessNumber</b>
 	 */
 	public void setMaxValue(String subject) {
 		this.setMaxValue(new Subject(subject));
@@ -142,7 +144,7 @@ public class Subject {
 	
 	/**
 	 * Set the maximum value.
-	 * @param subject is a Subject
+	 * @param subject is a <b>Subject</b>
 	 */
 	public void setMaxValue(Subject subject) {
 		this.maxValue.setPrefix(subject.value.getPrefix());
@@ -151,11 +153,11 @@ public class Subject {
 	
 	
 	/**
-	 * Return the string in the form LimitlessNumber.
+	 * Return the string in the form <b>LimitlessNumber</b>.
 	 * <br>
 	 * <pre><code> new Subject("gold", "145T", "1J").getNumber();// "1J"
 	 * </pre><code>
-	 * @return string in the form LimitlessNumber
+	 * @return string in the form <b>LimitlessNumber</b>
 	 */
 	public String getMaxValue() {
 		return maxValue.getPrefix() + maxValue.getPostfix();
@@ -171,7 +173,7 @@ public class Subject {
 	}
 	
 	/**
-	 * Compares Subjects by name.
+	 * Compares <b>Subject</b>'s by name.
 	 */
 	@Override
 	public boolean equals(Object o) {
