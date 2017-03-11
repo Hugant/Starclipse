@@ -13,11 +13,14 @@ import java.util.GregorianCalendar;
 import java.util.Date;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+import starclipse.common.Subject;
 
 public class Main{
 	public static void main(String args[]) {
 			
-		LimitlessNumber a = new LimitlessNumber("0.123123");
+		//LimitlessNumber a = new LimitlessNumber("0.00001K");
+		Subject b = new Subject("1.10K");
+		System.out.println(b.getNumber());
 		//System.out.println(BigDecimal.valueOf(0.123213).compareTo(BigDecimal.valueOf(0)) == 1); 
 		
 	}
