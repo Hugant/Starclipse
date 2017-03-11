@@ -67,14 +67,16 @@ public class Subject {
 	 * @param subject is a Subject which you want to add
 	 */
 	public void add(Subject subject) {
-		if(this.type.equals(subject.type)) {
+		if(subject.type == null || this.type == null) {
 			this.value.add(subject.value);
-			
-			if(this.maxValue.compareTo("0") == 1 && this.value.compareTo(this.maxValue) == 1) {
-				this.value = this.maxValue;
-			}
+		} else if(this.type.equals(subject.type)) {
+			this.value.add(subject.value);
 		} else {
 			throw new ArithmeticException("Arithmetic operations can only be done with the same material");
+		}
+		
+		if(this.maxValue != null && this.value.compareTo(this.maxValue) == 1) {
+			this.value = this.maxValue;
 		}
 	}
 	
