@@ -174,7 +174,7 @@ public class Subject {
 	 * @return string the type of this object
 	 */
 	public String getType() {
-		return this.type;
+		return this.type == null ? "no type" : this.type;
 	}
 	
 	/**
