@@ -104,13 +104,11 @@ public class Subject {
 	 * @return string in the form LimitlessNumber
 	 */
 	public String getNumber() {
-		if(value.getPrefix().scale() > 2) {
-			if(value.getPrefix().toString().contains(".00")) {
-				return value.getPrefix().setScale(0, BigDecimal.ROUND_DOWN) + value.getPostfix();
-			}
-			return value.getPrefix().setScale(2, BigDecimal.ROUND_DOWN) + value.getPostfix();
+		if(value.getPrefix().toString().contains(".00") || value.getPrefix().toString().contains(".0")) {
+			return value.getPrefix().setScale(0, BigDecimal.ROUND_DOWN) + value.getPostfix();
 		}
-		return value.getPrefix() + value.getPostfix();
+		
+		return value.getPrefix().setScale(2, BigDecimal.ROUND_DOWN) + value.getPostfix();
 	}
 	
 	
