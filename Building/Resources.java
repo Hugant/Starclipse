@@ -77,7 +77,7 @@ public class Resources {
 	 */
 	public void add(Subject sub) {
 		if(subjects.contains(sub)) {
-			subjects.get(subjects.indexOf(sub)).add(sub);;
+			subjects.get(subjects.indexOf(sub)).add(sub);
 		} else {
 			throw new ArithmeticException("No such element exists");
 		}
@@ -93,7 +93,7 @@ public class Resources {
 		if(subjects.contains(sub)) {
 			subjects.get(subjects.indexOf(sub)).minus(sub);
 		} else {
-			throw new ArithmeticException("No suck element exists");
+			throw new ArithmeticException("No such element exists");
 		}
 	}
 	
@@ -111,7 +111,7 @@ public class Resources {
 		if(subjects.contains(new Subject(type, "0"))) {
 			return subjects.get(subjects.indexOf(new Subject(type, "0")));
 		} else {
-			throw new ArithmeticException("No suck element exists");
+			throw new ArithmeticException("No such element exists");
 		}
 	}
 }
