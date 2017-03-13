@@ -106,18 +106,7 @@ public class LimitlessNumber {
 	* @param number the <b>LimitlessNumber</b>, which you want to add.
 	*/
 	public void add(LimitlessNumber number) {
-		final int fPostfix = Arrays.asList(POSTFIX_MAS).indexOf(this.postfix);
-		final int sPostfix = Arrays.asList(POSTFIX_MAS).indexOf(number.postfix);
-		
-		if(fPostfix > sPostfix) {
-			this.prefix = number.transferTo(this.postfix).add(this.prefix);
-		} else if(fPostfix < sPostfix) {
-			this.prefix = this.transferTo(number.postfix).add(number.prefix);
-			this.postfix = number.postfix;
-		} else {
-			this.prefix = this.prefix.add(number.prefix);
-		}
-		
+		this.prefix = number.transferTo(this.postfix).add(this.prefix);
 		this.checkingValidity();
 	}
 	
