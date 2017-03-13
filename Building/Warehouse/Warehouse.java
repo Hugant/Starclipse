@@ -3,7 +3,7 @@ package starclipse.building.warehouse;
 import starclipse.building.Resources;
 import starclipse.common.LimitlessNumber;
 
-public class Warehouse implements starclipse.building.Building{
+public class Warehouse /*implements starclipse.building.Building*/{
 	
 	//private Subject residents = new Subject("residents", "10", "70");
 	private LimitlessNumber volume = new LimitlessNumber("500");// the amount of resources per unit 
