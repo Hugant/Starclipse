@@ -134,28 +134,12 @@ public class LimitlessNumber {
 
 	
 	private BigDecimal transferTo(String system) {
-		for(int i = 0; i < POSTFIX_MAS.length; i++) {
-			if(POSTFIX_MAS[i].contains(system)) {
-				final int fPostfix = Arrays.asList(POSTFIX_MAS).indexOf(this.postfix);
-				final int sPostfix = i;
-				if(fPostfix > sPostfix) {
-					this.prefix = this.prefix.multiply(BigDecimal.valueOf(Math.pow(10, (fPostfix - sPostfix) * 3)));
-					this.postfix = system;
-					break;
-				} else if(fPostfix < sPostfix) {
-					this.prefix = this.prefix.divide(BigDecimal.valueOf(Math.pow(10, (sPostfix - fPostfix) * 3)));
-					this.postfix = system;
-					break;
-				} else {
-					break;
-				}
-			}
-			
-			if(i == POSTFIX_MAS.length - 1 ) {
-				throw new IllegalArgumentException("Such system does not exist!"); 
-			}
-		}
-		
+		// number * 10^(this.postfix - system) * 3
+		this.prefix = this.prefix.multiply(
+				BigDecimal.valueOf(Math.pow(10, (Arrays.asList(POSTFIX_MAS).indexOf(this.postfix) - 
+						Arrays.asList(POSTFIX_MAS).indexOf(system)) * 3)));
+		this.postfix = system;
+
 		return this.prefix;
 	}
 	
