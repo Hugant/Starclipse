@@ -18,8 +18,7 @@ import starclipse.common.Subject;
 public class Main{
 	public static void main(String args[]) {
 			
-		Resources a = new Resources("gold", "100B",
-									"iron", "1T");
-		System.out.println(a.get("iron"));
+		Subject a = new Subject();
+		System.out.println(a);
 	}
 }
