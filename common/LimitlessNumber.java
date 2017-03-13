@@ -174,21 +174,15 @@ public class LimitlessNumber {
 	
 
 	private void checkingValidity() {
-		if(this.prefix.compareTo(BigDecimal.valueOf(0)) == 1) {
-			// number < 1, but number > 0
-			while(this.prefix.compareTo(BigDecimal.valueOf(1)) == -1 && !this.postfix.equals("")) {	
-				this.prefix = this.prefix.multiply(BigDecimal.valueOf(1000));
-				this.postfix = POSTFIX_MAS[Arrays.asList(POSTFIX_MAS).indexOf(this.postfix) - 1];
-			}
-	
-			//number >= 1000
-			while(this.prefix.compareTo(BigDecimal.valueOf(1000)) != -1 &&
-				 !this.postfix.equals(POSTFIX_MAS[POSTFIX_MAS.length - 1])) {
-					this.prefix = this.prefix.divide(BigDecimal.valueOf(1000));
-					this.postfix = POSTFIX_MAS[Arrays.asList(POSTFIX_MAS).indexOf(this.postfix) + 1];
-			}
-		} else {
-			this.postfix = "";
+		while(this.prefix.abs().compareTo(BigDecimal.valueOf(1)) == -1 && !this.postfix.equals("")) {
+			this.prefix = this.prefix.multiply(BigDecimal.valueOf(1000));
+			this.postfix = POSTFIX_MAS[Arrays.asList(POSTFIX_MAS).indexOf(this.postfix) - 1];
+		}
+		
+		while(this.prefix.abs().compareTo(BigDecimal.valueOf(999)) == 1 && 
+				!this.postfix.equals(POSTFIX_MAS[POSTFIX_MAS.length - 1])) {
+			this.prefix = this.prefix.divide(BigDecimal.valueOf(1000));
+			this.postfix = POSTFIX_MAS[Arrays.asList(POSTFIX_MAS).indexOf(this.postfix) + 1];
 		}
 	}
 	
