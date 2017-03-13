@@ -70,7 +70,7 @@ public class LimitlessNumber {
 	* @param number the string which will be translated
 	*/
 	public LimitlessNumber(String number) {
-		if(number != null && number.matches("^(\\d+|\\d+[.]\\d+)([KMBTVZJ]|Ba[KMBTVZJ]|Ga[KMBTVZJ])?$")) {
+		if(number != null && number.matches("^-?(\\d+|\\d+[.]\\d+)([KMBTVZJ]|Ba[KMBTVZJ]|Ga[KMBTVZJ])?$")) {
 			for(int i = POSTFIX_MAS.length - 1; i > 0; i--) {
 				if(number.contains(POSTFIX_MAS[i])) {
 					this.prefix = 
