@@ -145,11 +145,8 @@ public class Subject {
 	 * @return string in the form <b>LimitlessNumber</b>
 	 */
 	public String getNumber() {
-		if(value.getPrefix().toString().contains(".00") || value.getPrefix().toString().contains(".0")) {
-			return value.getPrefix().setScale(0, BigDecimal.ROUND_DOWN) + value.getPostfix();
-		}
-		
-		return value.getPrefix().setScale(2, BigDecimal.ROUND_DOWN) + value.getPostfix();
+		return value.getPrefix().setScale(2, BigDecimal.ROUND_DOWN).toString().
+				replaceAll("(\\.00)|(0$)", "") + value.getPostfix();
 	}
 	
 	
