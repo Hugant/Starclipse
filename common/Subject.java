@@ -33,7 +33,11 @@ public class Subject {
 	* @param value is the amount of a subject
 	*/
 	public Subject(String value) {
-		this.value = new LimitlessNumber(value);
+		if(new LimitlessNumber(value).getPrefix().doubleValue() < 0) {
+			throw new IllegalArgumentException("The amount of material cannot be less than zero");
+		} else {
+			this.value = new LimitlessNumber(value);
+		}
 	}
 	
 	/**
@@ -42,7 +46,12 @@ public class Subject {
 	* @param value is the amount of a subject
 	*/
 	public Subject(String type, String value) {
-		this.value = new LimitlessNumber(value);
+		if(new LimitlessNumber(value).getPrefix().doubleValue() < 0) {
+			throw new IllegalArgumentException("The amount of material cannot be less than zero");
+		} else {
+			this.value = new LimitlessNumber(value);
+		}
+		
 		this.type = type == null ? type : type.toLowerCase();
 	}
 	
@@ -53,8 +62,18 @@ public class Subject {
 	* @param maxValue is the maximum amount of a subject
 	*/
 	public Subject(String type, String value, String maxValue) {
-		this.value = new LimitlessNumber(value);
-		this.maxValue = new LimitlessNumber(maxValue);
+		if(new LimitlessNumber(value).getPrefix().doubleValue() < 0) {
+			throw new IllegalArgumentException("The amount of material cannot be less than zero");
+		} else {
+			this.value = new LimitlessNumber(value);
+		}
+		
+		if(new LimitlessNumber(maxValue).getPrefix().doubleValue() < 0) {
+			throw new IllegalArgumentException("The maximum amount of material cannot be less than zero");
+		} else {
+			this.maxValue = new LimitlessNumber(maxValue);
+		}
+		
 		this.type = type == null ? type : type.toLowerCase();
 	}
 
