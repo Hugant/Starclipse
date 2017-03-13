@@ -30,6 +30,10 @@ public class Subject {
 	
 	/**
 	* Create a <b>Subject</b> which have only value.
+	* If value less than zero, will be generated 
+	* an IllegalArgumentException.
+	* 
+	* @throws IllegalArgumentException
 	* @param value is the amount of a subject
 	*/
 	public Subject(String value) {
@@ -41,7 +45,11 @@ public class Subject {
 	}
 	
 	/**
-	* Create a <b>Subject</b> which have type and value
+	* Create a <b>Subject</b> which have type and value.
+	* If value less than zero, will be generated 
+	* an IllegalArgumentException.
+	* 
+	* @throws IllegalArgumentException
 	* @param type is the type of a subject
 	* @param value is the amount of a subject
 	*/
@@ -57,6 +65,10 @@ public class Subject {
 	
 	/**
 	* Create a <b>Subject</b> which have type, value and maximum value.
+	* If value or maxValue less than zero, will be generated 
+	* an IllegalArgumentException.
+	* 
+	* @throws IllegalArgumentException
 	* @param type is the type of a subject
 	* @param value is the amount of a subject
 	* @param maxValue is the maximum amount of a subject
@@ -127,7 +139,7 @@ public class Subject {
 	 * <br>
 	 * <pre><code> new Subject("145T").getNumber();// "145T"
 	 *  new Subject("1.001V").getNumber();// "1V"
-	 *  new Subject("1.01Z").getNumber();// "1Z"
+	 *  new Subject("1.10Z").getNumber();// "1.1Z"
 	 *  new Subject("1.1234J").getNumber();// "1.12J"
 	 * </pre><code>
 	 * @return string in the form <b>LimitlessNumber</b>
