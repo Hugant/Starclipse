@@ -127,19 +127,7 @@ public class LimitlessNumber {
 	* @param number the <b>LimitlessNumber</b>, which you want take.
 	*/
 	public void minus(LimitlessNumber number) {
-		final int fPostfix = Arrays.asList(POSTFIX_MAS).indexOf(this.postfix);
-		final int sPostfix = Arrays.asList(POSTFIX_MAS).indexOf(number.postfix);
-		
-		if(fPostfix > sPostfix) {
-			this.prefix = this.prefix.subtract(number.transferTo(this.postfix));
-		} else if(fPostfix < sPostfix) {
-			this.prefix = BigDecimal.valueOf(0);
-			this.postfix = "";
-			//throw new ArithmeticException("You cannot subtract more from lot!"); 
-		} else {
-			this.prefix = this.prefix.subtract(number.prefix);
-		}
-
+		this.prefix = this.prefix.subtract(number.transferTo(this.postfix));
 		this.checkingValidity();
 	}
 	
