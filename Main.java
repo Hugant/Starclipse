@@ -5,7 +5,6 @@ import java.math.BigDecimal;
 import starclipse.common.LimitlessNumber;
 import starclipse.common.Timer;
 import starclipse.building.house.House;
-import starclipse.building.starships.*;
 import starclipse.building.Resources;
 
 import java.util.Calendar;
@@ -18,7 +17,15 @@ import starclipse.common.Subject;
 public class Main{
 	public static void main(String args[]) {
 			
-		Subject a = new Subject();
-		System.out.println(a);
+		House a = new House("small");
+		a.build();
+		while(true) {
+			if(a.getStatus().equals("Claim")) {
+				a.claim();
+				try {
+					Thread.sleep(1000);
+				} catch(Exception e) {}
+			}
+		}
 	}
 }
