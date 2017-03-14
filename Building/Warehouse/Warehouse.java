@@ -2,33 +2,20 @@ package starclipse.building.warehouse;
 
 import starclipse.building.Resources;
 import starclipse.common.LimitlessNumber;
+import starclipse.common.Subject;
 
 public class Warehouse /*implements starclipse.building.Building*/{
 	
-	//private Subject residents = new Subject("residents", "10", "70");
+	private Subject residents = new Subject("residents", "10", "70");
 	private LimitlessNumber volume = new LimitlessNumber("500");// the amount of resources per unit 
-	private Resources res;
+	private Resources store;
 	private Resources expenses = null;
 	
 	public Warehouse(String[] cells) {
 		if(cells.length != 6) {
 			throw new IllegalArgumentException("The number of elements in the string array must be equal to 6");
 		} else {
-			res = new Resources(volume, cells);
-			
-//			for(String i : cells) {
-//				switch(i) {
-//					case "tree":   this.manpower +=  1; break;
-//					case "iron":   this.manpower +=  3; break;
-//					case "gold":   this.manpower += 10; break;
-//					case "energy": this.manpower +=  1; break;			
-//					case "water":  this.manpower +=  2; break;
-//					case "oxygen": this.manpower +=  2; break;
-//					case "coal":   this.manpower +=  2; break;
-//					case "stone":  this.manpower +=  1; break;
-//					case "food":   this.manpower +=  2; break;
-//				}
-//			}
+			store = new Resources(volume, cells);
 		}
 	}
 }
