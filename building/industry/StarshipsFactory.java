@@ -1,8 +1,7 @@
 package starclipse.building.industry;
 
-import starclipse.building.starships.Cost;
-import starclipse.building.starships.Starship;
 import starclipse.building.Resources;
+import starclipse.common.Cost;
 
 public class StarshipsFactory {
 	private String name = "Starships Factory";
@@ -16,9 +15,9 @@ public class StarshipsFactory {
 													"water",  "10K",
 													"money",  "10M");
 	
-	public void createStarship(String name, Cost cost, String... cells) {
-		this.starship = new Starship(name, cost, cells);
-	}
+//	public void createStarship(String name, Cost cost, String... cells) {
+//		this.starship = new Starship(name, cost, cells);
+//	}
 	
 	public Starship getStarship() {
 		return this.starship;
