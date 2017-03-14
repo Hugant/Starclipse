@@ -6,10 +6,9 @@ public interface Building {
 	starclipse.common.Timer buildTime = null;
 	starclipse.common.Timer incomeTime = null;
 	
-	Resources expenses = null;
+	starclipse.common.Subject residents = null;
 	
-	int residents = 0;
-	int maxResidents = 0;
+	Resources expenses = null;
 	
 	public void build();
 	
