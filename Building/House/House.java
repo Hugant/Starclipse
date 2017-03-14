@@ -11,9 +11,11 @@ public class House implements starclipse.building.Building{
 	private Timer incomeTime;
 	private Subject residents;
 	private Resources expenses = null;
+	int i = 0;
 	
 	private class Updater extends Thread {
 		public void run() {
+			System.out.println("Start build");
 			while(!buildUpdateStatus().equals("End Work")) {
 				try {
 					Thread.sleep(1000);
@@ -22,11 +24,13 @@ public class House implements starclipse.building.Building{
 				}
 			}
 			startWork();
+			System.out.println("End build");
 		}
 	}
 	
 	private class Worker extends Thread {
 		public void run() {
+			System.out.println("Worker " + i + " on start");
 			while(!workUpdateStatus().equals("End Work")) {
 				try {
 					Thread.sleep(1000);
@@ -34,7 +38,8 @@ public class House implements starclipse.building.Building{
 					System.out.println(e.toString());
 				}
 			}
-			System.out.println("End THREAD!");
+			System.out.println("Worker " + i + " end work");
+			i++;
 			setStatus("Claim");
 		}
 	}
@@ -70,8 +75,8 @@ public class House implements starclipse.building.Building{
 			case "small":
 				this.residents = new Subject("residents", "0", "10");
 				this.name = "Small House";
-				this.buildTime = new Timer(Timer.SECOND * 10);
-				this.incomeTime = new Timer(Timer.SECOND * 10);
+				this.buildTime = new Timer(Timer.SECOND * 5);
+				this.incomeTime = new Timer(Timer.SECOND * 5);
 				this.expenses = new Resources("stone",  "12", 
 											  "tree",   "6", 
 											  "money",  "125",
