@@ -82,7 +82,7 @@ public class Resources {
 		if(subjects.contains(sub)) {
 			subjects.get(subjects.indexOf(sub)).add(sub);
 		} else {
-			throw new ArithmeticException("No such element exists");
+			subjects.add(sub);
 		}
 	}
 	
