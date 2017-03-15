@@ -74,7 +74,7 @@ public class Starship {
 	private int damage = 0;
 	private int speed = 0;
 	private int passenger = 0;
-	private Cost cost = null;
+	private Storage storage = null;
 		 
 	private int residents = 25;
 	
