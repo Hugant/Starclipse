@@ -13,6 +13,7 @@ import starclipse.common.Subject;
  */
 public class Resources {
 	private ArrayList<Subject> subjects = new ArrayList<Subject>();
+	private Boolean isStorage = null;
 	
 	/**
 	 * Create <b>Resources</b> in which all <b>Subjects</b> will have
@@ -36,7 +37,8 @@ public class Resources {
 			} else {
 				subjects.get(subjects.indexOf(new Subject(i, "0"))).addToMaxValue(volume.getPrefix() + volume.getPostfix());
 			}
-		}	
+		}
+		isStorage = new Boolean(true);
 	}
 	
 	/**
@@ -66,6 +68,7 @@ public class Resources {
 				}
 			}
 		}
+		isStorage = new Boolean(false);
 	}
 	
 	
