@@ -20,7 +20,7 @@ public class Starship {
 				for(String i : res.asTypeArray()) {
 					switch(i) {
 						case "gold":
-							expenses.add(new Subject("something", "1"));
+							expenses.add(new Subject("something", "1"));// bug
 							break;
 						
 						case "iron":
