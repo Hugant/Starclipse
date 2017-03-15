@@ -108,7 +108,7 @@ public class Subject {
 		}
 		
 		if(this.maxValue != null && this.value.compareTo(this.maxValue) == 1) {
-			this.value = this.maxValue;
+			this.value = this.maxValue;// exception?
 		}
 	}
 	
