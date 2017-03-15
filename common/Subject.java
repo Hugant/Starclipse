@@ -23,6 +23,7 @@ import java.math.BigDecimal;
  * @author Hugant MD
  */
 public class Subject {
+	public final static String RESIDENTS = "residents";
 	private LimitlessNumber value = null;
 	private LimitlessNumber maxValue = null;
 	private String type = null;
