@@ -76,7 +76,7 @@ public class Starship {
 	private int passenger = 0;
 	private Storage storage = null;
 		 
-	private int residents = 25;
+	private Subject residents = new Subject(Subject.RESIDENTS, "25", "25");
 	
 	private String name = "";
 	private Resources expenses = null;
