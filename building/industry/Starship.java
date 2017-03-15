@@ -60,7 +60,7 @@ public class Starship {
 			}
 		}
 		
-		public Resources getNeedResources() {
+		public Resources getExpenses() {
 			return this.expenses;
 		}
 	}
