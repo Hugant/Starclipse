@@ -8,7 +8,7 @@ import starclipse.common.LimitlessNumber;
 
 public class Starship {
 	
-	public class Cost {
+	class Storage {
 		private Resources resources = null;
 		private LimitlessNumber volume = new LimitlessNumber("300");// the amount of resources per unit 
 		private Resources expenses = null;
