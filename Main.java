@@ -5,8 +5,10 @@ import java.math.BigDecimal;
 import starclipse.common.LimitlessNumber;
 import starclipse.common.Timer;
 import starclipse.building.house.House;
+import starclipse.building.industry.Starship;
 import starclipse.building.Resources;
 
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Date;
@@ -17,18 +19,22 @@ import starclipse.common.Subject;
 public class Main{
 	public static void main(String args[]) {
 			
-		House a = new House("small");
-		a.build();
-		String c = "";
-		while(true) {
-			c = a.getStatus();
-			System.out.println(c);
-			if(c.equals("Claim")){
-				a.claim();
-			}
-			try {
-				Thread.sleep(1000);
-			} catch(Exception e) {}
-		}
+//		House a = new House("small");
+//		a.build();
+//		String c = "";
+//		while(true) {
+//			c = a.getStatus();
+//			//System.out.println(c);
+//			if(c.equals("Claim")){
+//				a.claim();
+//			}
+//			try {
+//				Thread.sleep(100);
+//			} catch(Exception e) {}
+//		}
+		
+		Resources a = new Resources(new LimitlessNumber("100"), "gold", "oxygen", "gold");
+		Starship b = new Starship("Hugant", a);
+		//System.out.println(Arrays.asList(a.asTypeArray()));
 	}
 }
