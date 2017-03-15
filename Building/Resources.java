@@ -117,4 +117,13 @@ public class Resources {
 			throw new ArithmeticException("No such element exists");
 		}
 	}
+	public String[] asTypeArray() {
+		String temp[] = new String[subjects.size()];
+		int index = 0;
+		for(Subject i : subjects) {
+			temp[index] = i.getType();
+			index++;
+		}
+		return temp;	
+	}
 }
