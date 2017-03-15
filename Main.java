@@ -19,13 +19,16 @@ public class Main{
 			
 		House a = new House("small");
 		a.build();
+		String c = "";
 		while(true) {
-			if(a.getStatus().equals("Claim")) {
+			c = a.getStatus();
+			System.out.println(c);
+			if(c.equals("Claim")){
 				a.claim();
-				try {
-					Thread.sleep(1000);
-				} catch(Exception e) {}
 			}
+			try {
+				Thread.sleep(1000);
+			} catch(Exception e) {}
 		}
 	}
 }

@@ -99,17 +99,17 @@ public class House implements starclipse.building.Building{
 		worker.start();
 	}
 	
-	private String buildUpdateStatus() {
+	synchronized private String buildUpdateStatus() {
 		this.status = buildTime.toString();
 		return this.status;
 	}
 	
-	private String workUpdateStatus() {
+	synchronized private String workUpdateStatus() {
 		this.status = incomeTime.toString();
 		return this.status;
 	}
 	
-	public String getStatus() {
+	synchronized public String getStatus() {
 		return this.status;
 	}
 	
