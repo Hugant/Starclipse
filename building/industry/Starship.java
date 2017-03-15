@@ -67,7 +67,7 @@ public class Starship {
 	
 	
 	
-	private static final byte PASSENGER_VOLUME = 10;// quantity per unit
+	private static final int PASSENGER_VOLUME = 10;// quantity per unit
 	private static final String NAMES_MAS[] = {"Crimson", "Wenda", "Lexa", ""};
 	
 	
