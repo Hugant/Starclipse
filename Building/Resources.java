@@ -126,4 +126,7 @@ public class Resources {
 		}
 		return temp;	
 	}
+	public boolean isStorage() {
+		return isStorage;
+	}
 }
