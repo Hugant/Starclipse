@@ -81,46 +81,32 @@ public class Starship {
 	private String name = "";
 	private Resources expenses = null;
 	
-	public Starship(String name, Resources res/*, String... cells*/) {
-		Storage a = new Storage(res);
-//		for(String i : cells) {
-//			switch(i) {
-//				case "damage":
-//					this.damage++;
-//					this.manpower++;
-//					break;
-//					
-//				case "speed":
-//					this.speed++;
-//					this.manpower++;
-//					break;
-//					
-//				case "passenger":
-//					this.passenger++;
-//					this.manpower += 3;
-//					break;
-//				
-//				case "cost":
-//					if(cost == null) {
-//						throw new IllegalArgumentException("If you specify an element of 'cost', "
-//															+ "the object cannot be null");
-//					} else {
-//						this.cost = new Cost("");
-//						this.manpower += cost.getManpower();
-//					}
-//					break;
-//					
-//				default:
-//					throw new UnsupportedOperationException("Such a resource does not exist");
-//			}
-//			
-//			this.name = name;
-//			this.residents = passenger * PASSENGER_VOLUME;
-//		}
-	}
-	
-	public int getResidents() {
-		return this.residents;
+	public Starship(String name, Resources res, String... cells) {
+		for(String i : cells) {
+			switch(i) {
+				case "damage":    this.damage++;    break;
+				case "speed":     this.speed++;     break;
+				case "passenger": this.passenger++; break;
+				
+				case "storage":
+					if(res == null) {
+						throw new IllegalArgumentException("If you specify an element of 'storage', "
+															+ "the object cannot be null");
+					} else {
+						Storage a = new Storage(res);
+					}
+					break;
+					
+				default:
+					throw new IllegalArgumentException("Such a resource does not exist");
+			}
+		}
+		
+		if(name != null && !name.equals("")) {
+			this.name = name;
+		} else {
+			
+		}
 	}
 }
 
