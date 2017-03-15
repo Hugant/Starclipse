@@ -117,6 +117,11 @@ public class Resources {
 			throw new ArithmeticException("No such element exists");
 		}
 	}
+	
+	/**
+	 * Return <b>String</b> array which consists of types of each <b>Subject</b>.
+	 * @return temp is a <b>String</b> array
+	 */
 	public String[] asTypeArray() {
 		String temp[] = new String[subjects.size()];
 		int index = 0;
@@ -126,6 +131,12 @@ public class Resources {
 		}
 		return temp;	
 	}
+	
+	
+	/**
+	 * Return <b>true</b> if the <b>Resources</b> is a storage, else return <b>false</b>.
+	 * @return isStorage
+	 */
 	public boolean isStorage() {
 		return isStorage;
 	}
