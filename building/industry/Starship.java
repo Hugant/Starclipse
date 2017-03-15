@@ -14,8 +14,51 @@ public class Starship {
 		private Resources expenses = null;
 		
 		
-		public Cost(Resources res) {
-			
+		public Storage(Resources res) {
+			if(res.isStorage()) {
+				this.resources = res;
+				this.expenses = new Resources();
+				for(String i : res.asTypeArray()) {
+					switch(i) {
+						case "gold":
+							expenses.add(new Subject("something", "1"));
+							break;
+						
+						case "iron":
+							expenses.add(new Subject("something", "1"));
+							break;
+							
+						case "coal":
+							expenses.add(new Subject("something", "1"));
+							break;
+						
+						case "stone":
+							expenses.add(new Subject("something", "1"));
+							break;
+							
+						case "water":
+							expenses.add(new Subject("something", "1"));
+							break;
+							
+						case "oxygen":
+							expenses.add(new Subject("something", "1"));
+							break;
+							
+						case "energy":
+							expenses.add(new Subject("something", "1"));
+							break;
+							
+						case "food":
+							expenses.add(new Subject("something", "1"));
+							break;
+							
+						default: 
+							throw new IllegalArgumentException(i + " this type of use in storage");
+					}
+				}
+			} else {
+				throw new IllegalArgumentException("The resources array needs to be a storage");
+			}
 		}
 		
 		public Resources getNeedResources() {
