@@ -11,6 +11,7 @@ public class House implements starclipse.building.Building{
 	private Timer incomeTime;
 	private Subject residents;
 	private Resources expenses = null;
+	
 	int i = 0;
 	
 	private class Updater extends Thread {
@@ -93,11 +94,7 @@ public class House implements starclipse.building.Building{
 		updater.start();
 	}
 	
-	public void startWork() {
-		incomeTime.start();
-		Worker worker = new Worker();
-		worker.start();
-	}
+	
 	
 	synchronized private String buildUpdateStatus() {
 		this.status = buildTime.toString();
@@ -117,9 +114,25 @@ public class House implements starclipse.building.Building{
 		this.status = status;
 	}
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	private Worker worker = new Worker();
+	
+	
+	
+	public void startWork() {
+		incomeTime.start();
+		worker.start();
+	}
+	
 	public Subject claim() {
 		incomeTime.start();
-		Worker worker = new Worker();
 		worker.start();
 		return this.residents;
 	}
