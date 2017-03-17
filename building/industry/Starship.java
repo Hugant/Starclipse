@@ -15,46 +15,53 @@ public class Starship {
 		
 		public Storage(Resources res) {
 			if(res.isStorage()) {
-				this.resources = res;
-				this.expenses = new Resources();
-				for(String i : res.asTypeArray()) {
-					switch(i) {
-						case "gold":
-							expenses.add(new Subject("something", "1"));// bug
-							break;
-						
-						case "iron":
-							expenses.add(new Subject("something", "1"));
-							break;
+				if(res.asTypeArray().length == 5) {
+					this.resources = res;
+					this.expenses = new Resources();
+					
+					for(String i : res.asTypeArray()) {
+						switch(i) {
+							case "gold":
+								expenses.add(new Subject("something", "1"));
+								break;
 							
-						case "coal":
-							expenses.add(new Subject("something", "1"));
-							break;
-						
-						case "stone":
-							expenses.add(new Subject("something", "1"));
-							break;
+							case "iron":
+								expenses.add(new Subject("something", "1"));
+								break;
+								
+							case "coal":
+								expenses.add(new Subject("something", "1"));
+								break;
 							
-						case "water":
-							expenses.add(new Subject("something", "1"));
-							break;
-							
-						case "oxygen":
-							expenses.add(new Subject("something", "1"));
-							break;
-							
-						case "energy":
-							expenses.add(new Subject("something", "1"));
-							break;
-							
-						case "food":
-							expenses.add(new Subject("something", "1"));
-							break;
-							
-						default: 
-							throw new IllegalArgumentException(i + " this type of use in storage");
+							case "stone":
+								expenses.add(new Subject("something", "1"));
+								break;
+								
+							case "water":
+								expenses.add(new Subject("something", "1"));
+								break;
+								
+							case "oxygen":
+								expenses.add(new Subject("something", "1"));
+								break;
+								
+							case "energy":
+								expenses.add(new Subject("something", "1"));
+								break;
+								
+							case "food":
+								expenses.add(new Subject("something", "1"));
+								break;
+								
+							default:
+								this.expenses = null;
+								this.resources = null;
+								throw new IllegalArgumentException(i + " this type is not used in storage");
+						}
 					}
-				}
+				} else {
+					throw new IllegalArgumentException("The amount of storage must equal 5");
+				}	
 			} else {
 				throw new IllegalArgumentException("The resources array needs to be a storage");
 			}
