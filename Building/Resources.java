@@ -16,7 +16,7 @@ public class Resources {
 	private Boolean isStorage = null;
 	
 	/**
-	 * Create <b>Resources</b> in which all <b>Subjects</b> will have
+	 * Create <b>Resources</b>(Storage) in which all <b>Subjects</b> will have
 	 * a maximal size volume. If the <b>Subjects</b> are repeat, it will be
 	 * added to the previous current.
 	 * 
