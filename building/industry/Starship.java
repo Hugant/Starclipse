@@ -128,3 +128,29 @@ public class Starship {
 		this.damage = 0;
 		this.speed = 0;
 		this.passenger = 0;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public String getOwner() {
+		return this.owner;
+	}
+	
+	public int getDamage() {
+		return this.damage;
+	}
+	
+	public int getSpeed() {
+		return this.speed;
+	}
+	
+	public int getPassenger() {
+		return this.passenger;
+	}
+	
+	public Resources getExpenses() {
+		return this.expenses;
+	}
+}
