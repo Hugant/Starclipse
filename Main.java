@@ -33,8 +33,18 @@ public class Main{
 //			} catch(Exception e) {}
 //		}
 		
-		Resources a = new Resources(new LimitlessNumber("100"), "gold", "oxygen", "gold");
-		Starship b = new Starship("Hugant", a);
+//		Resources a = new Resources(new LimitlessNumber("100"), "gold", "oxygen", "gold");
+//		Starship b = new Starship("Hugant", a);
 		//System.out.println(Arrays.asList(a.asTypeArray()));
+		
+		Starship a = new Starship("", new Resources(new LimitlessNumber("100M"), "gold", "iron", "oxygen", "coal", "energy"), 
+				"damage","speed", "storage", "speed", "damage");
+		
+//		Starship a = new Starship("Hugant", null, "speed", "speed", "damage", "damage", "passenger");
+		
+		System.out.println(a.getName());
+		System.out.println("damage: " + a.getDamage());
+		System.out.println("speed: " + a.getSpeed());
+		System.out.println("passenger: " + a.getPassenger());
 	}
 }
