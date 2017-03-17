@@ -102,6 +102,7 @@ public class Starship {
 				
 				case "storage":
 					if(res == null) {
+						this.toAnnihilateVariables();
 						throw new IllegalArgumentException("If you specify an element of 'storage', "
 															+ "the object cannot be null");
 					} else {
@@ -110,6 +111,7 @@ public class Starship {
 					break;
 					
 				default:
+					this.toAnnihilateVariables();
 					throw new IllegalArgumentException("Such a resource does not exist");
 			}
 		}
@@ -122,3 +124,9 @@ public class Starship {
 	}
 }
 
+	
+	private void toAnnihilateVariables() {
+		this.damage = 0;
+		this.speed = 0;
+		this.passenger = 0;
+	}
