@@ -135,7 +135,8 @@ public class Subject {
 		}
 		
 		if(this.value.compareTo("0") == -1) {
-			this.value = new LimitlessNumber("0");
+			this.value.add(subject.value);
+			throw new ArithmeticException("Out of bounds the minimum value");
 		}
 
 	}
