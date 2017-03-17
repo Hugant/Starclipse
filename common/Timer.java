@@ -65,7 +65,7 @@ public class Timer {
 	 */
 	@Override
 	public String toString() {
-		long timer = this.finish - new Date().getTime();
+		final long timer = this.finish - new Date().getTime();
 		
 		if(timer > 0) {
 			return  (getDays(timer)    == 0 ? "" : getDays(timer)    + "d ") + 
@@ -102,7 +102,7 @@ public class Timer {
 	 * 		   if you did not start the timer, pop up UnsupportedOperationException.
 	 */
 	public String toString(String format) {
-		long timer = this.finish - new Date().getTime();
+		final long timer = this.finish - new Date().getTime();
 		
 		if(timer > 0) {
 			format = format.replace("dd", getDays(timer) + "");
