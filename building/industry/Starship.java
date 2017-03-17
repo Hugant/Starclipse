@@ -70,6 +70,10 @@ public class Starship {
 		public Resources getExpenses() {
 			return this.expenses;
 		}
+		
+		public Resources getResources() {
+			return this.resources;
+		}
 	}
 	
 	
