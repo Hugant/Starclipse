@@ -106,7 +106,8 @@ public class Starship {
 						throw new IllegalArgumentException("If you specify an element of 'storage', "
 															+ "the object cannot be null");
 					} else {
-						Storage a = new Storage(res);
+						storage = new Storage(res);
+						expenses = storage.getExpenses();
 					}
 					break;
 					
@@ -119,14 +120,11 @@ public class Starship {
 		if(name != null && !name.equals("")) {
 			this.name = name;
 		} else {
-			
+			this.name = NAMES_MAS[new java.util.Random().nextInt(NAMES_MAS.length)];
 		}
 	}
-}
-
 	
 	private void toAnnihilateVariables() {
 		this.damage = 0;
 		this.speed = 0;
 		this.passenger = 0;
-	}
