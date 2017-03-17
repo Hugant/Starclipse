@@ -110,7 +110,8 @@ public class Subject {
 		}
 		
 		if(this.maxValue != null && this.value.compareTo(this.maxValue) == 1) {
-			this.value = this.maxValue;// exception?
+			this.value.minus(subject.value);
+			throw new ArithmeticException("Out of bounds the maximum value");
 		}
 	}
 	
