@@ -90,6 +90,7 @@ public class Starship {
 	private Subject residents = new Subject(Subject.RESIDENTS, "25", "25");
 	
 	private String name = "";
+	private String owner = "";
 	private Resources expenses = null;
 	
 	public Starship(String name, Resources res, String... cells) {
