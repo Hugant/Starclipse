@@ -94,6 +94,8 @@ public class Subject {
 	 * Adds a <b>Subject</b> to the <b>Subject</b>.
 	 * If the have a different type will generate
 	 * an ArithmeticException.
+	 * If the value exceeds the maximum value, will generate
+	 * an ArithmeticException.
 	 * 
 	 * @throws ArithmeticException
 	 * @param subject is a Subject which you want to add
@@ -115,6 +117,8 @@ public class Subject {
 	/**
 	 * Take a <b>Subject</b> to the <b>Subject</b>.
 	 * If the have a different type will generate
+	 * an ArithmeticException.
+	 * If the value less than the minimal value, will generate
 	 * an ArithmeticException.
 	 * 
 	 * @throws ArithmeticException
