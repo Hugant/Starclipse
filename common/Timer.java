@@ -39,8 +39,9 @@ public class Timer {
      *  Timer timer = new Timer(Timer.HOUR * 48);// 2d 
      * </code></pre>
      */
-	public Timer(long duration) {
-		this.duration = duration;	
+	public Timer(long duration, String phrase) {
+		this.duration = duration;
+		this.phrase = phrase;
 	}
 	
 	
