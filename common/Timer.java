@@ -20,6 +20,7 @@ public class Timer {
 	
 	private long duration = 0;
 	private long finish = 0;
+	private String phrase = "";
 	
 	/**
      * Creates a timer a certain amount of time specified in the parameters. 
@@ -76,7 +77,7 @@ public class Timer {
 			throw new UnsupportedOperationException("You did not start the timer");
 		}
 		
-		return "End Work";
+		return phrase;
 	}
 	
 	
@@ -114,7 +115,7 @@ public class Timer {
 			throw new UnsupportedOperationException("You did not start the timer");
 		}
 		
-		return "End Work";
+		return phrase;
 	}
 	
 	private long getDays(long time) {
