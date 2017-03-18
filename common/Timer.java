@@ -49,7 +49,7 @@ public class Timer {
 	 * Starts counting timer.
 	 */
 	public void start() {
-		this.finish = new Date().getTime() + this.duration;
+		this.finish = new java.util.Date().getTime() + this.duration;
 	}
 	
 	
@@ -68,7 +68,7 @@ public class Timer {
 	 */
 	@Override
 	public String toString() {
-		final long timer = this.finish - new Date().getTime();
+		final long timer = this.finish - new java.util.Date().getTime();
 		
 		if (timer > 0) {
 			return  (getDays(timer)    == 0 ? "" : getDays(timer)    + "d ") + 
@@ -105,7 +105,7 @@ public class Timer {
 	 * 		   if you did not start the timer, pop up UnsupportedOperationException.
 	 */
 	public String toString(String format) {
-		final long timer = this.finish - new Date().getTime();
+		final long timer = this.finish - new java.util.Date().getTime();
 		
 		if (timer > 0) {
 			format = format.replace("dd", getDays(timer) + "");
