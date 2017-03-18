@@ -123,6 +123,10 @@ public class Timer {
 	/**
 	 * Return true if the timer is running, otherwise return false.
 	 */
+	public boolean isWork() {
+		return this.finish - new Date().getTime() > 0;
+	}
+	
 	private long getDays(long time) {
 		return time / DAY;
 	}
