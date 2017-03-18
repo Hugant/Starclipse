@@ -14,13 +14,13 @@ public class Starship {
 		
 		
 		public Storage(Resources res) {
-			if(res.isStorage()) {
-				if(res.asTypeArray().length == 5) {
+			if (res.isStorage()) {
+				if (res.asTypeArray().length == 5) {
 					this.resources = res;
 					this.expenses = new Resources();
 					
-					for(String i : res.asTypeArray()) {
-						switch(i) {
+					for (String i : res.asTypeArray()) {
+						switch (i) {
 							case "gold":
 								expenses.add(new Subject("something", "1"));
 								break;
@@ -94,14 +94,14 @@ public class Starship {
 	private Resources expenses = null;
 	
 	public Starship(String name, Resources res, String... cells) {
-		for(String i : cells) {
-			switch(i) {
+		for (String i : cells) {
+			switch (i) {
 				case "damage":    this.damage++;    break;
 				case "speed":     this.speed++;     break;
 				case "passenger": this.passenger++; break;
 				
 				case "storage":
-					if(res == null) {
+					if (res == null) {
 						this.toAnnihilateVariables();
 						throw new IllegalArgumentException("If you specify an element of 'storage', "
 															+ "the object cannot be null");
@@ -117,7 +117,7 @@ public class Starship {
 			}
 		}
 		
-		if(name != null && !name.equals("")) {
+		if (name != null && !name.equals("")) {
 			this.name = name;
 		} else {
 			this.name = NAMES_MAS[new java.util.Random().nextInt(NAMES_MAS.length)];

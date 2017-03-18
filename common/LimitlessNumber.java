@@ -70,9 +70,9 @@ public class LimitlessNumber {
 	* @param number the string which will be translated
 	*/
 	public LimitlessNumber(String number) {
-		if(number != null && number.matches("^-?(\\d+|\\d+[.]\\d+)([KMBTVZJ]|Ba[KMBTVZJ]|Ga[KMBTVZJ])?$")) {
-			for(int i = POSTFIX_MAS.length - 1; i > 0; i--) {
-				if(number.contains(POSTFIX_MAS[i])) {
+		if (number != null && number.matches("^-?(\\d+|\\d+[.]\\d+)([KMBTVZJ]|Ba[KMBTVZJ]|Ga[KMBTVZJ])?$")) {
+			for (int i = POSTFIX_MAS.length - 1; i > 0; i--) {
+				if (number.contains(POSTFIX_MAS[i])) {
 					this.prefix = 
 							BigDecimal.valueOf(Double.parseDouble(number.substring(0, number.indexOf(POSTFIX_MAS[i]))));
 					this.postfix = number.substring(number.indexOf(POSTFIX_MAS[i]));
@@ -162,7 +162,7 @@ public class LimitlessNumber {
 	public int compareTo(LimitlessNumber number) {
 		String numberPost = number.postfix;
 		number.transferTo(this.postfix);
-		if(this.prefix.compareTo(number.prefix) == -1){
+		if (this.prefix.compareTo(number.prefix) == -1){
 			number.transferTo(numberPost);
 			return -1;
 		} else if(this.prefix.compareTo(number.prefix) == 1) {
@@ -174,12 +174,12 @@ public class LimitlessNumber {
 	
 
 	private void checkingValidity() {
-		while(this.prefix.abs().compareTo(BigDecimal.valueOf(1)) == -1 && !this.postfix.equals("")) {
+		while (this.prefix.abs().compareTo(BigDecimal.valueOf(1)) == -1 && !this.postfix.equals("")) {
 			this.prefix = this.prefix.multiply(BigDecimal.valueOf(1000));
 			this.postfix = POSTFIX_MAS[Arrays.asList(POSTFIX_MAS).indexOf(this.postfix) - 1];
 		}
 		
-		while(this.prefix.abs().compareTo(BigDecimal.valueOf(999)) == 1 && 
+		while (this.prefix.abs().compareTo(BigDecimal.valueOf(999)) == 1 && 
 				!this.postfix.equals(POSTFIX_MAS[POSTFIX_MAS.length - 1])) {
 			this.prefix = this.prefix.divide(BigDecimal.valueOf(1000));
 			this.postfix = POSTFIX_MAS[Arrays.asList(POSTFIX_MAS).indexOf(this.postfix) + 1];

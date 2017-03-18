@@ -67,12 +67,12 @@ public class Timer {
 	public String toString() {
 		final long timer = this.finish - new Date().getTime();
 		
-		if(timer > 0) {
+		if (timer > 0) {
 			return  (getDays(timer)    == 0 ? "" : getDays(timer)    + "d ") + 
 					(getHours(timer)   == 0 ? "" : getHours(timer)   + "h ") + 
 					(getMinutes(timer) == 0 ? "" : getMinutes(timer) + "m ") + 
 					(getSeconds(timer) + "s");
-		} else if(finish == 0) {
+		} else if (finish == 0) {
 			throw new UnsupportedOperationException("You did not start the timer");
 		}
 		
@@ -104,13 +104,13 @@ public class Timer {
 	public String toString(String format) {
 		final long timer = this.finish - new Date().getTime();
 		
-		if(timer > 0) {
+		if (timer > 0) {
 			format = format.replace("dd", getDays(timer) + "");
 			format = format.replace("hh", getHours(timer) + "");
 			format = format.replace("mm", getMinutes(timer) + "");
 			format = format.replace("ss", getSeconds(timer) + "");
 			return format;
-		} else if(finish == 0) {
+		} else if (finish == 0) {
 			throw new UnsupportedOperationException("You did not start the timer");
 		}
 		

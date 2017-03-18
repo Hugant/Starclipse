@@ -31,8 +31,8 @@ public class Resources {
 	 * @param res is a array of string where each string is the type of <b>Subject</b>.
 	 */
 	public Resources(LimitlessNumber volume, String... res) {
-		for(String i : res) {
-			if(!subjects.contains(new Subject(i, "0"))) {
+		for (String i : res) {
+			if (!subjects.contains(new Subject(i, "0"))) {
 				subjects.add(new Subject(i, "0", volume.getPrefix() + volume.getPostfix()));
 			} else {
 				subjects.get(subjects.indexOf(new Subject(i, "0"))).addToMaxValue(volume.getPrefix() + volume.getPostfix());
@@ -56,11 +56,11 @@ public class Resources {
 	 * @param res
 	 */
 	public Resources(String... res) {
-		if(res.length % 2 != 0) {
+		if (res.length % 2 != 0) {
 			throw new IllegalArgumentException("The number of array elements must be even");
 		} else {
-			for(int i = 0; i < res.length; i += 2) {
-				if(subjects.contains(new Subject(res[i], "0"))) {
+			for (int i = 0; i < res.length; i += 2) {
+				if (subjects.contains(new Subject(res[i], "0"))) {
 					subjects.clear();
 					throw new IllegalArgumentException("There are two of the same item");
 				} else {
@@ -79,7 +79,7 @@ public class Resources {
 	 * @param sub is a <b>Subject</b> which you want to add
 	 */
 	public void add(Subject sub) {
-		if(subjects.contains(sub)) {
+		if (subjects.contains(sub)) {
 			subjects.get(subjects.indexOf(sub)).add(sub);
 		} else {
 			subjects.add(sub);
@@ -93,7 +93,7 @@ public class Resources {
 	 * @param sub is a <b>Subject</b> which you want to take
 	 */
 	public void minus(Subject sub) {
-		if(subjects.contains(sub)) {
+		if (subjects.contains(sub)) {
 			subjects.get(subjects.indexOf(sub)).minus(sub);
 		} else {
 			throw new ArithmeticException("No such element exists");
@@ -111,7 +111,7 @@ public class Resources {
 	 * @return Subject with the type you specified
 	 */
 	public Subject get(String type) {
-		if(subjects.contains(new Subject(type, "0"))) {
+		if (subjects.contains(new Subject(type, "0"))) {
 			return subjects.get(subjects.indexOf(new Subject(type, "0")));
 		} else {
 			throw new ArithmeticException("No such element exists");
@@ -125,7 +125,7 @@ public class Resources {
 	public String[] asTypeArray() {
 		String temp[] = new String[subjects.size()];
 		int index = 0;
-		for(Subject i : subjects) {
+		for (Subject i : subjects) {
 			temp[index] = i.getType();
 			index++;
 		}

@@ -38,7 +38,7 @@ public class Subject {
 	* @param value is the amount of a subject
 	*/
 	public Subject(String value) {
-		if(new LimitlessNumber(value).getPrefix().doubleValue() < 0) {
+		if (new LimitlessNumber(value).getPrefix().doubleValue() < 0) {
 			throw new IllegalArgumentException("The amount of material cannot be less than zero");
 		} else {
 			this.value = new LimitlessNumber(value);
@@ -55,7 +55,7 @@ public class Subject {
 	* @param value is the amount of a subject
 	*/
 	public Subject(String type, String value) {
-		if(new LimitlessNumber(value).getPrefix().doubleValue() < 0) {
+		if (new LimitlessNumber(value).getPrefix().doubleValue() < 0) {
 			throw new IllegalArgumentException("The amount of material cannot be less than zero");
 		} else {
 			this.value = new LimitlessNumber(value);
@@ -75,13 +75,13 @@ public class Subject {
 	* @param maxValue is the maximum amount of a subject
 	*/
 	public Subject(String type, String value, String maxValue) {
-		if(new LimitlessNumber(value).getPrefix().doubleValue() < 0) {
+		if (new LimitlessNumber(value).getPrefix().doubleValue() < 0) {
 			throw new IllegalArgumentException("The amount of material cannot be less than zero");
 		} else {
 			this.value = new LimitlessNumber(value);
 		}
 		
-		if(new LimitlessNumber(maxValue).getPrefix().doubleValue() < 0) {
+		if (new LimitlessNumber(maxValue).getPrefix().doubleValue() < 0) {
 			throw new IllegalArgumentException("The maximum amount of material cannot be less than zero");
 		} else {
 			this.maxValue = new LimitlessNumber(maxValue);
@@ -101,15 +101,15 @@ public class Subject {
 	 * @param subject is a Subject which you want to add
 	 */
 	public void add(Subject subject) {
-		if(subject.type == null || this.type == null) {
+		if (subject.type == null || this.type == null) {
 			this.value.add(subject.value);
-		} else if(this.type.equals(subject.type)) {
+		} else if (this.type.equals(subject.type)) {
 			this.value.add(subject.value);
 		} else {
 			throw new ArithmeticException("Arithmetic operations can only be done with the same material");
 		}
 		
-		if(this.maxValue != null && this.value.compareTo(this.maxValue) == 1) {
+		if (this.maxValue != null && this.value.compareTo(this.maxValue) == 1) {
 			this.value.minus(subject.value);
 			throw new ArithmeticException("Out of bounds the maximum value");
 		}
@@ -126,15 +126,15 @@ public class Subject {
 	 * @param subject is a Subject which you want to take
 	 */
 	public void minus(Subject subject) {
-		if(subject.type == null || this.type == null) {
+		if (subject.type == null || this.type == null) {
 			this.value.minus(subject.value);
-		} else if(this.type.equals(subject.type)) {
+		} else if (this.type.equals(subject.type)) {
 			this.value.minus(subject.value);
 		} else {
 			throw new ArithmeticException("Arithmetic operations can only be done with the same material");
 		}
 		
-		if(this.value.compareTo("0") == -1) {
+		if (this.value.compareTo("0") == -1) {
 			this.value.add(subject.value);
 			throw new ArithmeticException("Out of bounds the minimum value");
 		}
@@ -217,8 +217,8 @@ public class Subject {
 	 */
 	@Override
 	public boolean equals(Object o) {
-		if(o != null && o instanceof Subject) {
-			if(this.type.equals(((Subject) o).type)) 
+		if (o != null && o instanceof Subject) {
+			if (this.type.equals(((Subject) o).type)) 
 				return true;
 		}
 
