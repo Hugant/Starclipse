@@ -155,7 +155,7 @@ public class Subject {
 	/**
 	 * Return the string in the form <b>LimitlessNumber</b> rounded down to the nearest tenth.
 	 * <br>
-	 * <pre><code> new Subject("145T").getNumber();// "145T"
+	 * <pre><code>  new Subject("145T").getNumber();// "145T"
 	 *  new Subject("1.001V").getNumber();// "1V"
 	 *  new Subject("1.10Z").getNumber();// "1.1Z"
 	 *  new Subject("1.1234J").getNumber();// "1.12J"
