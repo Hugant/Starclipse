@@ -27,7 +27,8 @@ public class Timer {
      * 
      * <p>
      * <strong>Parameters: </strong>
-     * <pre>  <b>duration</b> the number of the milliseconds.</pre>
+     * <pre>  <b>duration</b> the number of the milliseconds.
+     *  <b>phrase</b> the phrase which will be returned at the end of the timer.</pre>
      * 
      * <p>
      * <strong>Examples: </strong>
@@ -118,6 +119,9 @@ public class Timer {
 		return phrase;
 	}
 	
+	/**
+	 * Return true if the timer is running, otherwise return false.
+	 */
 	private long getDays(long time) {
 		return time / DAY;
 	}
