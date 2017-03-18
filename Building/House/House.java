@@ -9,6 +9,7 @@ public class House extends starclipse.building.Building {
 	private Timer buildTime;
 	private Timer incomeTime;
 	private Subject residents;
+	private Resources income = null;
 	private Resources expenses = null;
 	
 	public House(String type) {
