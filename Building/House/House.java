@@ -57,28 +57,4 @@ public class House extends starclipse.building.Building {
 				return;
 		}
 	}
-	
-	public void build() {
-		buildTime.start();
-	}
-	
-	public void startWork() {
-		incomeTime.start();
-	}
-	
-	synchronized public String getStatus() {
-//		if (buildTime.toString().equals("End Work")) {
-//			return "Start";
-//		} 
-		return incomeTime.toString();
-	}
-	
-	private void setStatus(String status) {
-		this.status = status;
-	}
-	
-	public Subject claim() {
-		incomeTime.start();
-		return this.residents;
-	}
 }
