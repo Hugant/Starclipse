@@ -20,17 +20,20 @@ public class Main{
 	public static void main(String args[]) {
 		String [] mas = {""};
 		House a = new House("small");
-		a.startWork();
+		a.build();
 		String c = "";
 		while(true) {
 			c = a.getStatus();
 			System.out.println(c);
-			if(c.equals("End Work")) {
+			if (c.equals("Start")) {
+				a.startWork();
+			}
+			if(c.equals("Claim")) {
 				//new java.util.Scanner(System.in).nextLine();
 				a.claim();
 			}
 			try {
-				Thread.sleep(500);
+				Thread.sleep(1000);
 			} catch(Exception e) {}
 		}
 		
