@@ -33,6 +33,10 @@ public class Starship {
 								expenses.add(new Subject("something", "1"));
 								break;
 							
+							case "tree":
+								expenses.add(new Subject("something", "1"));
+								break;
+							
 							case "stone":
 								expenses.add(new Subject("something", "1"));
 								break;
