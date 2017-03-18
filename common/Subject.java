@@ -24,6 +24,17 @@ import java.math.BigDecimal;
  */
 public class Subject {
 	public final static String RESIDENTS = "residents";
+	public final static String GOLD = "gold";
+	public final static String IRON = "iron";
+	public final static String COAL = "coal";
+	public final static String TREE = "tree";
+	public final static String STONE = "stone";
+	public final static String WATER = "water";
+	public final static String OXYGEN = "oxygen";
+	public final static String ENERGY = "energy";
+	public final static String FOOD = "food";
+	public final static String MONEY = "money";
+	
 	private LimitlessNumber value = null;
 	private LimitlessNumber maxValue = null;
 	private String type = null;
