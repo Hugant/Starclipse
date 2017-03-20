@@ -43,17 +43,17 @@ public class House extends starclipse.building.Building {
 //				return;
 				
 			case "small":
-				this.residents = new Subject(Subject.RESIDENTS, "0", "10");
-				this.name = "Small House";
-				this.buildTime = new Timer(Timer.SECOND * 5, "Start");
-				this.incomeTime = new Timer(Timer.SECOND * 10, "Claim");
-				this.income = new Resources(Subject.RESIDENTS, "3", Subject.MONEY, "25");
-				this.expenses = new Resources(Subject.STONE,  "12", 
+				super.setResidents(new Subject(Subject.RESIDENTS, "0", "10"));
+				super.setName("Small House");
+				super.setBuildTimer(new Timer(Timer.SECOND * 5, "Start"));
+				super.setIncomeTimer(new Timer(Timer.SECOND * 10, "Claim"));
+				super.setIncome(new Resources(Subject.RESIDENTS, "3", Subject.MONEY, "25"));
+				super.setExpenses(new Resources(Subject.STONE,  "12", 
 											  Subject.TREE,   "6", 
 											  Subject.MONEY,  "125",
 											  Subject.IRON,   "1" , 
 											  Subject.WATER,  "1", 
-											  Subject.ENERGY, "1"  );
+											  Subject.ENERGY, "1"  ));
 				return;
 		}
 	}
