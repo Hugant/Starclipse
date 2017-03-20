@@ -44,6 +44,14 @@ public class Building {
 		return residents.getNumber();
 	}
 	
+	public String getStatus() {
+		if (!buildTimer.isWork() && start && incomeTimer.isWork()) {
+			return incomeTimer.toString();
+		}
+		return buildTimer.toString();
+	}
+	
+	
 	public void setName(String name) {
 		this.name = name;
 	}
