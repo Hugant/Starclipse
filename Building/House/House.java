@@ -5,12 +5,12 @@ import starclipse.common.Timer;
 import starclipse.common.Subject;
 
 public class House extends starclipse.building.Building {
-	private String name = "";
-	private Timer buildTime;
-	private Timer incomeTime;
-	private Subject residents;
-	private Resources income = null;
-	private Resources expenses = null;
+//	private String name = "";
+//	private Timer buildTime;
+//	private Timer incomeTime;
+//	private Subject residents;
+//	private Resources income = null;
+//	private Resources expenses = null;
 	
 	public House(String type) {
 		switch (type.toLowerCase()) {
