@@ -44,4 +44,29 @@ public class Building {
 		return residents.getNumber();
 	}
 	
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setBuildTimer(starclipse.common.Timer buildTime) {
+		this.buildTimer = buildTime;
+	}
+
+	public void setIncomeTimer(starclipse.common.Timer incomeTime) {
+		this.incomeTimer = incomeTime;
+	}
+
+	public void setResidents(starclipse.common.Subject residents) {
+		this.residents = residents;
+	}
+
+	public void setIncome(Resources income) {
+		this.income = income;
+	}
+
+	public void setExpenses(Resources expenses) {
+		this.expenses = expenses;
+	}
+	
+	
 }
