@@ -2,25 +2,29 @@ package starclipse.building;
 
 public class Building {
 	String name = "";
+	private String name = "";
 	
-	starclipse.common.Timer buildTime = null;
-	starclipse.common.Timer incomeTime = null;
+	private starclipse.common.Timer buildTimer = null;
+	private starclipse.common.Timer incomeTimer = null;
 	
-	starclipse.common.Subject residents = null;
+	private starclipse.common.Subject residents = null;
 	
-	Resources income = null;
-	Resources expenses = null;
+	private Resources income = null;
+	private Resources expenses = null;
+	
+	private boolean start = false;
 	
 	public void build() {
-		buildTime.start();
+		buildTimer.start();
+		start = true;
 	}
 	
 	public void startWork() {
-		incomeTime.start();
+		incomeTimer.start();
 	}
 	
 	public Resources claim() {
-		incomeTime.start();
+		incomeTimer.start();
 		return income;
 	}
 	
