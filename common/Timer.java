@@ -1,7 +1,5 @@
 package starclipse.common;
 
-import java.util.Date;
-
 /** 
  * The Timer class allows you to create a time counter(timer).
  * <br>
@@ -124,7 +122,7 @@ public class Timer {
 	 * Return true if the timer is running, otherwise return false.
 	 */
 	public boolean isWork() {
-		return this.finish - new Date().getTime() > 0;
+		return (this.finish - new java.util.Date().getTime()) > 0;
 	}
 	
 	private long getDays(long time) {
