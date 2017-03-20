@@ -18,7 +18,6 @@ import starclipse.common.Subject;
 
 public class Main{
 	public static void main(String args[]) {
-		String [] mas = {""};
 		House a = new House("small");
 		a.build();
 		String c = "";
