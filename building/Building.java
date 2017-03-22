@@ -1,6 +1,8 @@
 package starclipse.building;
 
 import starclipse.common.Resources;
+import starclipse.common.Timer;
+import starclipse.common.Subject;
 
 /**
  * 
@@ -14,10 +16,10 @@ import starclipse.common.Resources;
 public class Building {
 	private String name = "";
 	
-	private starclipse.common.Timer buildTimer = null;
-	private starclipse.common.Timer incomeTimer = null;
+	private Timer buildTimer = null;
+	private Timer incomeTimer = null;
 	
-	private starclipse.common.Subject residents = null;
+	private Subject residents = null;
 	
 	private Resources income = null;
 	private Resources expenses = null;
@@ -28,15 +30,19 @@ public class Building {
 	 * Begins to build the <b>Building</b>.
 	 */
 	public void build() {
-		buildTimer.start();
+		if (buildTimer != null) {
+			buildTimer.start();
+		}
 	}
 	
 	/**
 	 * Starts work in the <b>Building</b>.
 	 */
 	public void startWork() {
-		incomeTimer.start();
-		start = true;
+		if (incomeTimer != null) {
+			incomeTimer.start();
+			start = true;
+		}
 	}
 	
 	
@@ -45,7 +51,9 @@ public class Building {
 	 * @return income is <b>Resources</b> which was extracted
 	 */
 	public Resources claim() {
-		incomeTimer.start();
+		if (incomeTimer != null) {
+			incomeTimer.start();
+		}
 		return income;
 	}
 	
@@ -91,10 +99,13 @@ public class Building {
 	 * @see starclipse.common.Timer
 	 */
 	public String getStatus() {
-		if (((buildTimer.isWork() || incomeTimer.isWork()) || !incomeTimer.isWork()) && start) {
-			return incomeTimer.toString();
+		if (buildTimer != null && incomeTimer != null) {
+			if (((buildTimer.isWork() || incomeTimer.isWork()) || !incomeTimer.isWork()) && start) {
+				return incomeTimer.toString();
+			}
+			return buildTimer.toString();
 		}
-		return buildTimer.toString();
+		return "";
 	}
 	
 	
@@ -110,7 +121,7 @@ public class Building {
 	 * Sets the build <b>Timer</b> of <b>Building</b>.
 	 * @param buildTime is <b>Timer</b>
 	 */
-	public void setBuildTimer(starclipse.common.Timer buildTime) {
+	public void setBuildTimer(Timer buildTime) {
 		this.buildTimer = buildTime;
 	}
 
@@ -118,7 +129,7 @@ public class Building {
 	 * Sets the income <b>Timer</b> of <b>Building</b>.
 	 * @param incomeTime is <b>Timer</b>
 	 */
-	public void setIncomeTimer(starclipse.common.Timer incomeTime) {
+	public void setIncomeTimer(Timer incomeTime) {
 		this.incomeTimer = incomeTime;
 	}
 
@@ -126,7 +137,7 @@ public class Building {
 	 * Sets the number of residents.
 	 * @param residents is <b>Subject</b>
 	 */
-	public void setResidents(starclipse.common.Subject residents) {
+	public void setResidents(Subject residents) {
 		this.residents = residents;
 	}
 
