@@ -73,6 +73,13 @@ public class Resources {
 	 * Adds to the current <b>Resources</b> another <b>Resources</b>.
 	 * @param res is a <b>Resources</b> which you want to add
 	 */
+	public void add(Resources res) {
+		if (res != null) {
+			for (Subject i : res.subjects) {
+				this.add(i);
+			}
+		}
+	}
 	
 	/**
 	 * Adds to the current <b>Subject</b> another <b>Subject</b>.
