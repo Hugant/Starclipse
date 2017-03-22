@@ -25,6 +25,7 @@ public class Building {
 	 */
 	public void startWork() {
 		incomeTimer.start();
+		start = true;
 	}
 	
 	
@@ -79,7 +80,7 @@ public class Building {
 	 * @see starclipse.common.Timer
 	 */
 	public String getStatus() {
-		if (!buildTimer.isWork() && start && incomeTimer.isWork()) {
+		if (((buildTimer.isWork() || incomeTimer.isWork()) || !incomeTimer.isWork()) && start) {
 			return incomeTimer.toString();
 		}
 		return buildTimer.toString();
