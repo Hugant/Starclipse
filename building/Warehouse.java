@@ -11,11 +11,14 @@ public class Warehouse extends starclipse.building.Building {
 	private Resources store;
 	private Resources expenses = null;
 	
-	public Warehouse(String[] cells) {
+	public Warehouse(String... cells) {
 		if(cells.length != 6) {
 			throw new IllegalArgumentException("The number of elements in the string array must be equal to 6");
 		} else {
-			store = new Resources(volume, cells);
+			this.store = new Resources(volume, cells);
+			super.setName("Warehouse");
+			super.setResidents(new Subject(Subject.RESIDENTS, "10", "70"));
+			super.setExpenses(new Resources());
 		}
 	}
 	
