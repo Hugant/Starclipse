@@ -7,6 +7,7 @@ import starclipse.common.Resources;
 import starclipse.common.Timer;
 import starclipse.building.industry.Starship;
 import starclipse.building.House;
+import starclipse.building.Warehouse;
 
 import java.util.Arrays;
 import java.util.Calendar;
@@ -19,22 +20,30 @@ import starclipse.common.Subject;
 public class Main{
 	public static void main(String args[]) {
 		House a = new House("big");
+		Warehouse b = new Warehouse("iron", "gold", "oxygen", "water", "coal", "food");
 		a.build();
-		String c = "";
-		while(true) {
-			c = a.getStatus();
-			System.out.println(c);
-			if (c.equals("Start")) {
-				a.startWork();
-			}
-			if(c.equals("Claim")) {
-				//new java.util.Scanner(System.in).nextLine();
-				a.claim();
-			}
-			try {
-				Thread.sleep(1000);
-			} catch(Exception e) {}
-		}
+		b.build();
+		b.startWork();
+		Resources z = new Resources();
+		Resources j = new Resources("gold", "100");
+		j.add(z);
+		System.out.println(j.get("gold"));
+//		String c = "";
+//		while(true) {
+//			c = a.getStatus();
+//			System.out.println(b.getStatus());
+//			System.out.println(c);
+//			if (c.equals("Start")) {
+//				a.startWork();
+//			}
+//			if(c.equals("Claim")) {
+//				//new java.util.Scanner(System.in).nextLine();
+//				a.claim();
+//			}
+//			try {
+//				Thread.sleep(1000);
+//			} catch(Exception e) {}
+//		}
 		
 //		Resources a = new Resources(new LimitlessNumber("100"), "gold", "oxygen", "gold");
 //		Starship b = new Starship("Hugant", a);
