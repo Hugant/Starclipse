@@ -15,7 +15,6 @@ public class Building {
 	
 	public void build() {
 		buildTimer.start();
-		start = true;
 	}
 	
 	public void startWork() {
