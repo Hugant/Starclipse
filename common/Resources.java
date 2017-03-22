@@ -99,6 +99,14 @@ public class Resources {
 	 * Takes away from the current <b>Resources</b> another <b>Resources</b>.
 	 * @param res is a <b>Resources</b> which you want to take
 	 */
+	public void minus(Resources res) {
+		if (res != null) {
+			for (Subject i : res.subjects) {
+				this.minus(i);
+			}
+		}
+	}
+	
 	/**
 	 * Takes away from the current <b>Subject</b> another <b>Subject</b>.
 	 * If the <b>Subject</b> does not exist, will be generated an 
