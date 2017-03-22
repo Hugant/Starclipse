@@ -18,4 +18,8 @@ public class Warehouse extends starclipse.building.Building {
 			store = new Resources(volume, cells);
 		}
 	}
+	
+	public void addToStore(Subject sub) {
+		store.add(sub);
+	}
 }
