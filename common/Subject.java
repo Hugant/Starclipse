@@ -21,6 +21,8 @@ import java.math.BigDecimal;
  * <br>
  * 
  * @author Hugant MD
+ * 
+ * @see starclipse.common.LimitlessNumber
  */
 public class Subject {
 	public final static String RESIDENTS = "residents";
