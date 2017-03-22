@@ -1,5 +1,16 @@
 package starclipse.building;
 
+import starclipse.common.Resources;
+
+/**
+ * 
+ * @author Hugant MD
+ *
+ * @see starclipse.common.Timer
+ * @see starclipse.common.Subject
+ * @see starclipse.common.Resources
+ * @see starclipse.building.House
+ */
 public class Building {
 	private String name = "";
 	
