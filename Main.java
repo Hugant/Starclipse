@@ -18,7 +18,7 @@ import starclipse.common.Subject;
 
 public class Main{
 	public static void main(String args[]) {
-		House a = new House("small");
+		House a = new House("big");
 		a.build();
 		String c = "";
 		while(true) {
