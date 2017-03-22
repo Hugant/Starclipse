@@ -1,7 +1,6 @@
 package starclipse.building;
 
 import starclipse.common.LimitlessNumber;
-import starclipse.common.Resources;
 import starclipse.common.Subject;
 
 public class Warehouse extends starclipse.building.Building {

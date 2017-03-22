@@ -1,6 +1,6 @@
 package starclipse.building.industry;
 
-import starclipse.common.Resources;
+import starclipse.building.Resources;
 
 public class ResourcesFactory {
 	final private static String[] NAMES = new String[]{"tree", "stone", "coal", "iron", "gold", "energy", "water",

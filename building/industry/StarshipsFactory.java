@@ -1,7 +1,7 @@
 package starclipse.building.industry;
 
+import starclipse.building.Resources;
 import starclipse.common.Cost;
-import starclipse.common.Resources;
 
 public class StarshipsFactory {
 	private String name = "Starships Factory";

@@ -1,6 +1,6 @@
 package starclipse;
 
-import starclipse.common.Resources;
+import starclipse.building.Resources;
 
 public class Planet {
 	private Resources resources;

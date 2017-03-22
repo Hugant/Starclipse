@@ -1,6 +1,9 @@
-package starclipse.common;
+package starclipse.building;
 
 import java.util.ArrayList;
+
+import starclipse.common.LimitlessNumber;
+import starclipse.common.Subject;
 
 /**
  * Allows you to store an array of <b>Subjects</b> and to work with them.
