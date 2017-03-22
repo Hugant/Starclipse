@@ -13,6 +13,9 @@ public class Building {
 	
 	private boolean start = false;
 	
+	/**
+	 * Begins to build the <b>Building</b>.
+	 */
 	public void build() {
 		buildTimer.start();
 	}
