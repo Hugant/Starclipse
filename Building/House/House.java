@@ -4,6 +4,16 @@ import starclipse.building.Resources;
 import starclipse.common.Timer;
 import starclipse.common.Subject;
 
+/**
+ * This class implements an object <b>House</b> that has three types:
+ * small, average, big. Depending on the type of <b>House</b> 
+ * after a certain period of time brings income: residents, money.
+ * Also depending on the type of <b>House</b> contains a certain 
+ * number of residents.
+ * 
+ * @author Hugant MD
+ *
+ */
 public class House extends starclipse.building.Building {
 //	private String name = "";
 //	private Timer buildTime;
@@ -12,6 +22,11 @@ public class House extends starclipse.building.Building {
 //	private Resources income = null;
 //	private Resources expenses = null;
 	
+	/**
+	 * Create a <b>House</b> where the parameters specified a type
+	 * of <b>House</b>.
+	 * @param type is type of <b>House</b>
+	 */
 	public House(String type) {
 		switch (type.toLowerCase()) {
 //			case "big":
