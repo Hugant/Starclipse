@@ -1,7 +1,6 @@
 package starclipse.building;
 
 public class Building {
-	String name = "";
 	private String name = "";
 	
 	private starclipse.common.Timer buildTimer = null;
