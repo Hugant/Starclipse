@@ -69,9 +69,13 @@ public class Resources {
 		isStorage = new Boolean(false);
 	}
 	
+	/**
+	 * Adds to the current <b>Resources</b> another <b>Resources</b>.
+	 * @param res is a <b>Resources</b> which you want to add
+	 */
 	
 	/**
-	 * Adds to the existing <b>Subject</b> other <b>Subject</b>.
+	 * Adds to the current <b>Subject</b> another <b>Subject</b>.
 	 * If the <b>Subject</b> does not exist, will be generated an 
 	 * ArithmeticException.
 	 * @param sub is a <b>Subject</b> which you want to add
@@ -85,7 +89,11 @@ public class Resources {
 	}
 	
 	/**
-	 * Takes away from the existing <b>Subject</b> other <b>Subject</b>.
+	 * Takes away from the current <b>Resources</b> another <b>Resources</b>.
+	 * @param res is a <b>Resources</b> which you want to take
+	 */
+	/**
+	 * Takes away from the current <b>Subject</b> another <b>Subject</b>.
 	 * If the <b>Subject</b> does not exist, will be generated an 
 	 * ArithmeticException.
 	 * @param sub is a <b>Subject</b> which you want to take
