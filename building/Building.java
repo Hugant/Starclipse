@@ -1,5 +1,7 @@
 package starclipse.building;
 
+import starclipse.common.Resources;
+
 public class Building {
 	private String name = "";
 	

@@ -3,10 +3,10 @@ package starclipse;
 import java.math.BigDecimal;
 
 import starclipse.common.LimitlessNumber;
+import starclipse.common.Resources;
 import starclipse.common.Timer;
 import starclipse.building.industry.Starship;
 import starclipse.building.House;
-import starclipse.building.Resources;
 
 import java.util.Arrays;
 import java.util.Calendar;

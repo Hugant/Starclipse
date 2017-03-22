@@ -2,9 +2,9 @@ package starclipse.building.industry;
 
 import java.util.Arrays;
 
-import starclipse.building.Resources;
 import starclipse.common.Subject;
 import starclipse.common.LimitlessNumber;
+import starclipse.common.Resources;
 
 public class Starship {
 	

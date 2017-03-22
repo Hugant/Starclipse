@@ -1,6 +1,7 @@
 package starclipse.building;
 
 import starclipse.common.Timer;
+import starclipse.common.Resources;
 import starclipse.common.Subject;
 
 /**
