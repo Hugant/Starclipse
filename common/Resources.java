@@ -33,7 +33,8 @@ public class Resources {
 			if (!subjects.contains(new Subject(i, "0"))) {
 				subjects.add(new Subject(i, "0", volume.getPrefix() + volume.getPostfix()));
 			} else {
-				subjects.get(subjects.indexOf(new Subject(i, "0"))).addToMaxValue(volume.getPrefix() + volume.getPostfix());
+				subjects.get(subjects.indexOf(new Subject(i, "0")))
+					.addToMaxValue(volume.getPrefix() + volume.getPostfix());
 			}
 		}
 		isStorage = new Boolean(true);
