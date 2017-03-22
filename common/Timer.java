@@ -54,14 +54,14 @@ public class Timer {
 	/**
 	 * Return the remaining of the timer in the format <b><code>1d 9h 31m 5s</code></b>.
 	 * <br>
-	 * If the timer has no starting counting will return <b><code>Start</code></b>.
+	 * If the timer has finished the counting will return <b><code><i>your phrase</i></code></b>.
 	 * <br>
-	 * If the timer has finished the counting will return <b><code>Claim</code></b>.
+	 * If the timer has no starting counting will generated UnsupportedOperationException</b>.
 	 * 
 	 * @exception UnsupportedOperationException
 	 * 
 	 * @return String in the format:<b> <code>(dd)d (hh)h (mm)m (ss)s</code></b>,
-	 * 		   if the timer has finished to count then it will return "End Work",
+	 * 		   if the timer has finished to count then it will return <i>your phrase</i>,
 	 * 		   if you did not start the timer, pop up UnsupportedOperationException.
 	 */
 	@Override
@@ -99,7 +99,7 @@ public class Timer {
 	 * @param format is your format of the output
 	 * <br>
 	 * @return String in your <b><code>format</code></b>,
-	 * 		   if the timer has finished to count then it will return "End Work",
+	 * 		   if the timer has finished to count then it will return <i>your phrase</i>,
 	 * 		   if you did not start the timer, pop up UnsupportedOperationException.
 	 */
 	public String toString(String format) {
