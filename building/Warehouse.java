@@ -30,4 +30,8 @@ public class Warehouse extends starclipse.building.Building {
 	public void takeFromStore(Subject sub) {
 		store.minus(sub);
 	}
+	
+	public void takeFromStore(Resources res) {
+		store.minus(res);
+	}
 }
