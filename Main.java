@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 
 import starclipse.common.LimitlessNumber;
 import starclipse.common.Timer;
-import starclipse.building.house.House;
 import starclipse.building.industry.Starship;
+import starclipse.building.House;
 import starclipse.building.Resources;
 
 import java.util.Arrays;

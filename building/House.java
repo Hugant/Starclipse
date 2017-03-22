@@ -1,6 +1,5 @@
-package starclipse.building.house;
+package starclipse.building;
 
-import starclipse.building.Resources;
 import starclipse.common.Timer;
 import starclipse.common.Subject;
 
@@ -12,6 +11,8 @@ import starclipse.common.Subject;
  * number of residents.
  * 
  * @author Hugant MD
+ * 
+ * @see starclipse.building.Building
  *
  */
 public class House extends starclipse.building.Building {

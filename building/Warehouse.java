@@ -1,6 +1,5 @@
-package starclipse.building.warehouse;
+package starclipse.building;
 
-import starclipse.building.Resources;
 import starclipse.common.LimitlessNumber;
 import starclipse.common.Subject;
 
