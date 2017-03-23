@@ -204,6 +204,10 @@ public class Subject {
 		this.maxValue.setPostfix(subject.value.getPostfix());
 	}
 	
+	public void fill() {
+		this.value.setPrefix(this.maxValue.getPrefix());
+		this.value.setPostfix(this.maxValue.getPostfix());
+	}
 	
 	/**
 	 * Return the string in the form <b>LimitlessNumber</b>.
