@@ -204,6 +204,9 @@ public class Subject {
 		this.maxValue.setPostfix(subject.value.getPostfix());
 	}
 	
+	/**
+	 * "Fill" <b>Subject</b> to the maximum value.
+	 */
 	public void fill() {
 		this.value.setPrefix(this.maxValue.getPrefix());
 		this.value.setPostfix(this.maxValue.getPostfix());
