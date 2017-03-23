@@ -19,19 +19,27 @@ import starclipse.common.Subject;
 
 public class Main{
 	public static void main(String args[]) {
-		House a = new House("big");
-		Warehouse b = new Warehouse("iron", "gold", "oxygen", "water", "coal", "food");
-		a.build();
-		b.build();
-		b.startWork();
-		Resources z = new Resources();
-		Resources j = new Resources("gold", "100");
-		j.add(z);
-		System.out.println(j.get("gold"));
+		Resources a = new Resources(new LimitlessNumber("100M"), "gold", "oxygen", "money", "people");
+		System.out.println(a.get("gold"));
+		System.out.println(a.get("oxygen"));
+		System.out.println(a.get("money"));
+		System.out.println(a.get("people"));
+		a.fillToMax();
+		System.out.println(a.get("gold"));
+		System.out.println(a.get("oxygen"));
+		System.out.println(a.get("money"));
+		System.out.println(a.get("people"));
+//		Subject a = new Subject("gold", "10");
+//		System.out.println(a);
+//		a.fill();
+//		System.out.println(a);
+//		House a = new House("small");
+//		a.build();
+//		
+//		
 //		String c = "";
 //		while(true) {
 //			c = a.getStatus();
-//			System.out.println(b.getStatus());
 //			System.out.println(c);
 //			if (c.equals("Start")) {
 //				a.startWork();
@@ -43,8 +51,11 @@ public class Main{
 //			try {
 //				Thread.sleep(1000);
 //			} catch(Exception e) {}
+//			for(int i = 0; i < 10; i++) {
+//				System.out.println();
+//			}
 //		}
-		
+//		
 //		Resources a = new Resources(new LimitlessNumber("100"), "gold", "oxygen", "gold");
 //		Starship b = new Starship("Hugant", a);
 		//System.out.println(Arrays.asList(a.asTypeArray()));
