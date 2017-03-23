@@ -154,6 +154,12 @@ public class Resources {
 		return temp;	
 	}
 	
+	/**
+	 * "Fills" each <b>Subject</b> to the maximum value.
+	 * If it is not storage, will generated UnsupportedOperationException.
+	 * 
+	 * @throws UnsupportedOperationException
+	 */
 	public void fill() {
 		if (this.isStorage) {
 			for (Subject i : subjects) {
