@@ -154,6 +154,15 @@ public class Resources {
 		return temp;	
 	}
 	
+	public void fill() {
+		if (this.isStorage) {
+			for (Subject i : subjects) {
+				i.fill();
+			}
+		} else {
+			throw new UnsupportedOperationException("It is impossible to fill not for storage");
+		}
+	}
 	
 	/**
 	 * Return <b>true</b> if the <b>Resources</b> is a storage, else return <b>false</b>.
