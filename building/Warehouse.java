@@ -1,12 +1,16 @@
 package starclipse.building;
 
-import starclipse.common.LimitlessNumber;
 import starclipse.common.Resources;
 import starclipse.common.Subject;
 
+/**
+ * 
+ * @author Hugant MD
+ *
+ */
 public class Warehouse extends starclipse.building.Building {
 	
-	private LimitlessNumber volume = new LimitlessNumber("500");// the amount of resources per unit 
+	private starclipse.common.LimitlessNumber volume = new starclipse.common.LimitlessNumber("500");// the amount of resources per unit 
 	private Resources store;
 	
 	public Warehouse(String... cells) {
@@ -34,5 +38,9 @@ public class Warehouse extends starclipse.building.Building {
 	
 	public void takeFromStore(Resources res) {
 		store.minus(res);
+	}
+	
+	public void fillToMax() {
+		
 	}
 }
