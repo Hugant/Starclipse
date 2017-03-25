@@ -21,39 +21,39 @@ public class Starship {
 					
 					for (String i : res.asTypeArray()) {
 						switch (i) {
-							case "gold":
+							case Subject.GOLD:
 								expenses.add(new Subject("something", "1"));
 								break;
 							
-							case "iron":
+							case Subject.IRON:
 								expenses.add(new Subject("something", "1"));
 								break;
 								
-							case "coal":
+							case Subject.COAL:
 								expenses.add(new Subject("something", "1"));
 								break;
 							
-							case "tree":
+							case Subject.TREE:
 								expenses.add(new Subject("something", "1"));
 								break;
 							
-							case "stone":
+							case Subject.STONE:
 								expenses.add(new Subject("something", "1"));
 								break;
 								
-							case "water":
+							case Subject.WATER:
 								expenses.add(new Subject("something", "1"));
 								break;
 								
-							case "oxygen":
+							case Subject.OXYGEN:
 								expenses.add(new Subject("something", "1"));
 								break;
 								
-							case "energy":
+							case Subject.ENERGY:
 								expenses.add(new Subject("something", "1"));
 								break;
 								
-							case "food":
+							case Subject.FOOD:
 								expenses.add(new Subject("something", "1"));
 								break;
 								
