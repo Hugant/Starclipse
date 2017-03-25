@@ -32,12 +32,14 @@ public class Warehouse extends starclipse.building.Building {
 		store.add(res);
 	}
 	
-	public void takeFromStore(Subject sub) {
+	public Subject takeFromStore(Subject sub) {
 		store.minus(sub);
+		return sub;
 	}
 	
-	public void takeFromStore(Resources res) {
+	public Resources takeFromStore(Resources res) {
 		store.minus(res);
+		return res;
 	}
 	
 	public void fillToMax() {
