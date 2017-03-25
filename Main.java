@@ -19,16 +19,9 @@ import starclipse.common.Subject;
 
 public class Main{
 	public static void main(String args[]) {
+		
 		Resources a = new Resources(new LimitlessNumber("100M"), "gold", "oxygen", "money", "people");
 		System.out.println(a.get("gold"));
-		System.out.println(a.get("oxygen"));
-		System.out.println(a.get("money"));
-		System.out.println(a.get("people"));
-		a.fillToMax();
-		System.out.println(a.get("gold"));
-		System.out.println(a.get("oxygen"));
-		System.out.println(a.get("money"));
-		System.out.println(a.get("people"));
 //		Subject a = new Subject("gold", "10");
 //		System.out.println(a);
 //		a.fill();
