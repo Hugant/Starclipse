@@ -42,7 +42,7 @@ public class Warehouse extends starclipse.building.Building {
 		return res;
 	}
 	
-	public void fillToMax() {
-		
+	public void fill() {
+		store.fill();
 	}
 }
