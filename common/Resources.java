@@ -28,7 +28,7 @@ public class Resources {
 	 * @param volume is a <b>LimitlessNumber</b> the future maximal size of each <b>Subject</b>.
 	 * @param res is a array of string where each string is the type of <b>Subject</b>.
 	 */
-	public Resources(LimitlessNumber volume, String... res) {
+	public Resources(ScaleNumber volume, String... res) {
 		for (String i : res) {
 			if (!subjects.contains(new Subject(i, "0"))) {
 				subjects.add(new Subject(i, "0", volume.getPrefix() + volume.getPostfix()));
