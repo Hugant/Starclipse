@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.math.BigDecimal;
 
 /**
- * The class <b>LimitlessNumber</b> allows you to translate number in a more convenient
+ * The class <b>ScaleNumber</b> allows you to translate number in a more convenient
  * form for the user.
  *
  * <p>
@@ -24,7 +24,7 @@ import java.math.BigDecimal;
  * <br>
  * @author Hugant MD
  */
-public class LimitlessNumber {
+public class ScaleNumber {
 	/**
 	* <b>Contains the names of large numbers: <br></b>
 	* K = 1000, <br>
@@ -54,22 +54,22 @@ public class LimitlessNumber {
 	private String postfix = "";
 
 	/**
-	* Create number type of <b>LimitlessNumber</b> and convert it to the form
+	* Create number type of <b>ScaleNumber</b> and convert it to the form
 	* prefix + postfix. If number has an irregular form, will generate
 	* an IllegalArgumentException.
 	*
 	* <p>
 	* <strong>Example:</strong>
-	* <pre><code>  LimitlessNumber num = new LimitlessNumber("1000");// 1K
-	*  LimitlessNumber num = new LimitlessNumber("45M");// 45M
-	*  LimitlessNumber num = new LimitlessNumber("1502M");// 1.502B
-	*  LimitlessNumber num = new LimitlessNumber("0.53B");// 530M
+	* <pre><code>  ScaleNumber num = new ScaleNumber("1000");// 1K
+	*  ScaleNumber num = new ScaleNumber("45M");// 45M
+	*  ScaleNumber num = new ScaleNumber("1502M");// 1.502B
+	*  ScaleNumber num = new ScaleNumber("0.53B");// 530M
 	* <br>
 	* 
 	* @throws IllegalArgumentException
 	* @param number the string which will be translated
 	*/
-	public LimitlessNumber(String number) {
+	public ScaleNumber(String number) {
 		if (number != null && number.matches("^-?(\\d+|\\d+[.]\\d+)([KMBTVZJ]|Ba[KMBTVZJ]|Ga[KMBTVZJ])?$")) {
 			for (int i = POSTFIX_MAS.length - 1; i > 0; i--) {
 				if (number.contains(POSTFIX_MAS[i])) {
@@ -91,47 +91,90 @@ public class LimitlessNumber {
 	
 	
 	/**
-	* Add number to this <b>LimitlessNumber</b>.
+	* Add <b>ScaleNumber</b> to this <b>ScaleNumber</b>.
 	* 
 	* @param number the string, which you want to add.
 	*/
 	public void add(String number) {
-		this.add(new LimitlessNumber(number));
+		this.add(new ScaleNumber(number));
 	}
 	
 	
 	/**
-	* Add number to this <b>LimitlessNumber</b>.
+	* Add <b>ScaleNumber</b> to this <b>ScaleNumber</b>.
 	* 
-	* @param number the <b>LimitlessNumber</b>, which you want to add.
+	* @param number the <b>ScaleNumber</b>, which you want to add.
 	*/
-	public void add(LimitlessNumber number) {
+	public ScaleNumber add(ScaleNumber number) {
 		this.prefix = number.transferTo(this.postfix).add(this.prefix);
 		this.checkingValidity();
+		return this;
 	}
 	
 	
 	/**
-	* Takes the number from this <b>LimitlessNumber</b>.
+	* Takes the <b>ScaleNumber</b> from this <b>ScaleNumber</b>.
 	* 
 	* @param number the string, which you want take.
 	*/
 	public void minus(String number) {
-		this.minus(new LimitlessNumber(number));
+		this.minus(new ScaleNumber(number));
 	}
 	
 	
 	/**
-	* Takes the number from this <b>LimitlessNumber</b>.
+	* Takes the <b>ScaleNumber</b> from this <b>ScaleNumber</b>.
 	* 
-	* @param number the <b>LimitlessNumber</b>, which you want take.
+	* @param number the <b>ScaleNumber</b>, which you want take.
 	*/
-	public void minus(LimitlessNumber number) {
+	public ScaleNumber minus(ScaleNumber number) {
 		this.prefix = this.prefix.subtract(number.transferTo(this.postfix));
 		this.checkingValidity();
+		return this;
 	}
 	
-
+	
+	/**
+	 * Multiplies the <b>ScaleNumber</b> with another <b>ScaleNumber</b>.
+	 * 
+	 * @param number the String, which you want to multiply
+	 */
+	public void multiply(String number) {
+		this.multiply(new ScaleNumber(number));
+	}
+	
+	
+	/**
+	 * Multiplies the the <b>ScaleNumber</b> with another the <b>ScaleNumber</b>.
+	 * 
+	 * @param number the <b>ScaleNumber</b>, which you want to multiply
+	 */
+	public ScaleNumber multiply(ScaleNumber number) {
+		this.prefix = number.transferTo("").multiply(this.transferTo(""));
+		this.checkingValidity();
+		return this;
+	}
+	
+	
+	/**
+	 * Divides a <b>ScaleNumber</b> by another <b>ScaleNumber</b>.
+	 * 
+	 * @param number the String, which you want to divide
+	 */
+	public void divide(String number) {
+		this.divide(new ScaleNumber(number));
+	}
+	
+	/**
+	 * Divides a <b>ScaleNumber</b> by another <b>ScaleNumber</b>.
+	 * 
+	 * @param number the <b>ScaleNumber</b>, which you want to divide
+	 */
+	public ScaleNumber divide(ScaleNumber number) {
+		this.prefix = this.transferTo("").divide(number.transferTo(""));
+		this.checkingValidity();
+		return this;
+	}
 	
 	private BigDecimal transferTo(String system) {
 		// number * 10^(this.postfix - system) * 3
@@ -145,21 +188,21 @@ public class LimitlessNumber {
 	
 	
 	/**
-	* Compare this <b>LimitlessNumber</b> to the string.
+	* Compare this <b>ScaleNumber</b> to the string.
 	* 
 	* @param number the string to compare with.
 	*/
 	public int compareTo(String number) {
-		return this.compareTo(new LimitlessNumber(number));
+		return this.compareTo(new ScaleNumber(number));
 	}
 	
 	
 	/**
-	* Compare this <b>LimitlessNumber</b> to the <b>LimitlessNumber</b>.
+	* Compare this <b>ScaleNumber</b> to the <b>ScaleNumber</b>.
 	* 
-	* @param number the <b>LimitlessNumber</b> to compare with.
+	* @param number the <b>ScaleNumber</b> to compare with.
 	*/
-	public int compareTo(LimitlessNumber number) {
+	public int compareTo(ScaleNumber number) {
 		String numberPost = number.postfix;
 		number.transferTo(this.postfix);
 		if (this.prefix.compareTo(number.prefix) == -1){
@@ -191,7 +234,7 @@ public class LimitlessNumber {
 	* <br>
 	* <br>
 	* <strong>Example: </strong>
-	* <pre><code> new LimitlessNumber("55B").getPrefix();// 55
+	* <pre><code> new ScaleNumber("55B").getPrefix();// 55
 	* </pre></code>
 	*/
 	public BigDecimal getPrefix() {
@@ -203,18 +246,18 @@ public class LimitlessNumber {
 	* <br>
 	* <br>
 	* <strong>Example: </strong>
-	* <pre><code> new LimitlessNumber("324M").getPostfix();// M
+	* <pre><code> new ScaleNumber("324M").getPostfix();// M
 	*/
 	public String getPostfix() {
 		return this.postfix;
 	}
 	
 	/**
-	* Set prefix to this <b>LimitlessNumber</b>.
+	* Set prefix to this <b>ScaleNumber</b>.
 	* <br>
 	* <br>
 	* <strong>Example: </strong>
-	* <pre><code> new LimitlessNumber("23B").setPrefix(BigDecimal.valueOf(132));// 132B
+	* <pre><code> new ScaleNumber("23B").setPrefix(BigDecimal.valueOf(132));// 132B
 	* <br>
 	* 
 	* @param prefix the number, which replaced this prefix.
@@ -224,11 +267,11 @@ public class LimitlessNumber {
 	}
 	
 	/**
-	* Set postfix to this <b>LimitlessNumber</b>.
+	* Set postfix to this <b>ScaleNumber</b>.
 	* <br>
 	* <br>
 	* <strong>Example: </strong>
-	* <pre><code> new LimitlessNumber("43B").setPostfix("J");// 43J
+	* <pre><code> new ScaleNumber("43B").setPostfix("J");// 43J
 	* <br>
 	* 
 	* @param postfix the string, which replaced this postfix.
