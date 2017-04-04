@@ -118,9 +118,20 @@ public class Starship {
 	public Starship(String name, Resources res, String... cells) {
 		for (String i : cells) {
 			switch (i) {
-				case "damage":    this.damage++;    break;
-				case "speed":     this.speed++;     break;
-				case "passenger": this.passenger++; break;
+				case "damage":    
+					this.damage++;
+					expenses.add(new Subject("damage", "1"));
+					break;
+					
+				case "speed":     
+					this.speed++;
+					expenses.add(new Subject("speed", "1"));
+					break;
+					
+				case "passenger": 
+					this.passengerCompartment++;
+					expenses.add(new Subject("food", "1"));
+					break;
 				
 				case "storage":
 					if (res == null) {
@@ -129,7 +140,7 @@ public class Starship {
 															+ "the object cannot be null");
 					} else {
 						storage = new Storage(res);
-						expenses = storage.getExpenses();
+						expenses.add(storage.getExpenses());
 					}
 					break;
 					
@@ -138,6 +149,10 @@ public class Starship {
 					throw new IllegalArgumentException("Such a resource does not exist");
 			}
 		}
+		
+		;
+		this.passenger = new Subject(Subject.RESIDENTS, "0",
+				passengerValume.multiply(new ScaleNumber(passengerCompartment + "")).toString());
 		
 		if (name != null && !name.equals("")) {
 			this.name = name;
