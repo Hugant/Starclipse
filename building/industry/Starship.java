@@ -193,4 +193,8 @@ public class Starship {
 	public Subject getResidents() {
 		return residents;
 	}
+	
+	public void addPassenger(String number) {
+		this.residents.add(new Subject(number)); 
+	}
 }
