@@ -1,9 +1,7 @@
 package starclipse.building.industry;
 
-import java.util.Arrays;
-
 import starclipse.common.Subject;
-import starclipse.common.LimitlessNumber;
+import starclipse.common.ScaleNumber;
 import starclipse.common.Resources;
 
 public class Starship {
