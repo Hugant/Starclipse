@@ -189,4 +189,8 @@ public class Starship {
 	public Resources getExpenses() {
 		return this.expenses;
 	}
+	
+	public Subject getResidents() {
+		return residents;
+	}
 }
