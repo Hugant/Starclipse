@@ -2,7 +2,7 @@ package starclipse;
 
 import java.math.BigDecimal;
 
-import starclipse.common.LimitlessNumber;
+import starclipse.common.ScaleNumber;
 import starclipse.common.Resources;
 import starclipse.common.Timer;
 import starclipse.building.industry.Starship;
@@ -19,9 +19,18 @@ import starclipse.common.Subject;
 
 public class Main{
 	public static void main(String args[]) {
-		
-		Resources a = new Resources(new LimitlessNumber("100M"), "gold", "oxygen", "money", "people");
-		System.out.println(a.get("gold"));
+		Starship a = new Starship("Hugant", null, "damage", "speed", "damage", "speed", "passenger");
+		System.out.println(a.getExpenses().get("damage"));
+		System.out.println(a.getExpenses().get("speed"));
+		System.out.println(a.getExpenses().get("food"));
+//		ScaleNumber a = new ScaleNumber("1M");
+//		a.divide("0.1");
+//		System.out.println(a);
+//		
+//		Resources a = new Resources();
+//		Resources b = new Resources();
+//		System.out.println(a.hashCode());
+//		System.out.println(b.hashCode());
 //		Subject a = new Subject("gold", "10");
 //		System.out.println(a);
 //		a.fill();
