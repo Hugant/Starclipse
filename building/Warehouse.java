@@ -2,6 +2,7 @@ package starclipse.building;
 
 import starclipse.common.Resources;
 import starclipse.common.Subject;
+import starclipse.common.ScaleNumber;
 
 /**
  * 
@@ -10,7 +11,7 @@ import starclipse.common.Subject;
  */
 public class Warehouse extends starclipse.building.Building {
 	
-	private starclipse.common.LimitlessNumber volume = new starclipse.common.LimitlessNumber("500");// the amount of resources per unit 
+	private starclipse.common.ScaleNumber volume = new starclipse.common.ScaleNumber("500");// the amount of resources per unit 
 	private Resources store;
 	
 	public Warehouse(String... cells) {
