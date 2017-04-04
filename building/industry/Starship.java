@@ -201,4 +201,8 @@ public class Starship {
 	public void setPassengerValume(String number) {
 		this.passengerValume = new ScaleNumber(number);
 	}
+	
+	public void setPassengerValume(ScaleNumber number) {
+		this.passengerValume = number;
+	}
 }
