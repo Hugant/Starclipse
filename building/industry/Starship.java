@@ -98,20 +98,22 @@ public class Starship {
 	
 	
 	
-	private static final int PASSENGER_VOLUME = 10;// quantity per unit
 	private static final String NAMES_MAS[] = {"Crimson", "Wenda", "Lexa"};
 	
 	
 	private int damage = 0;
 	private int speed = 0;
-	private int passenger = 0;
-	private Storage storage = null;
-		 
-	private Subject residents = new Subject(Subject.RESIDENTS, "25", "25");
+	private int passengerCompartment = 0;
 	
 	private String name = "";
-	private String owner = "";
-	private Resources expenses = null;
+	private String owner = "";// ???????????
+	
+	private Subject residents = new Subject(Subject.RESIDENTS, "25", "25");
+	private Subject passenger = null;
+	private static ScaleNumber passengerValume = new ScaleNumber("10");
+	
+	private Storage storage = null;
+	private Resources expenses = new Resources();
 	
 	public Starship(String name, Resources res, String... cells) {
 		for (String i : cells) {
