@@ -183,7 +183,7 @@ public class Starship {
 	}
 	
 	public int getPassenger() {
-		return this.passenger;
+		return this.passengerCompartment;
 	}
 	
 	public Resources getExpenses() {
