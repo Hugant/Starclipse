@@ -11,7 +11,7 @@ public class Starship {
 		private Resources expenses = null;
 		
 		
-		public Storage(Resources res) {
+		Storage(Resources res) {
 			if (res.isStorage()) {
 				if (res.asTypeArray().length == 5) {
 					this.resources = res;
@@ -162,7 +162,8 @@ public class Starship {
 	private void toAnnihilateVariables() {
 		this.damage = 0;
 		this.speed = 0;
-		this.passenger = 0;
+		this.passengerCompartment = 0;
+		this.expenses = null;
 	}
 	
 	public String getName() {
