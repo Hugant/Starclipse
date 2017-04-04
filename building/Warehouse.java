@@ -14,8 +14,8 @@ public class Warehouse extends starclipse.building.Building {
 	private starclipse.common.ScaleNumber volume = new starclipse.common.ScaleNumber("500");// the amount of resources per unit 
 	private Resources store;
 	
-	public Warehouse(String... cells) {
-		if(cells.length != 6) {
+	public Warehouse(ScaleNumber volume, String... cells) {
+		if (cells.length != 6) {
 			throw new IllegalArgumentException("The number of elements in the string array must be equal to 6");
 		} else {
 			this.store = new Resources(volume, cells);
