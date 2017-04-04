@@ -197,4 +197,8 @@ public class Starship {
 	public void addPassenger(String number) {
 		this.residents.add(new Subject(number)); 
 	}
+	
+	public void setPassengerValume(String number) {
+		this.passengerValume = new ScaleNumber(number);
+	}
 }
