@@ -78,6 +78,22 @@ public class Starship {
 		public Resources getResources() {
 			return this.resources;
 		}
+		
+		public void add(Subject sub) {
+			this.resources.add(sub);
+		}
+		
+		public void add(Resources res) {
+			this.resources.add(res);
+		}
+		
+		public void minus(Subject sub) {
+			this.resources.minus(sub);
+		}
+		
+		public void minus(Resources res) {
+			this.resources.add(res);
+		}
 	}
 	
 	
