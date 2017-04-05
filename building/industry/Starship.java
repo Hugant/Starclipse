@@ -77,17 +77,21 @@ public class Starship {
 			switch (i) {
 				case "damage":    
 					this.damage++;
-					expenses.add(new Subject("damage", "1"));
+					expenses.add(new Subject(Subject.IRON, "10K"));
+					expenses.add(new Subject(Subject.ENERGY, "1K"));
 					break;
 					
 				case "speed":     
 					this.speed++;
-					expenses.add(new Subject("speed", "1"));
+					expenses.add(new Subject(Subject.ENERGY, "1K"));
 					break;
 					
 				case "passenger": 
 					this.passengerCompartment++;
-					expenses.add(new Subject("food", "1"));
+					expenses.add(new Subject(
+							Subject.OXYGEN, OXYGEN_FOR_ONE_PASSENGER.multiply(passengerValume).toString()));
+					expenses.add(new Subject(
+							Subject.FOOD, FOOD_FOR_ONE_PASSENGER.multiply(passengerValume).toString()));
 					break;
 				
 				case "storage":
