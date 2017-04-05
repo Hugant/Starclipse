@@ -54,7 +54,8 @@ public class Starship {
 	
 	
 	private static final String NAMES_MAS[] = {"Crimson", "Wenda", "Lexa"};
-	
+	private static final ScaleNumber FOOD_FOR_ONE_PASSENGER = new ScaleNumber("50");
+	private static final ScaleNumber OXYGEN_FOR_ONE_PASSENGER = new ScaleNumber("100");
 	
 	private int damage = 0;
 	private int speed = 0;
