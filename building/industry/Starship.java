@@ -66,7 +66,8 @@ public class Starship {
 	
 	private Subject residents = new Subject(Subject.RESIDENTS, "25", "25");
 	private Subject passenger = null;
-	private static ScaleNumber passengerValume = new ScaleNumber("10");
+	private ScaleNumber passengerValume = new ScaleNumber("10");
+	
 	
 	private Storage storage = null;
 	private Resources expenses = new Resources();
