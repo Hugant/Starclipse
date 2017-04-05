@@ -20,12 +20,12 @@ public class Resources {
 	 * 
 	 * <p>
 	 * <strong>Example: </strong>
-	 * <pre><code> Resources a = new Resources(new LimitlessNumber("100"), "iron",
+	 * <pre><code> Resources a = new Resources(new ScaleNumber("100"), "iron",
 	 * 	"tree", "gold");// maxValue of iron = 100, tree = 100, gold = 100
-	 * Resources a = new Resources(new LimitlessNumber("100"), "iron", "iron",
+	 * Resources a = new Resources(new ScaleNumber("100"), "iron", "iron",
 	 * 	"tree", "gold");// maxValue of iron = 200, tree = 100, gold = 100
 	 * </code></pre>
-	 * @param volume is a <b>LimitlessNumber</b> the future maximal size of each <b>Subject</b>.
+	 * @param volume is a <b>ScaleNumber</b> the future maximal size of each <b>Subject</b>.
 	 * @param res is a array of string where each string is the type of <b>Subject</b>.
 	 */
 	public Resources(ScaleNumber volume, String... res) {
@@ -177,4 +177,16 @@ public class Resources {
 	public boolean isStorage() {
 		return isStorage;
 	}
+	
+	/**
+	 * Return amount of subjects.
+	 * 
+	 * @return length
+	 */
+	
+	/**
+	 * Return <b>ScaleNumber</b> volume of <b>Subject</b>.
+	 * 
+	 * @return volume
+	 */
 }
