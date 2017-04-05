@@ -6,18 +6,15 @@ public class ResourcesFactory {
 	final private static String[] NAMES = new String[]{"tree", "stone", "coal", "iron", "gold", "energy", "water",
 													   "oxygen", "food"};
 	private String name = "";
-	private Resources expenses = null;
+	private Resources expenses = new Resources();
 	
-	public ResourcesFactory(String name) {
-		for(String i : NAMES) {
-			if(i.equals(name)) {
-				this.name = name;
-				break;
+	public ResourcesFactory(String... cells) {
+		if (cells.length == 5) {
+			for (String i : cells) {
+				expenses.add(res);
 			}
-		}
-		
-		if(this.name.equals("")) {
-			//throw "FUCK";
+		} else {
+			//throw new Exception();
 		}
 	}
 }
