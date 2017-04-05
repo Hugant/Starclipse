@@ -190,6 +190,10 @@ public class Resources {
 	 * 
 	 * @return length
 	 */
+	public int length() {
+		return length;
+	}
+	
 	
 	/**
 	 * Return <b>ScaleNumber</b> volume of <b>Subject</b>.
