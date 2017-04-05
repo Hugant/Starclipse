@@ -12,6 +12,8 @@ import java.util.ArrayList;
 public class Resources {
 	private ArrayList<Subject> subjects = new ArrayList<Subject>();
 	private Boolean isStorage = null;
+	private ScaleNumber volume = null;
+	private int length = 0;
 	
 	/**
 	 * Create <b>Resources</b>(Storage) in which all <b>Subjects</b> will have
@@ -36,8 +38,10 @@ public class Resources {
 				subjects.get(subjects.indexOf(new Subject(i, "0")))
 					.addToMaxValue(volume.getPrefix() + volume.getPostfix());
 			}
+			this.length++;
 		}
-		isStorage = new Boolean(true);
+		this.volume = volume;
+		this.isStorage = new Boolean(true);
 	}
 	
 	/**
@@ -65,6 +69,7 @@ public class Resources {
 				} else {
 					subjects.add(new Subject(res[i], res[i + 1]));
 				}
+				this.length++;
 			}
 		}
 		isStorage = new Boolean(false);
@@ -94,6 +99,7 @@ public class Resources {
 		} else {
 			subjects.add(sub);
 		}
+		this.length++;
 	}
 	
 	/**
@@ -117,6 +123,7 @@ public class Resources {
 	public void minus(Subject sub) {
 		if (subjects.contains(sub)) {
 			subjects.get(subjects.indexOf(sub)).minus(sub);
+			this.length--;
 		} else {
 			throw new ArithmeticException("No such element exists");
 		}
