@@ -95,8 +95,8 @@ public class ScaleNumber {
 	* 
 	* @param number the string, which you want to add.
 	*/
-	public void add(String number) {
-		this.add(new ScaleNumber(number));
+	public ScaleNumber add(String number) {
+		return this.add(new ScaleNumber(number));
 	}
 	
 	
@@ -117,8 +117,8 @@ public class ScaleNumber {
 	* 
 	* @param number the string, which you want take.
 	*/
-	public void minus(String number) {
-		this.minus(new ScaleNumber(number));
+	public ScaleNumber minus(String number) {
+		return this.minus(new ScaleNumber(number));
 	}
 	
 	
@@ -139,8 +139,8 @@ public class ScaleNumber {
 	 * 
 	 * @param number the String, which you want to multiply
 	 */
-	public void multiply(String number) {
-		this.multiply(new ScaleNumber(number));
+	public ScaleNumber multiply(String number) {
+		return this.multiply(new ScaleNumber(number));
 	}
 	
 	
@@ -161,8 +161,8 @@ public class ScaleNumber {
 	 * 
 	 * @param number the String, which you want to divide
 	 */
-	public void divide(String number) {
-		this.divide(new ScaleNumber(number));
+	public ScaleNumber divide(String number) {
+		return this.divide(new ScaleNumber(number));
 	}
 	
 	/**
