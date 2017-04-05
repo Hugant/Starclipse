@@ -200,4 +200,7 @@ public class Resources {
 	 * 
 	 * @return volume
 	 */
+	public ScaleNumber getVolume() {
+		return volume;
+	}
 }
