@@ -13,54 +13,11 @@ public class Starship {
 		
 		Storage(Resources res) {
 			if (res.isStorage()) {
-				if (res.asTypeArray().length == 5) {
+				if (res.length() == 5) {
 					this.resources = res;
-					this.expenses = new Resources();
-					
-					for (String i : res.asTypeArray()) {
-						switch (i) {
-							case Subject.GOLD:
-								expenses.add(new Subject("something", "1"));
-								break;
-							
-							case Subject.IRON:
-								expenses.add(new Subject("something", "1"));
-								break;
-								
-							case Subject.COAL:
-								expenses.add(new Subject("something", "1"));
-								break;
-							
-							case Subject.TREE:
-								expenses.add(new Subject("something", "1"));
-								break;
-							
-							case Subject.STONE:
-								expenses.add(new Subject("something", "1"));
-								break;
-								
-							case Subject.WATER:
-								expenses.add(new Subject("something", "1"));
-								break;
-								
-							case Subject.OXYGEN:
-								expenses.add(new Subject("something", "1"));
-								break;
-								
-							case Subject.ENERGY:
-								expenses.add(new Subject("something", "1"));
-								break;
-								
-							case Subject.FOOD:
-								expenses.add(new Subject("something", "1"));
-								break;
-								
-							default:
-								this.expenses = null;
-								this.resources = null;
-								throw new IllegalArgumentException(i + " this type is not used in storage");
-						}
-					}
+					this.expenses = new Resources(
+							Subject.IRON, res.getVolume().divide("10").multiply(res.length() + "").toString(),
+							Subject.ENERGY, res.getVolume().divide("2").multiply(res.length() + "").toString());
 				} else {
 					throw new IllegalArgumentException("The amount of storage must equal 5");
 				}	
