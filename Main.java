@@ -19,9 +19,11 @@ import starclipse.common.Subject;
 
 public class Main{
 	public static void main(String args[]) {
-		Starship a = new Starship("Hugant", null, "damage", "speed", "damage", "speed", "passenger");
-		System.out.println(a.getExpenses().get("damage"));
-		System.out.println(a.getExpenses().get("speed"));
+		Starship a = new Starship("Hugant", new Resources(new ScaleNumber("2K"), "gold", "gold", "oxygen", "water", "stone"), "damage", "speed", "damage", "passenger", "storage");
+		System.out.println(Arrays.asList(a.getExpenses().asTypeArray()));
+		System.out.println(a.getExpenses().get("iron"));
+		System.out.println(a.getExpenses().get("energy"));
+		System.out.println(a.getExpenses().get("oxygen"));
 		System.out.println(a.getExpenses().get("food"));
 //		ScaleNumber a = new ScaleNumber("1M");
 //		a.divide("0.1");
