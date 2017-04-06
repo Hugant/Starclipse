@@ -17,7 +17,8 @@ public class Starship {
 					this.resources = res;
 					this.expenses = new Resources(
 							Subject.IRON, res.getVolume().divide("10").multiply(res.length() + "").toString(),
-							Subject.ENERGY, res.getVolume().divide("2").multiply(res.length() + "").toString());
+							Subject.ENERGY, res.getVolume().divide("2").multiply(res.length() + "").toString(),
+							Subject.MONEY, res.getVolume().divide("2").multiply(res.length() + "").toString());
 				} else {
 					throw new IllegalArgumentException("The amount of storage must equal 5");
 				}	
