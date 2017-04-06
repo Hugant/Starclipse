@@ -46,7 +46,7 @@ public class Resources {
 	
 	/**
 	 * Create <b>Resources</b> in which you can specify the size of each <b>Subject</b>.
-	 * If <b>Subject</a> will be repeated then will be generated an IllegalArgumentException.
+	 * If <b>Subject</b> will be repeated then will be generated an IllegalArgumentException.
 	 * 
 	 * <p>
 	 * <strong>Example: </strong>
