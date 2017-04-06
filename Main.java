@@ -19,12 +19,13 @@ import starclipse.common.Subject;
 
 public class Main{
 	public static void main(String args[]) {
-		Starship a = new Starship("Hugant", new Resources(new ScaleNumber("2K"), "gold", "gold", "oxygen", "water", "stone"), "damage", "speed", "damage", "passenger", "storage");
-		System.out.println(Arrays.asList(a.getExpenses().asTypeArray()));
-		System.out.println(a.getExpenses().get("iron"));
-		System.out.println(a.getExpenses().get("energy"));
-		System.out.println(a.getExpenses().get("oxygen"));
-		System.out.println(a.getExpenses().get("food"));
+		System.out.println(Subject.TREE.substring(0, 1).toUpperCase() + Subject.TREE.substring(1) + " Factory");
+//		Starship a = new Starship("Hugant", new Resources(new ScaleNumber("2K"), "gold", "gold", "oxygen", "water", "stone"), "damage", "speed", "damage", "passenger", "storage");
+//		System.out.println(Arrays.asList(a.getExpenses().asTypeArray()));
+//		System.out.println(a.getExpenses().get("iron"));
+//		System.out.println(a.getExpenses().get("energy"));
+//		System.out.println(a.getExpenses().get("oxygen"));
+//		System.out.println(a.getExpenses().get("food"));
 //		ScaleNumber a = new ScaleNumber("1M");
 //		a.divide("0.1");
 //		System.out.println(a);
