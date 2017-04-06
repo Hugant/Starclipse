@@ -2,10 +2,10 @@ package starclipse.building.industry;
 
 import starclipse.common.Resources;
 
-public class ResourcesFactory {
-	final private static String[] NAMES = new String[]{"tree", "stone", "coal", "iron", "gold", "energy", "water",
-													   "oxygen", "food"};
-	private String name = "";
+public class ResourcesFactory extends starclipse.building.Building {
+	final private static String[] NAMES = {Subject.TREE, Subject.STONE, Subject.COAL, Subject.IRON, 
+			Subject.GOLD, Subject.ENERGY, Subject.WATER, Subject.OXYGEN, Subject.FOOD, Subject.SOIL};
+	
 	private Resources expenses = new Resources();
 	
 	public ResourcesFactory(String... cells) {
