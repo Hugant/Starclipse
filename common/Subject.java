@@ -36,6 +36,7 @@ public class Subject {
 	public final static String ENERGY = "energy";
 	public final static String FOOD = "food";
 	public final static String MONEY = "money";
+	public final static String SOIL = "soil";
 	
 	private ScaleNumber value = null;
 	private ScaleNumber maxValue = null;
