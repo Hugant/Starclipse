@@ -3,6 +3,7 @@ package starclipse.building;
 import starclipse.common.Resources;
 import starclipse.common.Timer;
 import starclipse.common.Subject;
+import starclipse.common.ScaleNumber;
 
 /**
  * 
