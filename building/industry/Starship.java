@@ -174,4 +174,16 @@ public class Starship {
 	public void setPassengerValume(ScaleNumber number) {
 		this.passengerValume = number;
 	}
+	
+	public void defend(Starship starhips) {
+		
+	}
+	
+	public void defend(starclipse.Planet planet) {
+		
+	}
+	
+	public void attack(Starship starship) {
+		
+	}
 }
