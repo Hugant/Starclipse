@@ -6,8 +6,6 @@ import starclipse.common.Timer;
 import starclipse.common.ScaleNumber;
 
 public class ResourcesFactory extends starclipse.building.Building {
-	final private static String[] NAMES = {Subject.TREE, Subject.STONE, Subject.COAL, Subject.IRON, 
-			Subject.GOLD, Subject.ENERGY, Subject.WATER, Subject.OXYGEN, Subject.FOOD, Subject.SOIL};
 	private static final ScaleNumber INCOME_PER_RESIDENT = new ScaleNumber("10");
 	
 	private static ScaleNumber maxResidents = new ScaleNumber("1K");
