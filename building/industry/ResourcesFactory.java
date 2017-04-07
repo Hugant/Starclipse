@@ -94,4 +94,12 @@ public class ResourcesFactory extends starclipse.building.Building {
 				throw new IllegalArgumentException("Such a resource does not exist");
 		}
 	}
+	
+	public void setMaxResidents(ScaleNumber maxResidents) {
+		this.maxResidents = maxResidents;
+	}
+	
+	public void setMaxResidents(String maxResidents) {
+		this.maxResidents = new ScaleNumber(maxResidents);
+	}
 }
