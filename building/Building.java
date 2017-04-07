@@ -6,6 +6,8 @@ import starclipse.common.Subject;
 import starclipse.common.ScaleNumber;
 
 /**
+ * This is class the parents for buildings:
+ * House, Warehouse, ResourcesFactory, StarshipFactory
  * 
  * @author Hugant MD
  *
@@ -69,7 +71,7 @@ public class Building {
 	/**
 	 * Return the <b>Resources</b> which are necessary for the
 	 * construction of this <b>Building</b>.
-	 * @return expenses is a <b>Resources</b> which which are necessary for the
+	 * @return expenses is a <b>Resources</b> which are necessary for the
 	 * construction
 	 */
 	public Resources getExpenses() {
@@ -78,7 +80,7 @@ public class Building {
 	
 	/**
 	 * Return the maximum number of residents.
-	 * @return maxResidents is <b>String</b>
+	 * @return maxResidents is maximum number of residents
 	 */
 	public String getMaxResidents() {
 		return residents.getMaxValue();
@@ -86,7 +88,7 @@ public class Building {
 	
 	/**
 	 * Return the current number of residents.
-	 * @return residents id <b>String</b>
+	 * @return residents is number of residents
 	 */
 	public String getResidents() {
 		return residents.getNumber();
@@ -112,7 +114,7 @@ public class Building {
 	
 	/**
 	 * Sets the name of <b>Building</b>.
-	 * @param name is <b>String</b>
+	 * @param name is name of <b>Building</b>
 	 */
 	public void setName(String name) {
 		this.name = name;
@@ -120,23 +122,35 @@ public class Building {
 
 	/**
 	 * Sets the build <b>Timer</b> of <b>Building</b>.
-	 * @param buildTime is <b>Timer</b>
+	 * @param buildTime is the <b>Timer</b> for which the 
+	 * <b>Building</b> will be build
 	 */
 	public void setBuildTimer(Timer buildTime) {
 		this.buildTimer = buildTime;
 	}
 
 	/**
+	 * Sets the build <b>Timer</b> of <b>Building</b>.
+	 * @param duration is duration of timer
+	 * @param phrase is phrase which will return
+	 */
 	 * Sets the income <b>Timer</b> of <b>Building</b>.
-	 * @param incomeTime is <b>Timer</b>
+	 * @param incomeTime is the <b>Timer</b> for which will be
+	 * received income
 	 */
 	public void setIncomeTimer(Timer incomeTime) {
 		this.incomeTimer = incomeTime;
 	}
+	
+	/**
+	 * Sets the build <b>Timer</b> of <b>Building</b>.
+	 * @param duration is duration of timer
+	 * @param phrase is phrase which will return
+	 */
 
 	/**
 	 * Sets the number of residents.
-	 * @param residents is <b>Subject</b>
+	 * @param residents is number of residents
 	 */
 	public void setResidents(Subject residents) {
 		this.residents = residents;
@@ -144,7 +158,7 @@ public class Building {
 
 	/**
 	 * Sets the income <b>Resources</b>.
-	 * @param income is <b>Resources</b>
+	 * @param income is <b>Resources</b> which will be obtained
 	 */
 	public void setIncome(Resources income) {
 		this.income = income;
@@ -153,7 +167,8 @@ public class Building {
 	/**
 	 * Sets the expenses which are necessary for the
 	 * construction of this <b>Building</b>.
-	 * @param expenses is <b>Resources</b>
+	 * @param expenses is <b>Resources</b> which are necessary for the
+	 * construction of this <b>Building</b>
 	 */
 	public void setExpenses(Resources expenses) {
 		this.expenses = expenses;
