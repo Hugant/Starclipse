@@ -134,6 +134,11 @@ public class Building {
 	 * @param duration is duration of timer
 	 * @param phrase is phrase which will return
 	 */
+	public void setBuildTimer(Long duration, String phrase) {
+		this.buildTimer = new Timer(duration, phrase);
+	}
+	
+	/**
 	 * Sets the income <b>Timer</b> of <b>Building</b>.
 	 * @param incomeTime is the <b>Timer</b> for which will be
 	 * received income
