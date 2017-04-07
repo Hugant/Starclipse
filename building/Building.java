@@ -152,6 +152,9 @@ public class Building {
 	 * @param duration is duration of timer
 	 * @param phrase is phrase which will return
 	 */
+	public void setIncomeTimer(Long duration, String phrase) {
+		this.incomeTimer = new Timer(duration, phrase);
+	}
 
 	/**
 	 * Sets the number of residents.
