@@ -31,10 +31,10 @@ public class Timer {
      * <p>
      * <strong>Examples: </strong>
      * <pre>
-     * <code> Timer timer = new Timer(1000);// 1s
-     *  Timer timer = new Timer(Timer.HOUR * 4);// 4h
-     *  Timer timer = new Timer(Timer.DAY * 2 + Timer.MINUTE * 50);// 2d 50m
-     *  Timer timer = new Timer(Timer.HOUR * 48);// 2d 
+     * <code> Timer timer = new Timer(1000, "Claim");// 1s
+     *  Timer timer = new Timer(Timer.HOUR * 4, "Claim");// 4h
+     *  Timer timer = new Timer(Timer.DAY * 2 + Timer.MINUTE * 50, "Claim");// 2d 50m
+     *  Timer timer = new Timer(Timer.HOUR * 48, "Claim");// 2d 
      * </code></pre>
      */
 	public Timer(long duration, String phrase) {
