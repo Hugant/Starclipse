@@ -2,6 +2,8 @@ package starclipse.building.industry;
 
 import starclipse.common.Resources;
 import starclipse.common.Subject;
+import starclipse.common.Timer;
+import starclipse.common.ScaleNumber;
 
 public class ResourcesFactory extends starclipse.building.Building {
 	final private static String[] NAMES = {Subject.TREE, Subject.STONE, Subject.COAL, Subject.IRON, 
