@@ -27,8 +27,8 @@ public class House extends starclipse.building.Building {
 			case "big":
 				super.setResidents(new Subject(Subject.RESIDENTS, "0", "100"));
 				super.setName("Big House");
-				super.setBuildTimer(new Timer(Timer.MINUTE * 30, "Start"));
-				super.setIncomeTimer(new Timer(Timer.SECOND * 20, "Claim"));
+				super.setBuildTimer(Timer.MINUTE * 30, "Start");
+				super.setIncomeTimer(Timer.SECOND * 20, "Claim");
 				super.setIncome(new Resources(Subject.RESIDENTS, "10", Subject.MONEY, "100"));
 				super.setExpenses(new Resources(Subject.STONE,  "100", 
 											  	Subject.TREE,   "50", 
@@ -41,8 +41,8 @@ public class House extends starclipse.building.Building {
 			case "average":
 				super.setResidents(new Subject(Subject.RESIDENTS, "0", "50"));
 				super.setName("Average House");
-				super.setBuildTimer(new Timer(Timer.MINUTE * 5, "Start"));
-				super.setIncomeTimer(new Timer(Timer.SECOND * 20, "Claim"));
+				super.setBuildTimer(Timer.MINUTE * 5, "Start");
+				super.setIncomeTimer(Timer.SECOND * 20, "Claim");
 				super.setIncome(new Resources(Subject.RESIDENTS, "5", Subject.MONEY, "50"));
 				super.setExpenses(new Resources(Subject.STONE,  "50", 
 											  	Subject.TREE,   "25", 
@@ -55,8 +55,8 @@ public class House extends starclipse.building.Building {
 			case "small":
 				super.setResidents(new Subject(Subject.RESIDENTS, "0", "10"));
 				super.setName("Small House");
-				super.setBuildTimer(new Timer(Timer.SECOND * 5, "Start"));
-				super.setIncomeTimer(new Timer(Timer.SECOND * 10, "Claim"));
+				super.setBuildTimer(Timer.SECOND * 5, "Start");
+				super.setIncomeTimer(Timer.SECOND * 10, "Claim");
 				super.setIncome(new Resources(Subject.RESIDENTS, "3", Subject.MONEY, "25"));
 				super.setExpenses(new Resources(Subject.STONE,  "12", 
 												Subject.TREE,   "6", 
