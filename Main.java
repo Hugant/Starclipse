@@ -6,6 +6,7 @@ import starclipse.common.ScaleNumber;
 import starclipse.common.Resources;
 import starclipse.common.Timer;
 import starclipse.building.industry.Starship;
+import starclipse.building.Building;
 import starclipse.building.House;
 import starclipse.building.Warehouse;
 
@@ -38,7 +39,7 @@ public class Main{
 //		System.out.println(a);
 //		a.fill();
 //		System.out.println(a);
-		House a = new House("small");
+		Building a = new House("small");
 		a.build();
 		
 		
