@@ -19,7 +19,7 @@ import starclipse.common.Subject;
 
 public class Main{
 	public static void main(String args[]) {
-		System.out.println(Subject.TREE.substring(0, 1).toUpperCase() + Subject.TREE.substring(1) + " Factory");
+		//System.out.println(Subject.TREE.substring(0, 1).toUpperCase() + Subject.TREE.substring(1) + " Factory");
 //		Starship a = new Starship("Hugant", new Resources(new ScaleNumber("2K"), "gold", "gold", "oxygen", "water", "stone"), "damage", "speed", "damage", "passenger", "storage");
 //		System.out.println(Arrays.asList(a.getExpenses().asTypeArray()));
 //		System.out.println(a.getExpenses().get("iron"));
@@ -38,28 +38,28 @@ public class Main{
 //		System.out.println(a);
 //		a.fill();
 //		System.out.println(a);
-//		House a = new House("small");
-//		a.build();
-//		
-//		
-//		String c = "";
-//		while(true) {
-//			c = a.getStatus();
-//			System.out.println(c);
-//			if (c.equals("Start")) {
-//				a.startWork();
-//			}
-//			if(c.equals("Claim")) {
-//				//new java.util.Scanner(System.in).nextLine();
-//				a.claim();
-//			}
-//			try {
-//				Thread.sleep(1000);
-//			} catch(Exception e) {}
-//			for(int i = 0; i < 10; i++) {
-//				System.out.println();
-//			}
-//		}
+		House a = new House("small");
+		a.build();
+		
+		
+		String c = "";
+		while(true) {
+			c = a.getStatus();
+			System.out.println(c);
+			if (c.equals("Start")) {
+				a.startWork();
+			}
+			if(c.equals("Claim")) {
+				//new java.util.Scanner(System.in).nextLine();
+				a.claim();
+			}
+			try {
+				Thread.sleep(1000);
+			} catch(Exception e) {}
+			for(int i = 0; i < 10; i++) {
+				System.out.println();
+			}
+		}
 //		
 //		Resources a = new Resources(new LimitlessNumber("100"), "gold", "oxygen", "gold");
 //		Starship b = new Starship("Hugant", a);
