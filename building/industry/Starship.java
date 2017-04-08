@@ -4,8 +4,44 @@ import starclipse.common.Subject;
 import starclipse.common.ScaleNumber;
 import starclipse.common.Resources;
 
+/**
+ * Allows you to create a <b>Starship</b> with certain
+ * properties: <b>damage</b>, <b>speed</b>, <b>passenger</b>, <b>storage</b>.
+ * <ul>
+ * 	<li>damage - gives your <b>Starship</b> ability to fight or defend.</li>
+ * 	<li>speed - your <b>Starship</b> become more mobile.</li>
+ * 	<li>passenger - allows your <b>Starship</b> to carry passengers in
+ * a certain amount.
+ * 	<li>storage - allows your <b>Starship</b> to carry any resources 
+ * a certain amount.
+ * </ul>
+ * <p>
+ * Each <b>Starship</b> has 5 cells in which you specify 
+ * properties of the <b>Starship</b> which have been mentioned above.
+ * <br>
+ * You can specify the some property multiple times.
+ * <p>
+ * <table border = 1 cellpadding = 3>
+ * 	<tr>
+ * 		<td>damage</td>
+ * 		<td>damage</td>
+ * 		<td>speed</td>
+ * 		<td>passenger</td>
+ * 		<td>storage</td>
+ * 	</tr>
+ * </table>
+ * 
+ * @author Hugant MD
+ *
+ */
 public class Starship {
 	
+	/**
+	 * Allows you to create a <b>Storage</b> where you can 
+	 * store <b>Resources</b> for <b>Starship</b>.
+	 * @author Hugant MD
+	 *
+	 */
 	class Storage {
 		private Resources resources = null;
 		private Resources expenses = null;
