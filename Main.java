@@ -39,6 +39,7 @@ public class Main{
 //		System.out.println(a);
 //		a.fill();
 //		System.out.println(a);
+		System.out.println("Test");
 		Building a = new House("small");
 		a.build();
 		
