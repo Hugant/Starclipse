@@ -207,4 +207,7 @@ public class Building {
 	 * @param expenses is <b>Resources</b> which are necessary for the 
 	 * upgrade of this <b>Building</b>
 	 */
+	public void setUpgradeExpenses(Resources expenses) {
+		this.upgradeExpenses = expenses;
+	}
 }
