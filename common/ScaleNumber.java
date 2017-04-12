@@ -202,7 +202,19 @@ public class ScaleNumber {
 	 * @param number the <b>ScaleNumber</b>, which you want to divide
 	 */
 	public ScaleNumber divide(ScaleNumber number) {
-		this.prefix = this.transferTo("").divide(number.transferTo(""));
+		int thisPostfix = Arrays.asList(POSTFIX_MAS).indexOf(this.postfix);
+		int numberPostfix = Arrays.asList(POSTFIX_MAS).indexOf(number.postfix);
+		
+		if (thisPostfix > numberPostfix) {
+			this.prefix = this.transferTo(number.postfix).divide(number.prefix);
+			//this.postfix = number.postfix;
+		} else if (thisPostfix < numberPostfix) {
+			this.prefix = number.transferTo(this.postfix).multiply(this.prefix);
+			//this.postfix = number.postfix;
+		} else {
+			this.prefix = this.prefix.multiply(number.transferTo(""));
+		}
+		//this.prefix = this.transferTo("").divide(number.transferTo(""));
 		this.checkingValidity();
 		return this;
 	}
