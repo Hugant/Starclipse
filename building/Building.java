@@ -62,6 +62,12 @@ public class Building {
 		return income;
 	}
 	
+	public void upgrade() {
+		this.residents.addToMaxValue("");
+		this.upgradeExpenses = upgradeExpenses.multiply("");
+		this.income = income.multiply(level * k + "");
+	}
+	
 	/**
 	 * Return name of <b>Building</b>.
 	 * @return
