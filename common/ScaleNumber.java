@@ -330,4 +330,14 @@ public class ScaleNumber {
 	public String toString() {
 		return this.prefix + this.postfix;
 	}
+	
+	private static String getPrefixPattern() {
+		String out = "";
+		for (String i : POSTFIX_MAS) {
+			if (!(i.length() < 2) && !out.contains(i.charAt(0) + "")) {
+				out += i.charAt(0);
+			}
+		}
+		return out;
+	}
 }
