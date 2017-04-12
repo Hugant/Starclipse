@@ -6,7 +6,6 @@ import starclipse.common.ScaleNumber;
 import starclipse.common.Resources;
 import starclipse.common.Timer;
 import starclipse.building.industry.Starship;
-import starclipse.building.Building;
 import starclipse.building.House;
 import starclipse.building.Warehouse;
 
@@ -20,6 +19,15 @@ import starclipse.common.Subject;
 
 public class Main{
 	public static void main(String args[]) {
+		
+		ScaleNumber a = new ScaleNumber("1M");
+		System.out.println(a.divide("10K"));
+//		while(true) {
+//			try {
+//				System.out.println(a.multiply("1K"));
+//				Thread.sleep(100);
+//			} catch(Exception e) {}
+//		}
 //		Resources a = new Resources(Subject.GOLD, "100", Subject.IRON, "40");
 //		System.out.println(a.divide("10").get(Subject.GOLD));
 //		System.out.println(a.get(Subject.IRON));
