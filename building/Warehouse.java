@@ -20,7 +20,7 @@ public class Warehouse extends starclipse.Building {
 		} else {
 			this.store = new Resources(volume, cells);
 			super.setName("Warehouse");
-			super.setResidents(new Subject(Subject.RESIDENTS, "10", "70"));
+			super.setResidents("10", "70");
 			super.setExpenses(new Resources());
 		}
 	}
