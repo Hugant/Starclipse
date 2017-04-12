@@ -143,6 +143,13 @@ public class Resources {
 	 * of <b>ScaleNumber</b>
 	 * @return this
 	 */
+	public Resources multiply(String number) {
+		for (Subject i : subjects) {
+			i.multiply(new Subject(number));
+		}
+		return this;
+	}
+	
 	/**
 	 * Divide each <b>Subject</b> in the <b>Resources</b> on number.
 	 * @param number is a <b>String</b> which presented in the form
