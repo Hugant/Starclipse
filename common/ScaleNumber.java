@@ -40,12 +40,13 @@ public class ScaleNumber {
 	* BaV - BaVillion = 100BaT, <br>
 	* BaZ - BaZillion = 100BaV, <br>
 	* BaJ - BaJillion = 100BaZ, <br>
-	* GaM - GaMillion = 100BaJ, <br>
-	* GaB - GaBillion = 100GaM, <br>
-	* GaT - GaTrillion = 100GaB, <br>
-	* GaV - GaVillion = 100GaT, <br>
-	* GaZ - GaZillion = 100GaV, <br>
-	* GaJ - GaJillion = 100GaZ;
+	* CaM - CaMillion = 100BaJ, <br>
+	* CaB - CaBillion = 100CaM, <br>
+	* CaT - CaTrillion = 100CaB, <br>
+	* CaV - CaVillion = 100CaT, <br>
+	* CaZ - CaZillion = 100CaV, <br>
+	* CaJ - CaJillion = 100CaZ; <br>
+	* and more...
 	*/
 	private static final String[] POSTFIX_MAS = new String[]{ "", "K", "M", "B", "T", "V", "Z", "J",
 													         "BaM", "BaB", "BaT", "BaV", "BaZ", "BaJ",
