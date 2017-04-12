@@ -102,9 +102,4 @@ public class ResourcesFactory extends starclipse.building.Building {
 	public void setMaxResidents(String maxResidents) {
 		this.maxResidents = new ScaleNumber(maxResidents);
 	}
-	
-	
-	public Starship getStarship() {
-		return new Starship(null, null, null);
-	}
 }
