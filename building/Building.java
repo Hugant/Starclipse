@@ -22,9 +22,12 @@ public class Building {
 	private Timer incomeTimer = null;
 	
 	private Subject residents = null;
+	private int level = 0;
+	private float k = 0.0f;
 	
 	private Resources income = null;
 	private Resources expenses = null;
+	private Resources upgradeExpenses = null;
 	
 	private boolean start = false;
 	
