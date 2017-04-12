@@ -170,7 +170,18 @@ public class ScaleNumber {
 	 * @param number the <b>ScaleNumber</b>, which you want to multiply
 	 */
 	public ScaleNumber multiply(ScaleNumber number) {
-		this.prefix = number.transferTo("").multiply(this.transferTo(""));
+		int thisPostfix = Arrays.asList(POSTFIX_MAS).indexOf(this.postfix);
+		int numberPostfix = Arrays.asList(POSTFIX_MAS).indexOf(number.postfix);
+		
+		if (thisPostfix > numberPostfix) {
+			this.prefix = this.prefix.multiply(number.transferTo(""));
+		} else if (thisPostfix < numberPostfix) {
+			this.prefix = number.prefix.multiply(this.transferTo(""));
+			this.postfix = number.postfix;
+		} else {
+			this.prefix = this.prefix.multiply(number.transferTo(""));
+		}
+
 		this.checkingValidity();
 		return this;
 	}
