@@ -92,6 +92,10 @@ public class Building {
 	 * @return upgradeExpenses is a <b>Resources</b> which are necessary for
 	 * the upgrade
 	 */
+	public Resources getUpgradeExpenses() {
+		return upgradeExpenses;
+	}
+	
 	/**
 	 * Return the maximum number of residents.
 	 * @return maxResidents is maximum number of residents
