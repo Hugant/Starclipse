@@ -200,7 +200,6 @@ public class Building {
 		this.expenses = expenses;
 	}
 	
-	
 	/**
 	 * Sets the expenses which are necessary for the upgrade
 	 * of this <b>Building</b>.
