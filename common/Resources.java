@@ -79,12 +79,13 @@ public class Resources {
 	 * Adds to the current <b>Resources</b> another <b>Resources</b>.
 	 * @param res is a <b>Resources</b> which you want to add
 	 */
-	public void add(Resources res) {
+	public Resources add(Resources res) {
 		if (res != null) {
 			for (Subject i : res.subjects) {
 				this.add(i);
 			}
 		}
+		return this;
 	}
 	
 	/**
@@ -93,25 +94,27 @@ public class Resources {
 	 * ArithmeticException.
 	 * @param sub is a <b>Subject</b> which you want to add
 	 */
-	public void add(Subject sub) {
+	public Resources add(Subject sub) {
 		if (subjects.contains(sub)) {
 			subjects.get(subjects.indexOf(sub)).add(sub);
 		} else {
 			subjects.add(sub);
 		}
 		this.length++;
+		return this;
 	}
 	
 	/**
 	 * Takes away from the current <b>Resources</b> another <b>Resources</b>.
 	 * @param res is a <b>Resources</b> which you want to take
 	 */
-	public void minus(Resources res) {
+	public Resources minus(Resources res) {
 		if (res != null) {
 			for (Subject i : res.subjects) {
 				this.minus(i);
 			}
 		}
+		return this;
 	}
 	
 	/**
@@ -120,13 +123,14 @@ public class Resources {
 	 * ArithmeticException.
 	 * @param sub is a <b>Subject</b> which you want to take
 	 */
-	public void minus(Subject sub) {
+	public Resources minus(Subject sub) {
 		if (subjects.contains(sub)) {
 			subjects.get(subjects.indexOf(sub)).minus(sub);
 			this.length--;
 		} else {
 			throw new ArithmeticException("No such element exists");
 		}
+		return this;
 	}
 	
 	
