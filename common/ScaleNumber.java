@@ -340,4 +340,14 @@ public class ScaleNumber {
 		}
 		return out;
 	}
+	
+	private static String getPostfixPattern() {
+		String out = "";
+		for (String i : POSTFIX_MAS) {
+			if (!i.equals("") && !out.contains(i.charAt(i.length() - 1) + "")) {
+				out += i.charAt(i.length() - 1);
+			}
+		}
+		return out;
+	}
 }
