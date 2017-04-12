@@ -52,31 +52,40 @@ public class ResourcesFactory extends starclipse.building.Building {
 				break;
 				
 			case Subject.GOLD:
-				expenses.add(new Resources());
+				expenses.add(new Resources( Subject.STONE,	"",
+											Subject.IRON,	"",
+											Subject.MONEY,	""));
 				super.setIncome(new Resources(
 						Subject.GOLD, new ScaleNumber(super.getResidents()).multiply(INCOME_PER_RESIDENT).toString()));
 				break;
 				
 			case Subject.ENERGY:
-				expenses.add(new Resources());
+				expenses.add(new Resources(	Subject.OXYGEN,	"",
+											Subject.WATER,	"",
+											Subject.FOOD,	"",
+											Subject.MONEY,	""));
 				super.setIncome(new Resources(
 						Subject.ENERGY, new ScaleNumber(super.getResidents()).multiply(INCOME_PER_RESIDENT).toString()));
 				break;
 				
 			case Subject.WATER:
-				expenses.add(new Resources());
+				expenses.add(new Resources(	Subject.OXYGEN,	"",
+											Subject.SOIL,	"",
+											Subject.MONEY,	""));
 				super.setIncome(new Resources(
 						Subject.WATER, new ScaleNumber(super.getResidents()).multiply(INCOME_PER_RESIDENT).toString()));
 				break;
 				
 			case Subject.OXYGEN:
-				expenses.add(new Resources());
+				expenses.add(new Resources(	Subject.WATER,	"",
+											Subject.MONEY,	""));
 				super.setIncome(new Resources(
 						Subject.OXYGEN, new ScaleNumber(super.getResidents()).multiply(INCOME_PER_RESIDENT).toString()));
 				break;
 				
 			case Subject.FOOD:
-				expenses.add(new Resources());
+				expenses.add(new Resources(	Subject.SOIL,	"",
+											Subject.MONEY,	""));
 				super.setIncome(new Resources(
 						Subject.FOOD, new ScaleNumber(super.getResidents()).multiply(INCOME_PER_RESIDENT).toString()));
 				break;
