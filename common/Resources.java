@@ -78,6 +78,7 @@ public class Resources {
 	/**
 	 * Adds to the current <b>Resources</b> another <b>Resources</b>.
 	 * @param res is a <b>Resources</b> which you want to add
+	 * @return this
 	 */
 	public Resources add(Resources res) {
 		if (res != null) {
@@ -89,10 +90,11 @@ public class Resources {
 	}
 	
 	/**
-	 * Adds to the current <b>Subject</b> another <b>Subject</b>.
+	 * Adds to the current <b>Resources</b> another <b>Subject</b>.
 	 * If the <b>Subject</b> does not exist, will be generated an 
 	 * ArithmeticException.
 	 * @param sub is a <b>Subject</b> which you want to add
+	 * @return this
 	 */
 	public Resources add(Subject sub) {
 		if (subjects.contains(sub)) {
@@ -107,6 +109,7 @@ public class Resources {
 	/**
 	 * Takes away from the current <b>Resources</b> another <b>Resources</b>.
 	 * @param res is a <b>Resources</b> which you want to take
+	 * @return this
 	 */
 	public Resources minus(Resources res) {
 		if (res != null) {
@@ -118,10 +121,11 @@ public class Resources {
 	}
 	
 	/**
-	 * Takes away from the current <b>Subject</b> another <b>Subject</b>.
+	 * Takes away from the current <b>Resources</b> another <b>Subject</b>.
 	 * If the <b>Subject</b> does not exist, will be generated an 
 	 * ArithmeticException.
 	 * @param sub is a <b>Subject</b> which you want to take
+	 * @return this
 	 */
 	public Resources minus(Subject sub) {
 		if (subjects.contains(sub)) {
@@ -133,6 +137,18 @@ public class Resources {
 		return this;
 	}
 	
+	/**
+	 * Multiply each <b>Subject</b> in the <b>Resources</b> on number.
+	 * @param number is a <b>String</b> which presented in the form
+	 * of <b>ScaleNumber</b>
+	 * @return this
+	 */
+	/**
+	 * Divide each <b>Subject</b> in the <b>Resources</b> on number.
+	 * @param number is a <b>String</b> which presented in the form
+	 * of <b>ScaleNumber</b>
+	 * @return this
+	 */
 	
 	/**
 	 * Return <b>Subject</b> with the type you specified.
