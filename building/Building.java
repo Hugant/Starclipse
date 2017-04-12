@@ -87,6 +87,12 @@ public class Building {
 	}
 	
 	/**
+	 * Return the <b>Resources</b> which are necessary for the upgrade
+	 * of this <b>Building</b>.
+	 * @return upgradeExpenses is a <b>Resources</b> which are necessary for
+	 * the upgrade
+	 */
+	/**
 	 * Return the maximum number of residents.
 	 * @return maxResidents is maximum number of residents
 	 */
@@ -131,7 +137,7 @@ public class Building {
 	/**
 	 * Sets the build <b>Timer</b> of <b>Building</b>.
 	 * @param buildTime is the <b>Timer</b> for which the 
-	 * <b>Building</b> will be build
+	 * <b>Building</b> will be build.
 	 */
 	public void setBuildTimer(Timer buildTime) {
 		this.buildTimer = buildTime;
@@ -191,4 +197,10 @@ public class Building {
 	}
 	
 	
+	/**
+	 * Sets the expenses which are necessary for the upgrade
+	 * of this <b>Building</b>.
+	 * @param expenses is <b>Resources</b> which are necessary for the 
+	 * upgrade of this <b>Building</b>
+	 */
 }
