@@ -16,7 +16,7 @@ import starclipse.common.Subject;
  * @see starclipse.Building
  *
  */
-public class House extends starclipse.building.Building {
+public class House extends starclipse.Building {
 	/**
 	 * Create a <b>House</b> where the parameters specified a type
 	 * of <b>House</b>.
