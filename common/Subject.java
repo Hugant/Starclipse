@@ -139,7 +139,7 @@ public class Subject {
 	 * an ArithmeticException.
 	 * 
 	 * @throws ArithmeticException
-	 * @param subject is a Subject which you want to take
+	 * @param subject is a <b>Subject</b> which you want to take
 	 */
 	public Subject minus(Subject subject) {
 		if (subject.type == null || this.type == null) {
@@ -157,7 +157,26 @@ public class Subject {
 		
 		return this;
 	}
+	
+	/**
+	 * Multiply a <b>Subject</b> to the <b>Subject</b>.
+	 * If the have a different type will generate
+	 * an ArithmeticException.
+	 * If the value less than the minimal value or 
+	 * more than maximal value, will generate an ArithmeticException.
+	 * @param subject is a <b>Subject</b> which you want to multiply
+	 * @return this
+	 */
 
+	/**
+	 * Divide a <b>Subject</b> to the <b>Subject</b>.
+	 * If the have a different type will generate
+	 * an ArithmeticException.
+	 * If the value less than the minimal value or 
+	 * more than maximal value, will generate an ArithmeticException.
+	 * @param subject is a <b>Subject</b> which you want to divide
+	 * @return this
+	 */
 	}
 	
 	/**
