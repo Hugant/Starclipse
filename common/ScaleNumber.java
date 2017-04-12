@@ -48,9 +48,27 @@ public class ScaleNumber {
 	* CaJ - CaJillion = 100CaZ; <br>
 	* and more...
 	*/
-	private static final String[] POSTFIX_MAS = new String[]{ "", "K", "M", "B", "T", "V", "Z", "J",
+	private static final String[] POSTFIX_MAS = new String[]{ "", "K", "M", "B", "T", "V", "Z",   "J",
 													         "BaM", "BaB", "BaT", "BaV", "BaZ", "BaJ",
-													         "GaM", "GaB", "GaT", "GaV", "GaZ", "GaJ" };
+													         "CaM", "CaB", "CaT", "CaV", "CaZ", "CaJ",
+													         "DaM", "DaB", "DaT", "DaV", "DaZ", "DaJ",
+													         "FaM", "FaB", "FaT", "FaV", "FaZ", "FaJ",
+													         "GaM", "GaB", "GaT", "GaV", "GaZ", "GaJ",
+													         "HaM", "HaB", "HaT", "HaV", "HaZ", "HaJ",
+													         "JaM", "JaB", "JaT", "JaV", "JaZ", "JaJ",
+													         "KaM", "KaB", "KaT", "KaV", "KaZ", "KaJ",
+													         "LaM", "LaB", "LaT", "LaV", "LaZ", "LaJ",
+													         "MaM", "MaB", "MaT", "MaV", "MaZ", "MaJ",
+													         "NaM", "NaB", "NaT", "NaV", "NaZ", "NaJ",
+													         "PaM", "PaB", "PaT", "PaV", "PaZ", "PaJ",
+													         "RaM", "RaB", "RaT", "RaV", "RaZ", "RaJ",
+													         "SaM", "SaB", "SaT", "SaV", "SaZ", "SaJ",
+													         "TaM", "TaB", "TaT", "TaV", "TaZ", "TaJ",
+													         "VaM", "VaB", "VaT", "VaV", "VaZ", "VaJ",
+													         "ZaM", "ZaV", "ZaT", "ZaV", "ZaZ", "ZaJ"};
+	private static final String PATTERN_PREFIX = getPrefixPattern();
+	private static final String PATTERN_POSTFIX = getPostfixPattern();
+	
 	private BigDecimal prefix = new BigDecimal("0");
 	private String postfix = "";
 
