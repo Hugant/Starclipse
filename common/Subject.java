@@ -114,7 +114,7 @@ public class Subject {
 	 * @throws ArithmeticException
 	 * @param subject is a Subject which you want to add
 	 */
-	public void add(Subject subject) {
+	public Subject add(Subject subject) {
 		if (subject.type == null || this.type == null) {
 			this.value.add(subject.value);
 		} else if (this.type.equals(subject.type)) {
@@ -127,6 +127,8 @@ public class Subject {
 			this.value.minus(subject.value);
 			throw new ArithmeticException("Out of bounds the maximum value");
 		}
+		
+		return this;
 	}
 	
 	/**
@@ -139,7 +141,7 @@ public class Subject {
 	 * @throws ArithmeticException
 	 * @param subject is a Subject which you want to take
 	 */
-	public void minus(Subject subject) {
+	public Subject minus(Subject subject) {
 		if (subject.type == null || this.type == null) {
 			this.value.minus(subject.value);
 		} else if (this.type.equals(subject.type)) {
@@ -152,6 +154,9 @@ public class Subject {
 			this.value.add(subject.value);
 			throw new ArithmeticException("Out of bounds the minimum value");
 		}
+		
+		return this;
+	}
 
 	}
 	
