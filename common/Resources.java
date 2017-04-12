@@ -156,6 +156,12 @@ public class Resources {
 	 * of <b>ScaleNumber</b>
 	 * @return this
 	 */
+	public Resources divide(String number) {
+		for (Subject i : subjects) {
+			i.divide(new Subject(number));
+		}
+		return this;
+	}
 	
 	/**
 	 * Return <b>Subject</b> with the type you specified.
