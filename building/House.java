@@ -13,7 +13,7 @@ import starclipse.common.Subject;
  * 
  * @author Hugant MD
  * 
- * @see starclipse.building.Building
+ * @see starclipse.Building
  *
  */
 public class House extends starclipse.building.Building {

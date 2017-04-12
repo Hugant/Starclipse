@@ -1,5 +1,6 @@
-package starclipse.building;
+package starclipse;
 
+import starclipse.building.House;
 import starclipse.common.Resources;
 import starclipse.common.Timer;
 import starclipse.common.Subject;
@@ -17,6 +18,7 @@ import starclipse.common.Subject;
  */
 public class Building {
 	private String name = "";
+	private String status = "";
 	
 	private Timer buildTimer = null;
 	private Timer incomeTimer = null;
@@ -27,7 +29,6 @@ public class Building {
 	
 	private Resources income = null;
 	private Resources expenses = null;
-	private Resources upgradeExpenses = null;
 	
 	private boolean start = false;
 	
@@ -64,7 +65,7 @@ public class Building {
 	
 	public void upgrade() {
 		this.residents.addToMaxValue("");
-		this.upgradeExpenses = upgradeExpenses.multiply("");
+		this.expenses = expenses.multiply("");
 		this.income = income.multiply(level * k + "");
 	}
 	
@@ -84,16 +85,6 @@ public class Building {
 	 */
 	public Resources getExpenses() {
 		return expenses;
-	}
-	
-	/**
-	 * Return the <b>Resources</b> which are necessary for the upgrade
-	 * of this <b>Building</b>.
-	 * @return upgradeExpenses is a <b>Resources</b> which are necessary for
-	 * the upgrade
-	 */
-	public Resources getUpgradeExpenses() {
-		return upgradeExpenses;
 	}
 	
 	/**
@@ -178,8 +169,8 @@ public class Building {
 	 * Sets the number of residents.
 	 * @param residents is number of residents
 	 */
-	public void setResidents(Subject residents) {
-		this.residents = residents;
+	public void setResidents(String currentResidents, String maximalResidents) {
+		this.residents = new Subject(Subject.RESIDENTS, currentResidents, maximalResidents);
 	}
 
 	/**
@@ -198,15 +189,5 @@ public class Building {
 	 */
 	public void setExpenses(Resources expenses) {
 		this.expenses = expenses;
-	}
-	
-	/**
-	 * Sets the expenses which are necessary for the upgrade
-	 * of this <b>Building</b>.
-	 * @param expenses is <b>Resources</b> which are necessary for the 
-	 * upgrade of this <b>Building</b>
-	 */
-	public void setUpgradeExpenses(Resources expenses) {
-		this.upgradeExpenses = expenses;
 	}
 }

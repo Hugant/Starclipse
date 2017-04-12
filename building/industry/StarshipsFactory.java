@@ -2,7 +2,7 @@ package starclipse.building.industry;
 
 import starclipse.common.Resources;
 
-public class StarshipsFactory extends starclipse.building.Building {
+public class StarshipsFactory extends starclipse.Building {
 	private String name = "Starships Factory";
 	private Starship starship = null;
 	private int manpower = 0;

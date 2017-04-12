@@ -5,7 +5,7 @@ import starclipse.common.Subject;
 import starclipse.common.Timer;
 import starclipse.common.ScaleNumber;
 
-public class ResourcesFactory extends starclipse.building.Building {
+public class ResourcesFactory extends starclipse.Building {
 	private static final ScaleNumber INCOME_PER_RESIDENT = new ScaleNumber("10");
 	
 	private static ScaleNumber maxResidents = new ScaleNumber("1K");

@@ -9,7 +9,7 @@ import starclipse.common.ScaleNumber;
  * @author Hugant MD
  *
  */
-public class Warehouse extends starclipse.building.Building {
+public class Warehouse extends starclipse.Building {
 	
 	private starclipse.common.ScaleNumber volume = new starclipse.common.ScaleNumber("500");// the amount of resources per unit 
 	private Resources store;
