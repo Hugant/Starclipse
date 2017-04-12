@@ -8,15 +8,8 @@ import starclipse.common.ScaleNumber;
 public class ResourcesFactory extends starclipse.Building {
 	private static final ScaleNumber INCOME_PER_RESIDENT = new ScaleNumber("10");
 	
-	private static ScaleNumber maxResidents = new ScaleNumber("1K");
-	private Resources expenses = new Resources();
-	
-	
 	public ResourcesFactory(String type) {
-		super.setName(type.substring(0, 1).toUpperCase() + type.substring(1).toLowerCase() + " Factory");
-		super.setBuildTimer(Timer.DAY * 4, "Start");
-		super.setIncomeTimer(Timer.DAY, "Claim");
-		super.setResidents(new Subject(Subject.RESIDENTS, "0", maxResidents.toString()));
+		Resources expenses = new Resources();
 		
 		switch (type) {
 			case Subject.TREE:
@@ -102,6 +95,11 @@ public class ResourcesFactory extends starclipse.Building {
 			default:
 				throw new IllegalArgumentException("Such a resource does not exist");
 		}
-	}
+		
+		super.setName(type.substring(0, 1).toUpperCase() + type.substring(1).toLowerCase() + " Factory");
+		super.setBuildTimer(Timer.DAY * 4, "Start");
+		super.setIncomeTimer(Timer.DAY, "Claim");
+		super.setResidents("0", "1K");
+		super.setExpenses(expenses);
 	}
 }
