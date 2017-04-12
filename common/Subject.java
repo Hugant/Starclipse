@@ -194,6 +194,22 @@ public class Subject {
 	 * @param subject is a <b>Subject</b> which you want to divide
 	 * @return this
 	 */
+	public Subject divide(Subject subject) {
+		if (subject.type == null || this.type == null) {
+			this.value.divide(subject.value);
+		} else if (this.type.equals(subject.type)) {
+			this.value.divide(subject.value);
+		} else {
+			throw new ArithmeticException("Arithmetic operations can only be done with the same material");
+		}
+		
+		if (this.value.compareTo("0") == -1) {
+			throw new ArithmeticException("Out of bounds the minimum value");
+		} else if (this.maxValue != null && this.value.compareTo(this.maxValue) == 1) {
+			throw new ArithmeticException("Out of bounds the maximum value");
+		}
+		
+		return this;
 	}
 	
 	/**
