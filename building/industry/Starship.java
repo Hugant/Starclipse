@@ -46,7 +46,11 @@ public class Starship {
 		private Resources resources = null;
 		private Resources expenses = null;
 		
-		
+		/**
+		 * Create <b>Storage</b> with these <b>Resources</b>.
+		 * @param res is <b>Resources</b> which should be
+		 * in the <b>Storage</b>.
+		 */
 		Storage(Resources res) {
 			if (res.isStorage()) {
 				if (res.length() == 5) {
@@ -63,26 +67,54 @@ public class Starship {
 			}
 		}
 		
+		/**
+		 * Return expenses(<b>Resources</b>) of this <b>Storage</b>.
+		 * @return expenses
+		 */
 		public Resources getExpenses() {
 			return this.expenses;
 		}
 		
+		/**
+		 * Return <b>Resources</b> of this <b>Storage</b>.
+		 * @return
+		 */
 		public Resources getResources() {
 			return this.resources;
 		}
 		
+		/**
+		 * Adds to the <b>Resources</b> of this <b>Storage</b>
+		 * <b>Subject</b>.
+		 * @param sub is a <b>Subject</b> which you will to add
+		 */
 		public void add(Subject sub) {
 			this.resources.add(sub);
 		}
 		
+		/**
+		 * Adds to the <b>Resources</b> of this <b>Storage</b>
+		 * <b>Resources</b>.
+		 * @param res is a <b>Resources</b> which you will to add
+		 */
 		public void add(Resources res) {
 			this.resources.add(res);
 		}
 		
+		/**
+		 * Take from the <b>Resources</b> of this <b>Storage</b>
+		 * <b>Subject</b>.
+		 * @param sub is a <b>Subject</b> which you will to take
+		 */
 		public void minus(Subject sub) {
 			this.resources.minus(sub);
 		}
 		
+		/**
+		 * Take from the <b>Resources</b> of this <b>Storage</b>
+		 * <b>Resources</b>.
+		 * @param res is a <b>Resources</b> which you will take
+		 */
 		public void minus(Resources res) {
 			this.resources.add(res);
 		}
@@ -110,6 +142,16 @@ public class Starship {
 	private Storage storage = null;
 	private Resources expenses = new Resources();
 	
+	/**
+	 * Creates a <b>Starship</b> with the specified parameters.
+	 * @throws IllegalArgumentException
+	 * @param name is name of the <b>Starship</b>, it can be empty,
+	 * then it will be chosen by random name
+	 * @param res is <b>Resources</b> of the <b>Storage</b>, if you
+	 * do not specify "storage" parameter, then it can be null.
+	 * @param cells is a massive of strings where you should specify
+	 * parameters of the <b>Starship</b>: damage, speed, passenger, storage
+	 */
 	public Starship(String name, Resources res, String... cells) {
 		for (String i : cells) {
 			switch (i) {
@@ -171,33 +213,62 @@ public class Starship {
 		this.expenses = null;
 	}
 	
+	/**
+	 * Return name of the <b>Starship</b>.
+	 * @return name
+	 */
 	public String getName() {
 		return this.name;
 	}
 	
+	/**
+	 * Return owner of the <b>Starship</b>.
+	 * @return
+	 */
 	public String getOwner() {
 		return this.owner;
 	}
 	
+	/**
+	 * Return amount of cells with parameter "damage".
+	 * @return amount of damage
+	 */
 	public int getDamage() {
 		return this.damage;
 	}
 	
+	/**
+	 * Return amount of cells with parameter "speed".
+	 * @return amount of speed
+	 */
 	public int getSpeed() {
 		return this.speed;
 	}
 	
+	/**
+	 * Return amount of cells with parameter "passenger".
+	 * @return amount of passenger
+	 */
 	public int getPassenger() {
 		return this.passengerCompartment;
 	}
 	
+	/**
+	 * Return expenses(<b>Resources</b>) of this <b>Starship</b>.
+	 * @return expenses
+	 */
 	public Resources getExpenses() {
 		return this.expenses;
 	}
 	
+	/**
+	 * Return residents in form of <b>Subject</b>.
+	 * @return residents
+	 */
 	public Subject getResidents() {
 		return residents;
 	}
+	
 	
 	public void addPassenger(String number) {
 		this.residents.add(new Subject(number)); 
