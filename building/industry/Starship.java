@@ -273,6 +273,9 @@ public class Starship {
 	public void addPassenger(String number) {
 		this.passenger.add(new Subject(number)); 
 	}
+	
+	public void takePassenger(String number) {
+		this.passenger.minus(new Subject(number));
 	}
 	
 	public void setPassengerValume(String number) {
