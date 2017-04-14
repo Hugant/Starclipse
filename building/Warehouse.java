@@ -11,7 +11,7 @@ import starclipse.common.ScaleNumber;
  */
 public class Warehouse extends starclipse.Building {
 	
-	private starclipse.common.ScaleNumber volume = new starclipse.common.ScaleNumber("500");// the amount of resources per unit 
+	private starclipse.common.ScaleNumber volume = new starclipse.common.ScaleNumber("1K");// the amount of resources per unit 
 	private Resources store;
 	
 	public Warehouse(ScaleNumber volume, String... cells) {
