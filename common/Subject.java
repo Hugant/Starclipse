@@ -95,10 +95,12 @@ public class Subject {
 			this.value = new ScaleNumber(value);
 		}
 		
-		if (new ScaleNumber(maxValue).getPrefix().doubleValue() < 0) {
-			throw new IllegalArgumentException("The maximum amount of material cannot be less than zero");
-		} else {
-			this.maxValue = new ScaleNumber(maxValue);
+		if (maxValue != null) {
+			if (new ScaleNumber(maxValue).getPrefix().doubleValue() < 0) {
+				throw new IllegalArgumentException("The maximum amount of material cannot be less than zero");
+			} else {
+				this.maxValue = new ScaleNumber(maxValue);
+			}
 		}
 		
 		this.type = type == null ? type : type.toLowerCase();
