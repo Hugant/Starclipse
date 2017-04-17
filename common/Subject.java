@@ -306,10 +306,16 @@ public class Subject {
 	}
 	
 	/**
+	 * Return cloned <b>Subject</b>
+	 * 
+	 * @return Subject
+	 */
+	@Override
 	public Subject clone() throws CloneNotSupportedException {
 		return new Subject(this.type, this.getNumber(), this.getMaxValue());
 	}
 	
+	/**
 	 * Return the string in the form: type + " " + number.
 	 * <pre><code> new Subject("oxygen", "10B").toString();// oxygen 10B
 	 * </pre></code>
