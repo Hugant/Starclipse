@@ -100,9 +100,14 @@ public class Resources {
 		if (subjects.contains(sub)) {
 			subjects.get(subjects.indexOf(sub)).add(sub);
 		} else {
-			subjects.add(sub);
+			try {
+				subjects.add(sub.clone());
+			} catch (CloneNotSupportedException e) {
+				System.out.println(e.getMessage());
+			}
+			this.length++;
 		}
-		this.length++;
+		
 		return this;
 	}
 	
