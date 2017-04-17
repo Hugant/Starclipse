@@ -103,6 +103,7 @@ public class Subject {
 			}
 		}
 		
+		
 		this.type = type == null ? type : type.toLowerCase();
 	}
 
