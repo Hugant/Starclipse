@@ -2,6 +2,7 @@ package starclipse;
 
 import java.math.BigDecimal;
 
+import java.util.ArrayList;
 import starclipse.common.ScaleNumber;
 import starclipse.common.Resources;
 import starclipse.common.Timer;
@@ -19,9 +20,13 @@ import starclipse.common.Subject;
 
 public class Main{
 	public static void main(String args[]) {
-		
-		ScaleNumber a = new ScaleNumber("1M");
-		System.out.println(a.divide("10K"));
+		Resources a = new Resources();
+		Subject b = new Subject(Subject.GOLD, "12");
+		a.add(b);
+		System.out.println(b);
+		System.out.println(a.get(Subject.GOLD));
+//		ScaleNumber a = new ScaleNumber("1M");
+//		System.out.println(a.divide("10K"));
 //		while(true) {
 //			try {
 //				System.out.println(a.multiply("1K"));
