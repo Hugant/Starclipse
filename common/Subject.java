@@ -280,7 +280,7 @@ public class Subject {
 	 * @return string in the form <b>ScaleNumber</b>
 	 */
 	public String getMaxValue() {
-		return maxValue.getPrefix() + maxValue.getPostfix();
+		return this.maxValue == null ? null : maxValue.getPrefix() + maxValue.getPostfix();
 	}
 	
 	
