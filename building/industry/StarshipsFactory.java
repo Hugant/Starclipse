@@ -1,9 +1,9 @@
-package starclipse.building.industry;
+package Starclipse.building.industry;
 
-import starclipse.common.Resources;
-import starclipse.common.Timer;
+import Starclipse.common.Resources;
+import Starclipse.common.Timer;
 
-public class StarshipsFactory extends starclipse.Building {
+public class StarshipsFactory extends Starclipse.Building {
 	private String name = "Starships Factory";
 	private Starship starship = null;
 	private int manpower = 0;

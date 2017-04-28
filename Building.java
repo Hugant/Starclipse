@@ -1,9 +1,9 @@
-package starclipse;
+package Starclipse;
 
-import starclipse.building.House;
-import starclipse.common.Resources;
-import starclipse.common.Timer;
-import starclipse.common.Subject;
+import Starclipse.building.House;
+import Starclipse.common.Resources;
+import Starclipse.common.Timer;
+import Starclipse.common.Subject;
 
 /**
  * This is class the parents for buildings:
@@ -11,10 +11,10 @@ import starclipse.common.Subject;
  * 
  * @author Hugant MD
  *
- * @see starclipse.common.Timer
- * @see starclipse.common.Subject
- * @see starclipse.common.Resources
- * @see starclipse.building.House
+ * @see Starclipse.common.Timer
+ * @see Starclipse.common.Subject
+ * @see Starclipse.common.Resources
+ * @see Starclipse.building.House
  */
 public class Building {
 	private String name = "";
@@ -108,7 +108,7 @@ public class Building {
 	 * will return time. Otherwise return <b>String</b> "Start" or "Claim".
 	 * @return time or "Start" or "Claim"
 	 * 
-	 * @see starclipse.common.Timer
+	 * @see Starclipse.common.Timer
 	 */
 	public String getStatus() {
 		if (buildTimer != null && incomeTimer != null) {

@@ -1,17 +1,17 @@
-package starclipse.building;
+package Starclipse.building;
 
-import starclipse.common.Resources;
-import starclipse.common.Subject;
-import starclipse.common.ScaleNumber;
+import Starclipse.common.Resources;
+import Starclipse.common.Subject;
+import Starclipse.common.ScaleNumber;
 
 /**
  * 
  * @author Hugant MD
  *
  */
-public class Warehouse extends starclipse.Building {
+public class Warehouse extends Starclipse.Building {
 	
-	private starclipse.common.ScaleNumber volume = new starclipse.common.ScaleNumber("1K");// the amount of resources per unit 
+	private Starclipse.common.ScaleNumber volume = new Starclipse.common.ScaleNumber("1K");// the amount of resources per unit 
 	private Resources store;
 	
 	public Warehouse(ScaleNumber volume, String... cells) {

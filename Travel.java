@@ -1,4 +1,4 @@
-package starclipse;
+package Starclipse;
 
 import java.util.ArrayList;
 

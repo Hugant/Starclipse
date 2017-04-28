@@ -1,14 +1,14 @@
-package starclipse;
+package Starclipse;
 
 import java.math.BigDecimal;
 
 import java.util.ArrayList;
-import starclipse.common.ScaleNumber;
-import starclipse.common.Resources;
-import starclipse.common.Timer;
-import starclipse.building.industry.Starship;
-import starclipse.building.House;
-import starclipse.building.Warehouse;
+import Starclipse.common.ScaleNumber;
+import Starclipse.common.Resources;
+import Starclipse.common.Timer;
+import Starclipse.building.industry.Starship;
+import Starclipse.building.House;
+import Starclipse.building.Warehouse;
 
 import java.util.Arrays;
 import java.util.Calendar;
@@ -16,7 +16,7 @@ import java.util.GregorianCalendar;
 import java.util.Date;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
-import starclipse.common.Subject;
+import Starclipse.common.Subject;
 
 public class Main{
 	public static void main(String args[]) {

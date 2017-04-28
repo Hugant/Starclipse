@@ -1,4 +1,4 @@
-package starclipse.common;
+package Starclipse.common;
 
 import java.util.Arrays;
 import java.math.BigDecimal;

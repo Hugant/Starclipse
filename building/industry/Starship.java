@@ -1,8 +1,8 @@
-package starclipse.building.industry;
+package Starclipse.building.industry;
 
-import starclipse.common.Subject;
-import starclipse.common.ScaleNumber;
-import starclipse.common.Resources;
+import Starclipse.common.Subject;
+import Starclipse.common.ScaleNumber;
+import Starclipse.common.Resources;
 
 /**
  * Allows you to create a <b>Starship</b> with certain
@@ -290,7 +290,7 @@ public class Starship {
 		
 	}
 	
-	public void defend(starclipse.Planet planet) {
+	public void defend(Starclipse.Planet planet) {
 		
 	}
 	

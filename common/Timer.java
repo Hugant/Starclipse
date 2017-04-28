@@ -1,4 +1,4 @@
-package starclipse.common;
+package Starclipse.common;
 
 /** 
  * The Timer class allows you to create a time counter(timer).

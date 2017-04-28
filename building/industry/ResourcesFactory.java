@@ -1,11 +1,11 @@
-package starclipse.building.industry;
+package Starclipse.building.industry;
 
-import starclipse.common.Resources;
-import starclipse.common.Subject;
-import starclipse.common.Timer;
-import starclipse.common.ScaleNumber;
+import Starclipse.common.Resources;
+import Starclipse.common.Subject;
+import Starclipse.common.Timer;
+import Starclipse.common.ScaleNumber;
 
-public class ResourcesFactory extends starclipse.Building {
+public class ResourcesFactory extends Starclipse.Building {
 	private static final ScaleNumber INCOME_PER_RESIDENT = new ScaleNumber("10");
 	
 	public ResourcesFactory(String type) {

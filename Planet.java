@@ -1,8 +1,8 @@
-package starclipse;
+package Starclipse;
 
-import starclipse.common.Resources;
-import starclipse.common.Subject;
-import starclipse.building.House;
+import Starclipse.common.Resources;
+import Starclipse.common.Subject;
+import Starclipse.building.House;
 
 public class Planet {
 	private Resources resources;

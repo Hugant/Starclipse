@@ -1,4 +1,4 @@
-package starclipse.building;
+package Starclipse.building;
 
 public class TradingStation {
 

@@ -1,9 +1,9 @@
-package starclipse;
+package Starclipse;
 
 import java.util.ArrayList;
-import starclipse.building.*;
-import starclipse.common.ScaleNumber;
-import starclipse.common.Subject;
+import Starclipse.building.*;
+import Starclipse.common.ScaleNumber;
+import Starclipse.common.Subject;
 
 public class Infrastructure {
 	private ArrayList<Building> infrastructure;

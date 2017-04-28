@@ -1,8 +1,8 @@
-package starclipse.building;
+package Starclipse.building;
 
-import starclipse.common.Timer;
-import starclipse.common.Resources;
-import starclipse.common.Subject;
+import Starclipse.common.Timer;
+import Starclipse.common.Resources;
+import Starclipse.common.Subject;
 
 /**
  * This class implements an object <b>House</b> that has three types:
@@ -13,10 +13,10 @@ import starclipse.common.Subject;
  * 
  * @author Hugant MD
  * 
- * @see starclipse.Building
+ * @see Starclipse.Building
  *
  */
-public class House extends starclipse.Building {
+public class House extends Starclipse.Building {
 	/**
 	 * Create a <b>House</b> where the parameters specified a type
 	 * of <b>House</b>.

@@ -1,4 +1,4 @@
-package starclipse.common;
+package Starclipse.common;
 
 import java.util.ArrayList;
 
@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * 
  * @author Hugant MD
  *
- *@see starclipse.common.Subject
+ *@see Starclipse.common.Subject
  */
 public class Resources {
 	private ArrayList<Subject> subjects = new ArrayList<Subject>();

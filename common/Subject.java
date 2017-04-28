@@ -1,4 +1,4 @@
-package starclipse.common;
+package Starclipse.common;
 
 import java.math.BigDecimal;
 
@@ -22,7 +22,7 @@ import java.math.BigDecimal;
  * 
  * @author Hugant MD
  * 
- * @see starclipse.common.ScaleNumber
+ * @see Starclipse.common.ScaleNumber
  */
 public class Subject {
 	public final static String RESIDENTS = "residents";
